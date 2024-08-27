@@ -1,1 +1,90 @@
-/* Archivo para montar carpeta en Git hub */
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    }
+
+    header {
+    height: 20%;
+    background-color: #394DC0;
+    color: white;
+    padding: 1%;
+    text-align: left;
+
+    }
+
+    .container {
+        width: 50%;
+        margin: 20px 10%;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    h1 { 
+        margin-bottom: 20px;
+    }
+
+    h2{
+        font-size: medium;
+    }
+
+   .form-group {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .header button {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .blue-box {
+        background-color: #394DC0;
+        color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        width: 95%;
+        height: 20%;
+        font-family: sans-serif;
+    }
+
+   .buttons {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .button1 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #404140;
+    color: #fff;
+    cursor: pointer;
+    }
+
+    .button2 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #080808;
+    cursor: pointer;
+}
