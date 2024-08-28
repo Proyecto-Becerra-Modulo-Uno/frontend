@@ -56,3 +56,14 @@ th{
 .content {
   padding-top: 20px; 
 }
+#settings-dropdown .btn,
+#users-dropdown .btn,
+#records-dropdown .btn,
+#access-dropdown .btn,
+#admin-dropdown .btn,
+#config-dropdown .btn {
+  line-height: 1; /* Ajusta la altura de línea para evitar cortes */
+  padding: 10px; /* Ajusta el padding si es necesario */
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+}
+
