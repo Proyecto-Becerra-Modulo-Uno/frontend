@@ -15,7 +15,6 @@ rutaPanel.get("/registros", verRegistro)
 rutaPanel.get("/co", condicionesc)
 rutaPanel.get("/verificacionDoble1", verificacionDoble1)
 rutaPanel.get("/verificacionDoble2", verificacionDoble2)
-rutaPanel.get("/privacidad",politicas)
 rutaPanel.get("/login", login)
 
 export default rutaPanel
