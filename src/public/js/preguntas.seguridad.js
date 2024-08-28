@@ -23,8 +23,6 @@ window.addEventListener('click', function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-<<<<<<< HEAD
+
 });
-=======
-});
->>>>>>> 51eb4038dd29904ce27ce60601635325086b2fe8
+
