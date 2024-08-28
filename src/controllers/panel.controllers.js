@@ -6,3 +6,7 @@ export const panel = (req, res) => {
 export const login = (req, res) => {
     res.render("views.login.ejs")
 }
+
+export const panegl = (req, res) => {
+    res.render("views.panel.ejs")
+}
