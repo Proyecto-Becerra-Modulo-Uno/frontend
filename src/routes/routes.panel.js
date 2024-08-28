@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { panel } from "../controllers/panel.controllers.js";
+import { condicionesc, panel } from "../controllers/panel.controllers.js";
 
 const rutaPanel = Router();
 
 rutaPanel.get("/", panel)
+rutaPanel.get("/co", condicionesc)
+
 
 export default rutaPanel
