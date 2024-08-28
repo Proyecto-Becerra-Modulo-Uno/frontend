@@ -20,6 +20,7 @@ app.set("port", process.env.PORT || 3000);
 
 app.use("/", rutaPanel);
 app.use("/", rutaRecuperarClave);
+app.use("/", ruta);
 
 // app.use("/", (req, res) => {
 //     res.render("views.error.ejs");
