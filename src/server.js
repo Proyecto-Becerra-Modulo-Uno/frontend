@@ -2,24 +2,25 @@ import express from "express";
 import { config } from "dotenv";
 import ejs from "ejs";
 import path from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 import ruta from "./routes/index.js";
+import rutaPanel from "./routes/routes.panel.js";
+import rutaRecuperarClave from "./routes/routes.recuperarClave.js";
 config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 const app = express();
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
 
-
 app.set("port", process.env.PORT || 3000);
 
+app.use("/", rutaPanel);
+app.use("/", rutaRecuperarClave);
 app.use("/", ruta);
-
 
 // app.use("/", (req, res) => {
 //     res.render("views.error.ejs");
