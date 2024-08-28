@@ -5,4 +5,4 @@ const rutaPreguntas = Router();
 
 rutaPreguntas.get("/preguntas", preguntas);
 
-export default rutaPreguntas;
+export default rutaPreguntas
