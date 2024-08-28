@@ -4,7 +4,6 @@ import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from 'url';
 import ruta from "./routes/index.js";
-import rutaPanel from "./routes/routes.panel.js";
 config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -19,7 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.set("port", process.env.PORT || 3000);
 
-app.use("/", rutaPanel);
+app.use("/", ruta);
 
 
 // app.use("/", (req, res) => {

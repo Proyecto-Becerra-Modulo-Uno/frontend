@@ -5,6 +5,6 @@ import rutaPreguntas from "./routes.usuario.js";
 const ruta = Router();
 
 ruta.use("/", rutaPanel);
-ruta.use("/usuarios", rutaPreguntas);
+ruta.use("/", rutaPreguntas);
 
 export default ruta;
