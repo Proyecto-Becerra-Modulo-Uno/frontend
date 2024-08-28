@@ -1,28 +1,26 @@
 import express from "express";
 import { config } from "dotenv";
-import ruta from "./routes/index.js";
 import ejs from "ejs";
 import path from "path";
-import morgan from "morgan";
 import { fileURLToPath } from 'url';
-import cookieParser from "cookie-parser";
+import ruta from "./routes/index.js";
 config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const server = express();
+const app = express();
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
+app.set("views", path.join(__dirname, "views"));
 
-server.use(morgan("dev"));
-server.use(cookieParser());
-server.set("view engine", "ejs");
-server.set("views", path.join(__dirname + "/views"))
-server.set("port", process.env.PORT || 3100);
-server.use(express.static(path.join(__dirname + "/public")));
 
-server.use("/", ruta);
+app.set("port", process.env.PORT || 3000);
 
-server.use("/", (req,res)=>{
-    res.render("views.error.ejs")
+app.use("/", ruta);
+
+app.use("/", (req, res) => {
+    res.render("views.error.ejs");
 });
-export default server;
+
+export default app;
