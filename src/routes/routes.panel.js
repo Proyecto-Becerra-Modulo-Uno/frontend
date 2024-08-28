@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { condicionesc, ingresarcodigo, login, nuevousuario, panel, politicas, recuperarusuario, registro, verificacionDoble1,verificacionDoble2, verRegistro } from "../controllers/panel.controllers.js";
+import { cambiarcontrasena, condicionesc, ingresarcodigo, login, nuevousuario, panel, politicas, recuperarusuario, registro, verificacionDoble1,verificacionDoble2, verRegistro } from "../controllers/panel.controllers.js";
 
 const rutaPanel = Router();
 
@@ -8,7 +8,7 @@ rutaPanel.get("/panel", panel)
 rutaPanel.get("/correo", recuperarusuario)
 rutaPanel.get("/codigo", ingresarcodigo)
 rutaPanel.get("/nuevousuario", nuevousuario)
-rutaPanel.get("/", panel)
+rutaPanel.get("/contrasena", cambiarcontrasena)
 rutaPanel.get("/privacidad",politicas)
 rutaPanel.get("/registro",registro)
 rutaPanel.get("/registros", verRegistro)
@@ -18,4 +18,4 @@ rutaPanel.get("/verificacionDoble2", verificacionDoble2)
 rutaPanel.get("/privacidad",politicas)
 rutaPanel.get("/login", login)
 
-export default rutaPanel 
+export default rutaPanel
