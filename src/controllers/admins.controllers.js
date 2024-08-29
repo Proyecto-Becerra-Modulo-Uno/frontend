@@ -1,6 +1,17 @@
-//Archivo para montar carpeta en Git hub
 export const panel = (req, res) => {
     res.render("views.panel.ejs")
+}
+
+export const registro = (req, res) => {
+    res.render("views.registro.ejs")
+}
+
+export const verRegistro = (req, res) => {
+    res.render("views.verRegistro.ejs")
+}
+
+export const nuevousuario = (req, res) => {
+    res.render("views.nuevousuario.ejs")
 }
 
 export const condicionesc = (req, res) => {
@@ -13,18 +24,4 @@ export const verificacionDoble1 = (req, res) => {
 
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
-}
-
-export const politicas = (req, res) => {
-    res.render("views.privacidad.ejs")
-}
-export const registro = (req, res) => {
-    res.render("views.registro.ejs")
-  
-export const login = (req, res) => {
-    res.render("views.login.ejs")
-}
-
-export const panegl = (req, res) => {
-    res.render("views.panel.ejs")
 }
