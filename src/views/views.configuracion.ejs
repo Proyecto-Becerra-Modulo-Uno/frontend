@@ -8,32 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/panel.css">
     <link rel="stylesheet" href="/css/configuracion.css">
+    
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <%- include('./components/menu'); %>
             <div class="content col-md-10 mt-5">
-                <div class="row mb-4 header-row-config">
-                    <div class="col-12 d-flex">
-                        <div class="row w-100">
-                            <div class="col-8">
-                                <h1>Configuración del sistema</h1>
-                                <div class="col d-flex">
-                                    <div class="mt-4">Configurar numero de intentos fallidos <br> para el inicio de sesion</div>
-                                    <input type="text" class="t1 px-3 rounded border-0 mx-3 mt-3" id="cantC" placeholder="1">
-                                </div>
-                                <div class="col d-flex">
-                                    <div class="mt-4">Tiempo de expiracion de las sesiones</div>
-                                    <input type="text" class="t1 px-3 rounded border-0 mx-3 mt-3" id="cantC" placeholder="1">
-                                </div>
-                            </div>
-                            <div class="col-4 d-flex">
-                                <button class="btn btn-primary btn-custom Guardar">Guardar Cambios</button>
-                            </div>
-                            
-                        </div>
-                    </div>
+                <div class="header-row-config">
+                    <h1>Configuración del sistema</h1>
+                </div>
+                <div class="section">
+                    <div class="section-title">Configurar número de intentos fallidos para el inicio de sesión</div>
+                    <input type="text" class="t1 px-3  " id="cantC1" placeholder="1">
+                </div>
+                <div class="section">
+                    <div class="section-title">Tiempo de expiración de las sesiones</div>
+                    <input type="text" class="t1 px-3  " id="cantC2" placeholder="1">
+                    <select name="select" id="">
+                    <option value="Minutos">Minutos</option>
+                    </select>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="btn btn-primary btn-custom">Guardar Cambios</button>
                 </div>
             </div>
         </div>
