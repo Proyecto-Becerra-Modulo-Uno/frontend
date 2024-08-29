@@ -25,3 +25,7 @@ export const politicas = (req, res) => {
 export const inicioAutentificacionDosPasos = (req, res) => {
     res.render("views.inicio.autentificacion.dos.pasos.ejs")
 }
+
+export const elegirAutentificacionDosPasos = (req, res) => {
+    res.render("views.elegir.autentificacion.dos.pasos.ejs")
+}
