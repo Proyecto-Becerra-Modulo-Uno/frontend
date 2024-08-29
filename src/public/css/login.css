@@ -138,7 +138,7 @@ a{
         z-index: 9999;
     }
     .formulario{
-        height: 350px;
+        height: 380px;
         width: 500px;
         background-color: #394dc0c5;
         position: absolute;
@@ -150,6 +150,7 @@ a{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin: 10px;
     }
     input{
         margin: 10px;
@@ -160,9 +161,9 @@ a{
         padding: 10px;
     }
     .boton{
-        margin: 20px;
         width: 320px;
-        height: 20px;
+        height: 30px;
+        margin: 20px;
         border-radius: 10px;
         border: none;
         padding: 1px;
