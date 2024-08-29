@@ -40,7 +40,4 @@ export const politicas = (req, res) => {
 }
 export const registro = (req, res) => {
     res.render("views.registro.ejs")
-  
-export const login = (req, res) => {
-    res.render("views.login.ejs")
 }
