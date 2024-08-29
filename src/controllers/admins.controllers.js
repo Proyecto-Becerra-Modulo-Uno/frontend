@@ -1,5 +1,12 @@
 export const panel = (req, res) => {
-    res.render("views.panel.ejs")
+    let datos = {};
+    const url = "http://localhost:3000";
+    fetch(url + "/users")
+    .then(res => res.json())
+    .then(data => {
+        datos = data
+        res.render("views.panel.ejs", {users: data, url: url})
+    })
 }
 
 export const registro = (req, res) => {
@@ -24,8 +31,4 @@ export const verificacionDoble1 = (req, res) => {
 
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
-}
-
-export const configuracion = (req, res) => {
-    res.render("views.configuracion.ejs")
 }
