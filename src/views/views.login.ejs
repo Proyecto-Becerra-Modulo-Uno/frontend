@@ -12,9 +12,9 @@
             <form class="formulario">
                 <h1>BIENVENIDO A ERP</h1>
                 
-                <input type="text" placeholder="Ingrese su correo o usuario" required>
-                <input type="password" placeholder="Ingrese su contraseña" required>
-                <input class="boton" type="submit" value="Ingresar">
+                <input type="text" placeholder="Ingrese su usuario" id="usuario" required>
+                <input type="password" placeholder="Ingrese su contraseña" id="contrasena" required>
+                <button class="boton" type="submit" onclick="login()">Ingresar</button>
                 <p>Recuperar usuario <a href="/correo">AQUI</a></p>
                 <p>Recuperar contraseña <a href="/recuperarClave">AQUI</a></p>
 
@@ -30,5 +30,7 @@
                 </div>
             </form>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/iniciologin.js"></script>
     </body>
 </html>
