@@ -1,8 +1,13 @@
 import { Router } from "express";
-import { preguntas } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, ingresarcodigo, politicas, preguntas, recuperarClave, recuperarusuario } from "../controllers/usuarios.controllers.js";
 
-const rutaPreguntas = Router();
+const rutaUsuario = Router();
 
-rutaPreguntas.get("/preguntas", preguntas);
+rutaUsuario.get("/preguntas", preguntas);
+rutaUsuario.get("/recuperarClave", recuperarClave);
+rutaUsuario.get("/contrasena", cambiarcontrasena);
+rutaUsuario.get("/correo", recuperarusuario);
+rutaUsuario.get("/codigo", ingresarcodigo);
+rutaUsuario.get("/privacidad",politicas);
 
-export default rutaPreguntas
+export default rutaUsuario
