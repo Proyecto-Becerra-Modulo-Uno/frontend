@@ -6,22 +6,28 @@
     <title>Administrador - Cuentas bloqueadas</title>
     <link rel="stylesheet" href="/css/bloqueos.css">
 </head>
-<body>
-    <div class="container">
-        <h1>ADMINISTRADOR</h1>
-        <h2>Cuentas bloqueadas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Contraseña</th>
-                    <th>Rol</th>
-                    <th>Estado</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-        </table>
+<body class="container">
+    <div class="col-4 bg-success">
+        <%- include("partials/partial.barralatera.ejs") %>
+    </div>
+    <div class="col-8 bg-danger">
+        <div class="container-fluid">
+        
+            <h1>ADMINISTRADOR</h1>
+            <h2>Cuentas bloqueadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Contraseña</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
     <script src="/js/cuenta-bloqueo.js"></script>
 </body>

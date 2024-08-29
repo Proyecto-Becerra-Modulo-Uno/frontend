@@ -21,3 +21,15 @@ export const ingresarcodigo = (req, res) => {
 export const politicas = (req, res) => {
     res.render("views.privacidad.ejs")
 }
+
+export const inicioAutentificacionDosPasos = (req, res) => {
+    res.render("views.inicio.autentificacion.dos.pasos.ejs")
+}
+
+export const elegirAutentificacionDosPasos = (req, res) => {
+    res.render("views.elegir.autentificacion.dos.pasos.ejs")
+}
+
+export const dispositivosMovil = (req, res) => {
+    res.render("views.dispositivos.movil.ejs")
+}
