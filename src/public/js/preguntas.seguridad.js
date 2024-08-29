@@ -1,7 +1,5 @@
 var modal = document.getElementById("questionModal");
-
 var btn = document.querySelector(".button1");
-
 var span = document.getElementsByClassName("close")[0];
 
 btn.addEventListener('click', function(event) {
@@ -17,6 +15,4 @@ window.addEventListener('click', function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-
 });
-
