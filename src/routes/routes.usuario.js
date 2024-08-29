@@ -6,7 +6,7 @@ const rutaUsuario = Router();
 rutaUsuario.get("/preguntas", preguntas);
 rutaUsuario.get("/recuperarClave", recuperarClave);
 rutaUsuario.get("/contrasena", cambiarcontrasena);
-rutaUsuario.get("/correo", recuperarusuario);
+rutaUsuario.get("/recuperar", recuperarusuario);
 rutaUsuario.get("/codigo", ingresarcodigo);
 rutaUsuario.get("/privacidad",politicas);
 

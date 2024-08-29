@@ -1,45 +1,22 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    font-family: 'Corbel';
-}
-@font-face {
-    font-family: 'Corbel';
-    src: url(../font/CORBEL.TTF);
-}
-.fondo{
-    height: 100vh;
-    width: 100%;
-    background: #151c4180;
-    z-index: 9999;
-}
-.caja_segundaria{
-    height: 100vh;
-    width: 100%;
+@import "main.css";
+@import "backgroud.form.css";
+
+
+form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/login.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    flex-direction: column;
+    background-color: var(--color-1);
+    padding: 5vh;
+    border-radius: 2vh;
+    color: #fff;
+    font-family: 'CorbelR';
+    text-align: center;
 }
 
-.formulario{
-    height: 500px;
-    width: 500px;
-    background-color: #394dc0c5;
-    position: absolute;
-    z-index: 9999;
-    margin-top: -80px;
-    border-radius: 15px;
-    color: azure;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+h1{
+    text-align: center;
 }
+
 input{
     margin: 20px;
     width: 300px;
@@ -48,9 +25,11 @@ input{
     border: none;
     padding: 10px;
 }
+
 a{
     color: #ffff;
 }
+
 .boton{
     margin: 20px;
     width: 320px;
@@ -60,6 +39,7 @@ a{
     padding: 10px;
     transition: .2s;
 }
+
 .boton:hover{
     background: #b4b4b4;
     transition: .2s;

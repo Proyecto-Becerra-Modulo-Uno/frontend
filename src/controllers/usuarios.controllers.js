@@ -11,7 +11,7 @@ export const cambiarcontrasena = (req, res) => {
 }
 
 export const recuperarusuario = (req, res) => {
-    res.render("views.recucorreo.ejs")
+    res.render("views.recuperar.user.ejs")
 }
 
 export const ingresarcodigo = (req, res) => {
