@@ -29,3 +29,7 @@ export const inicioAutentificacionDosPasos = (req, res) => {
 export const elegirAutentificacionDosPasos = (req, res) => {
     res.render("views.elegir.autentificacion.dos.pasos.ejs")
 }
+
+export const dispositivosMovil = (req, res) => {
+    res.render("views.dispositivos.movil.ejs")
+}
