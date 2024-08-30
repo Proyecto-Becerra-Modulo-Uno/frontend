@@ -29,3 +29,4 @@ export const verificacionDoble2 = (req, res) => {
 export const registroIngreso = (req, res) => {
     res.render("views.registro.ingreso.ejs")
 }
+

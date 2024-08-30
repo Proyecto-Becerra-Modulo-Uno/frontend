@@ -221,7 +221,16 @@
                 </div>
             </div>
         </div>
-
+        <script>
+            document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', () => {
+                const dropdownId = button.id.replace('button', 'dropdown');
+                const dropdown = document.getElementById(dropdownId);
+                dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+            });
+        });
+        
+        </script>
     
     <script src="/js/botones.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
