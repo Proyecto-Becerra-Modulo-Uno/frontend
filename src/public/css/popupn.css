@@ -1,0 +1,48 @@
+.notification-icon {
+    position: relative;
+  }
+  
+  .popup-window {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 400px;
+    height: 100vh; 
+    background-color: rgb(219, 218, 218);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto; 
+    padding: 10px;
+
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .popup-content p {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0; 
+    background-color: #c9c9c9;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: small;
+  }
+  
+  .btnNoti {
+    margin: 10px; 
+    background-color: #1E3DEA;
+    border-radius: 5px;
+    color: #f1f1f1;
+    border: none; 
+    
+  }
+  
+  
