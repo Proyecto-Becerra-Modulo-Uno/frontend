@@ -21,3 +21,7 @@ export const ingresarcodigo = (req, res) => {
 export const politicas = (req, res) => {
     res.render("views.privacidad.ejs")
 }
+
+export const historialacceso = (req, res) => {
+    res.render("views.historialAcceso.ejs")
+}
