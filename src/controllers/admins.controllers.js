@@ -32,9 +32,11 @@ export const verificacionDoble1 = (req, res) => {
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
+
 export const config = (req, res) => {
     res.render("views.configuracion.ejs")
 }
+
 export const registroSesion = (req, res) => {
     fetch(url + "/users/inicios")
     .then(res => res.json())
@@ -42,4 +44,8 @@ export const registroSesion = (req, res) => {
         res.render("views.registroSesión.ejs", {registros: data})
     })
     .catch(err => console.error(err))
+}
+
+export const cuentasbloqueadas = (req, res) => {
+    res.render("views.cuentas.bloqueadas.ejs")
 }
