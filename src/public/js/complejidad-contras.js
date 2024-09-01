@@ -2,11 +2,15 @@ const url = localStorage.getItem('url');
 const btn = document.getElementById("btnG").addEventListener("click", () => {
     const num = document.getElementById("tiempoT").value;
     const time = document.getElementById("medidaT").value;
-    fetch(url + "/users/duracion", {
+    const longitud = document.getElementById("cantC").value;
+    const frecuencia = document.getElementById("frecuenciaCS").value;
+    fetch(url + "/users/actualizar-politicas", {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-            duracion: num + time
+            longitud: longitud,
+            duracion: num + time,
+            frecuencia: frecuencia
         })
     })
     .then(res => res.json())

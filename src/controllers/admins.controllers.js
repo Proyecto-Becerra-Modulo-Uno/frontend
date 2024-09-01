@@ -1,4 +1,7 @@
-const url = "http://localhost:3000";
+import { config } from "dotenv";
+config();
+
+const url = process.env.BACKEND_URL;
 export const panel = (req, res) => {
     let datos = {};
     fetch(url + "/users")
@@ -13,16 +16,16 @@ export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
-export const verRegistro = (req, res) => {
-    res.render("views.verRegistro.ejs")
-}
-
 export const nuevousuario = (req, res) => {
     res.render("views.nuevousuario.ejs")
 }
 
 export const condicionesc = (req, res) => {
-    res.render("views.condicionesc.ejs")
+    fetch(url + "/users/listar-politicas")
+    .then(res => res.json())
+    .then(data => {
+        res.render("views.condicionesc.ejs", {politicas: data})
+    })
 }
 
 export const verificacionDoble1 = (req, res) => {
@@ -33,11 +36,8 @@ export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
 
-export const registroIngreso = (req, res) => {
-    res.render("views.registro.ingreso.ejs")
-}
+export const configuracion = (req, res) => {
 
-export const config = (req, res) => {
     res.render("views.configuracion.ejs")
 }
 
