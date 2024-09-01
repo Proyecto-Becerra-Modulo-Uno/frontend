@@ -28,10 +28,6 @@ export const verRegistro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
-export const panel = (req, res) => {
-    res.render("views.panel.ejs")
-}
-
 export const ingresarcodigo = (req, res) => {
     res.render("views.codigo.ejs")
 }
@@ -54,10 +50,6 @@ export const verificacionDoble1 = (req, res) => {
 
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
-}
-
-export const verRegistro = (req, res) => {
-    res.render("views.verRegistro.ejs")
 }
 
 export const configuracion = (req, res) => {
