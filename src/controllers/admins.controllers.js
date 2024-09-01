@@ -33,6 +33,10 @@ export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
 
+export const registroIngreso = (req, res) => {
+    res.render("views.registro.ingreso.ejs")
+}
+
 export const config = (req, res) => {
     res.render("views.configuracion.ejs")
 }
