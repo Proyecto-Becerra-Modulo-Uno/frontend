@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/correo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Correo</title>
 </head>
 <body>
         <div class="caja_segundaria">
             <div class="fondo"></div>
+            
             <div class="formulario">
-                <h1>Ingresa Tu Correo</h1>
-                <input type="text" placeholder="Ingrese su correo">
-                <a class="boton" type="button" value="Enviar">
+                
+                <div class="form__comen">
+                    <div class="parra" id="mostrar">
+                        <p>Para recuperar tu nombre de usuario, ingresa tu dirección de correo electrónico asociada a tu cuenta para recuperarlo.</p>
+                    </div>
+                    <i class='bx bx-message-dots' id="abrir"></i> 
+                   
+                </div>
+                <div class="form__titulo">
+                    <h1>Ingresa Tu Correo</h1>
+                </div>
+              
+              <div class="form__btn">
+                  <input type="text" placeholder="Ingrese su correo">
+                  <input class="boton" type="button" value="Enviar">
+              </div>
             </div>
+            
+            
         </div>
+        
     </body>
+    <script>
+        const abrir = document.getElementById('abrir');
+        const mostrar = document.getElementById('mostrar');
+
+        abrir.addEventListener('mouseover', () =>  {
+            // setTimeout(()=>{
+            // },300)
+            mostrar.style.display='block';
+        })
+        abrir.addEventListener('mouseout', () =>  {
+            
+            mostrar.style.display='none';
+        })
+    </script>
 </html>
