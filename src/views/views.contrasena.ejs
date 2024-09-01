@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Contraseña</title>
-    <link rel="stylesheet" href="../css/contrasena.css">
+    <link rel="stylesheet" href="./css/contrasena.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
                 <p class="texto1">Configuración de Cuenta</p>
             </div>
             <div class="container_texto">
-                <p class="texto2">Puedes cambiar tu contraseña de usuario aqui</p>
+                <p class="texto2">Puedes cambiar tu contraseña de usuario aquí</p>
             </div>
             <div class="container_contenido_formulario">
 
@@ -27,19 +27,22 @@
                 </div>
 
                 <div class="container_input">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+                    <input type="password" id="current-password">
+                    <input type="password" id="new-password">
+                    <p id="password-strength"></p>
+                    <input type="password" id="confirm-password">
     
                     <div class="container_contenido_botones">
                         <button class="btn-cancelar">Cancelar</button>
-                        <button class="btn-save">Save</button>
+                        <button class="btn-save">Guardar</button>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    <script src="./js/contrasena.js"></script>
 </body>
 
 </html>
+
