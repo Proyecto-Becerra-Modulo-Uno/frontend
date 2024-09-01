@@ -16,9 +16,6 @@ export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
-export const verRegistro = (req, res) => {
-    res.render("views.verRegistro.ejs")
-}
 
 export const nuevousuario = (req, res) => {
     res.render("views.nuevousuario.ejs")
@@ -39,9 +36,11 @@ export const verificacionDoble1 = (req, res) => {
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
+
 export const configuracion = (req, res) => {
     res.render("views.configuracion.ejs")
 }
+
 export const registroSesion = (req, res) => {
     fetch(url + "/users/inicios")
     .then(res => res.json())
@@ -49,4 +48,8 @@ export const registroSesion = (req, res) => {
         res.render("views.registroSesión.ejs", {registros: data})
     })
     .catch(err => console.error(err))
+}
+
+export const cuentasbloqueadas = (req, res) => {
+    res.render("views.cuentas.bloqueadas.ejs")
 }
