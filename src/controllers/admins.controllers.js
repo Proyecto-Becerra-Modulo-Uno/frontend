@@ -12,6 +12,14 @@ export const panel = (req, res) => {
     })
 }
 
+export const dispositivos = (req, res) => {
+    res.render("views.dispositivos.ejs")
+}
+
+export const notipopup = (req, res) => {
+    res.render("views.popup.ejs")
+}
+
 export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
@@ -34,6 +42,10 @@ export const verificacionDoble1 = (req, res) => {
 
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
+}
+
+export const verRegistro = (req, res) => {
+    res.render("views.verRegistro.ejs")
 }
 
 export const configuracion = (req, res) => {
