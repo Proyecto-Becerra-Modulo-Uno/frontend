@@ -1,5 +1,6 @@
 .contenedorPrincipal {
-    height: 100vh;
+    transform: translate(0, -35px);
+    height: 120vh;
     width: 80vw;
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@
 
 .contenedorPrincipal__cuadroConTexto {
     background-color: #D9D9D9;
-    height: 80vh;
+    height: 100vh;
     width: 70%; /* Ancho de cada paso */
     flex-shrink: 0; /* Evita que los elementos se reduzcan de tamaño */
     display: flex;
@@ -74,17 +75,17 @@ transform: translate(550px);
 }
 
 .contenedor2__contadorVista1{
-    transform: translate(340px,85px);
+    transform: translate(340px,-25px);
     font-size: 110%;
 }
 
 .contenedor2__contadorPantalla2{
-    transform: translate(360px,115px);
+    transform: translate(360px,50px);
     font-size: 110%;
 }
 
 .contenedor2__contadorPantalla3{
-    transform: translate(360px,190px);
+    transform: translate(360px,100px);
     font-size: 110%;
 }
 
@@ -103,7 +104,7 @@ transform: translate(550px);
 }
 
 .boton-atras--pantalla2{
-    transform: translate(0, 70px);
+    transform: translate(0, 0px);
 }
 
 .boton-atras:hover {
@@ -127,15 +128,15 @@ transform: translate(550px);
 }
 
 .cuadroConTexto__boton--cuadro1{
-    transform: translate(690px, 25px);
+    transform: translate(690px, -95px);
 }
 
 .cuadroConTexto__boton--cuadro2{
-    transform: translate(690px, 170px);
+    transform: translate(690px, 135px);
 }
 
 .cuadroConTexto__boton--pantalla3{
-    transform: translate(680px,220px);
+    transform: translate(680px,135px);
 }
 
 
