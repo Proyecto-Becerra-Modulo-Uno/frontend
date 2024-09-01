@@ -25,3 +25,7 @@ export const verificacionDoble1 = (req, res) => {
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
+
+export const cuentasbloqueadas = (req, res) => {
+    res.render("views.cuentas.bloqueadas.ejs")
+}
