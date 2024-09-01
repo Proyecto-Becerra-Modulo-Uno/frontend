@@ -12,5 +12,6 @@ rutaUsuario.get("/privacidad",politicas);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
 rutaUsuario.get("/dispositivos", dispositivosMovil);
+rutaUsuario.get("/historiala", historialacceso);
 
 export default rutaUsuario
