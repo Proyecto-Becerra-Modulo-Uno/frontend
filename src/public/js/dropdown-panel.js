@@ -1,7 +1,11 @@
 document.querySelectorAll('.btn-primary').forEach(button => {
-    button.addEventListener('click', () => {
-        const dropdownId = button.id.replace('button', 'dropdown');
-        const dropdown = document.getElementById(dropdownId);
-        dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
-    });
+    const dropdownId = button.id.replace('button', 'dropdown');
+    const dropdown = document.getElementById(dropdownId);
+
+    // Verifica si el dropdown correspondiente existe
+    if (dropdown) {
+        button.addEventListener('click', () => {
+            dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+        });
+    }
 });
