@@ -16,7 +16,6 @@ export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
-
 export const nuevousuario = (req, res) => {
     res.render("views.nuevousuario.ejs")
 }
@@ -38,6 +37,7 @@ export const verificacionDoble2 = (req, res) => {
 }
 
 export const configuracion = (req, res) => {
+
     res.render("views.configuracion.ejs")
 }
 

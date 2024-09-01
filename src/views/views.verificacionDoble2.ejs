@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row">
             <%- include('./components/menu'); %>
-            <div class="content col-md-10">
+            <div class="content col-md-10" style="height: 200vh;">
                 
                 <div class="contenedorPrincipal">
                     <div class="slider">
@@ -32,7 +32,7 @@
                                     Obtendras los codigos por medio de <br>mensaje de textos
                                 </p>
                                 <p class="contenedor2__contadorVista1">paso 1 de 3</p>
-                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro1" onclick="moverSlider(3)">Siguiente</button>
+                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro1" onclick="moverSlider(1)">Siguiente</button>
                             </div>
                         </div>
                         <!-- Segunda pantalla -->
@@ -43,7 +43,7 @@
                                 <br>
                                 <p class="contenedor2__p1">Apex acaba de enviar un mensaje de texto con un codigo de verificacion al ... </p><br>
                                 <input type="text" placeholder="Introduce el codigo" class="contenedor2__input">
-                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro2" onclick="moverSlider(6)">Siguiente</button>
+                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro2" onclick="moverSlider(2)">Siguiente</button>
             
                                 <p>¿No lo has recibido?</p> Volver a enviar
             
@@ -79,6 +79,13 @@
         dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
     });
 });
+let currentStep = 0;
+
+function moverSlider(step) {
+    const slider = document.querySelector('.slider');
+    currentStep = step;
+    slider.style.transform = `translateX(-${step * 100}%)`;
+}
 
 
 
