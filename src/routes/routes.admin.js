@@ -3,8 +3,8 @@ import { condicionesc, configuracion, cuentasbloqueadas, dispositivos, notipopup
 const rutaAdmin = Router();
 
 rutaAdmin.get("/panel", panel)
-rutaPanel.get("/dis", dispositivos)
-rutaPanel.get("/notipop", notipopup)
+rutaAdmin.get("/dis", dispositivos)
+rutaAdmin.get("/notipop", notipopup)
 rutaAdmin.get("/nuevousuario", nuevousuario)
 rutaAdmin.get("/registro", registro)
 rutaAdmin.get("/co", condicionesc)
