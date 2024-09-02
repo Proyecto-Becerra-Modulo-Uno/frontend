@@ -30,3 +30,6 @@ export const registroIngreso = (req, res) => {
     res.render("views.registro.ingreso.ejs")
 }
 
+export const complejidadPreguntas = (req, res) => {
+    res.render("views.complejidad.preguntas.ejs")
+}

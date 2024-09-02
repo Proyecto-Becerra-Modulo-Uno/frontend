@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { condicionesc, nuevousuario, panel, registro, registroIngreso, verificacionDoble1, verificacionDoble2, verRegistro } from "../controllers/admins.controllers.js";
+import { complejidadPreguntas, condicionesc, nuevousuario, panel, registro, registroIngreso, verificacionDoble1, verificacionDoble2, verRegistro } from "../controllers/admins.controllers.js";
 
 const rutaAdmin = Router();
 
@@ -11,7 +11,6 @@ rutaAdmin.get("/co", condicionesc)
 rutaAdmin.get("/verificacionDoble1", verificacionDoble1)
 rutaAdmin.get("/verificacionDoble2", verificacionDoble2)
 rutaAdmin.get("/registroIngreso", registroIngreso)
-
-
+rutaAdmin.get("/complejidadPreguntas", complejidadPreguntas)
 
 export default rutaAdmin
