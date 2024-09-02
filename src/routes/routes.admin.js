@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { condicionesc, config, nuevousuario, panel, registro, registroIngreso, registroSesion, verificacionDoble1, verificacionDoble2, verRegistro, complejidadPreguntas } from "../controllers/admins.controllers.js";
+import { condicionesc, config, nuevousuario, panel, registro, registroIngreso, registroSesion, verificacionDoble1, verificacionDoble2, verRegistro, complejidadPreguntas, cuentasbloqueadas } from "../controllers/admins.controllers.js";
 const rutaAdmin = Router();
 
 rutaAdmin.get("/panel", panel)
