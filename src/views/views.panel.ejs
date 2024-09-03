@@ -8,29 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/permisos.css">
     <link rel="stylesheet" href="/css/panel.css">
-    <script>
-        const token = sessionStorage.getItem('token');
-        if (token == "" || token == null){
-            window.location.href = "/";
-        }
-        const url = sessionStorage.getItem('urlApex') + "/users/oauth";
-        if (url = "" || url == null){
-            window.location.href = "/";
-        }
-        const options = {
-            method: 'POST',
-            headers: {
-                "content-type": "application/json",
-                "x-access-token": token
-            }
-        }
-        fetch(url, options)
-        .then(response => response.json())
-        .then(data => {
-            window.location.href = "/panel"
-        })
-
-    </script>
 </head>
 <body>
     <div class="container-fluid">

@@ -1,8 +1,10 @@
-const url = localStorage.getItem('url');
+const input = document.querySelector("#url").value
+const url1 = localStorage.setItem("url", input)
+const url = localStorage.getItem("url")
 const boton = document.querySelector(".boton").addEventListener("click", (e) => {
     e.preventDefault()
-    const usuario = document.querySelector(".usuario").value;
-    const contrasena = document.querySelector(".contrasena").value;
+    const usuario = document.querySelector("#usuario").value;
+    const contrasena = document.querySelector("#contrasena").value;
     fetch(url + "/users/login", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -13,6 +15,7 @@ const boton = document.querySelector(".boton").addEventListener("click", (e) => 
     })
     .then(response => response.json())
     .then(data => {
+        sessionStorage.setItem("token", data.body.token)
         fetch(url + "/users/historial-sesion", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
