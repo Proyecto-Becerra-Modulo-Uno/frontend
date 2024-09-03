@@ -1,6 +1,24 @@
 const url = document.querySelector(".id").value;
 localStorage.setItem("url", url);
-
+const token = sessionStorage.getItem('token');
+if (token == "" || token == null){
+    window.location.href = "/";
+}
+if (url == "" || url == null){
+    window.location.href = "/";
+}
+const options = {
+    method: 'POST',
+    headers: {
+        "content-type": "application/json",
+        "x-access-token": token
+    }
+}
+fetch(url, options)
+.then(response => response.json())
+.then(data => {
+    window.location.href = "/panel"
+})
 const btnAdd = document.querySelector(".agregar");
 btnAdd.addEventListener("click", () => {
     window.location.href = "/registro";
