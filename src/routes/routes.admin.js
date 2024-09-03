@@ -10,9 +10,9 @@ rutaAdmin.get("/co", condicionesc)
 rutaAdmin.get("/verificacionDoble1", verificacionDoble1)
 rutaAdmin.get("/verificacionDoble2", verificacionDoble2)
 rutaAdmin.get("/config", configuracion)
-//rutaAdmin.get("/registroIngreso", registroIngreso)
-rutaAdmin.get("/historiala", historialacceso);
-rutaAdmin.get("/sesiones", registroSesion)
+// rutaAdmin.get("/registroIngreso", registroIngreso)
+// rutaAdmin.get("/historiala", historialacceso);
+// rutaAdmin.get("/sesiones", registroSesion)
 rutaAdmin.get("/bloqueos", cuentasbloqueadas)//???
 
 export default rutaAdmin
