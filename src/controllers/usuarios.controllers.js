@@ -49,7 +49,3 @@ export const elegirAutentificacionDosPasos = (req, res) => {
 export const dispositivosMovil = (req, res) => {
     res.render("views.dispositivos.movil.ejs")
 }
-
-export const historialacceso = (req, res) => {
-    res.render("views.historialAcceso.ejs")
-}

@@ -68,3 +68,7 @@ export const registroSesion = (req, res) => {
 export const cuentasbloqueadas = (req, res) => {
     res.render("views.cuentas.bloqueadas.ejs")
 }
+
+export const historialacceso = (req, res) => {
+    res.render("views.historialAcceso.ejs")
+}
