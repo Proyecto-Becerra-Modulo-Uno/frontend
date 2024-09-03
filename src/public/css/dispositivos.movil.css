@@ -3,3 +3,22 @@
     justify-content: end;
     align-items: center;
 }
+
+/* .one_divice{
+    width: 30%;
+    /* height: 80px; 
+} */
+
+/* .icon-phone{
+    height: 100%;
+} */
+
+/* .name-device{
+    height: 40%;
+} */
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
