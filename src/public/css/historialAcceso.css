@@ -1,0 +1,209 @@
+/* Archivo para montar carpeta en Git hub */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-arrow {
+    width: auto;
+    height: 20px;
+    position: relative;
+    margin-left: auto;
+}
+
+.row {
+    width: 100%;
+    height: 100vh;
+}
+
+#settings-button,
+#users-button,
+#records-button,
+#groups-button,
+#reports-button,
+#access-button,
+#export-button,
+#admin-button,
+#config-button {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.aside {
+    background-color: #1E3DEA;
+}
+
+.btn {
+    width: 100%;
+    height: 52px;
+    background-color: #4961E4;
+    font-size: 18px;
+}
+
+.admin-section {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+th {
+    background-color: #1E3DEA;
+}
+
+.header-row {
+    align-items: center;
+    height: 60px;
+}
+
+.header-row h1 {
+    margin-right: 100px;
+    line-height: 60px;
+}
+
+.header-row .btn {
+    line-height: 40px;
+}
+
+.device{
+    width: 50px;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+#settings-dropdown .btn,
+#users-dropdown .btn,
+#records-dropdown .btn,
+#access-dropdown .btn,
+#admin-dropdown .btn,
+#config-dropdown .btn {
+    line-height: 1;
+    /* Ajusta la altura de línea para evitar cortes */
+    padding: 10px;
+    /* Ajusta el padding si es necesario */
+    text-align: left;
+    /* Asegura que el texto esté alineado a la izquierda */
+}
+
+.gbtn {
+    width: 20%;
+    height: 45px;
+    background-color: #4961E4;
+    font-size: 15px;
+}
+
+/* header */
+
+
+/* barra de busqueda */
+.form{
+    --input-text-color: #000000;
+    --input-bg-color: #5c72f0bb;
+    --focus-input-bg-color: transparent;
+    --text-color: #ffffff;
+    --active-color: #1b9bee;
+    --width-of-input: 200px;
+    --inline-padding-of-input: 0.9em;
+    --gap: 0.9rem;
+  
+  }
+.eib{
+    display: flex;
+    
+}
+/* form style */
+.form{
+    height: 8%;
+    font-size: 0.9rem;
+    display: flex;
+    margin-top: 10px;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+}
+
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+    position: absolute;
+    width: 220%;
+    inset: 0;
+    background: var(--input-bg-color);
+    border-radius: 10px;
+    height: 90%;
+    z-index: -1;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* label styling */
+label {
+    width: 100%;
+    padding: 0.8em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    position: absolute;
+}
+
+/* styling search-icon */
+.search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+}
+
+/* svg -- size */
+svg {
+    width: 18px;
+    display: block;
+}
+
+
+
+/* styling of input */
+.input {
+    color: var(--input-text-color);
+    width: 40000px;
+    margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--text-color)
+}
+
+/* input background change in focus */
+.input:focus~.fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+}
+
+/* search icon color change in focus */
+.input:focus~.search {
+    fill: var(--active-color);
+}
+
+/* showing close button when typing */
+.input:valid~.close-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}

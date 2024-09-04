@@ -1,0 +1,28 @@
+/* Estilos en /css/configuracion.css */
+
+.content-config {
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido al principio del contenedor */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    overflow: hidden;
+}
+
+.config {
+    height: 600px;
+    width: 100%;
+    color: white; /* Color del texto en blanco para contrastar */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    border: 1px solid black;
+}
+
+.form-control {
+    border-radius: 0.375rem; /* Redondeo opcional */
+    border: 1px solid #ced4da; /* Borde gris claro */
+}
+
+.btn-custom {
+    /* Estilos personalizados para el botón, si es necesario */
+    padding: 10px 20px;
+    border-radius: 0.375rem;
+}

@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/correo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Correo</title>
 </head>
 <body>
         <div class="caja_segundaria">
             <div class="fondo"></div>
             <div class="formulario">
-                <h1>Ingresa El Codigo</h1>
-                <!-- <p>Ingresa el codigo que llego a tu correo</p> -->
-                <input type="text" placeholder="Ingresa el codigo">
-                <input class="boton" type="button" value="Enviar">
+                <div class="form__comen">
+                    <i class='bx bx-exit' id="volver"></i>                   
+                </div>
+                <div class="form__titulo">
+                    <h1>Digita el codigo</h1>
+                </div>
+                
+                <div class="form__btn">
+                  <!-- <p>Ingresa el código que hemos enviado a tu correo electrónico para continuar con la recuperación de tu nombre de usuario.</p> -->
+                  <input type="text" placeholder="Ingresa el codigo ">
+                  <input class="boton" type="button" value="Enviar">
+              </div>
             </div>
         </div>
     </body>
+    <script>
+        const volver = document.getElementById('volver');
+        volver.addEventListener('click',()=>{
+            window.location.href="/correo"
+        })
+    </script>
 </html>
