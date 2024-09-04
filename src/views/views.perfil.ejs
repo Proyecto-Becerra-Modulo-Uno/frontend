@@ -13,7 +13,7 @@
         <nav>
             <div class="nav__item">
                 <i class='bx bxs-bell' id="abrir"></i>
-                <i class='bx bxs-user-circle'></i>
+                <i class='bx bxs-user-circle' id="config"></i>
              </div>
         </nav>
     </header>
@@ -32,6 +32,16 @@
                     <label for="toggle-switch" class="switch"></label>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="config" id="configuracion">
+        <div class="noti__head">
+            <p>Configuración</p>
+        </div>
+        <div class="config__body">
+            <a href="">Autentificación de Dos Factores</a>
+            <a href="">Pongan las opciones aca cansones</a>
+            <a href="" class="cerrarSesion">Cerrar Sesión</a>
         </div>
     </div>
     <main>
@@ -88,6 +98,24 @@
 
       if (!isClickInside) {
         notificaciones.classList.remove("active");
+      }
+    });
+
+    const abrirConfig = document.getElementById('config');
+    const configuracion = document.getElementById('configuracion');
+
+    abrirConfig.addEventListener('click', () =>{
+        configuracion.classList.toggle('activeC')
+
+    })
+
+    document.addEventListener("click", (event) => {
+      const isClickInside =
+      configuracion.contains(event.target) ||
+      abrirConfig.contains(event.target);
+
+      if (!isClickInside) {
+        configuracion.classList.remove("activeC");
       }
     });
 
