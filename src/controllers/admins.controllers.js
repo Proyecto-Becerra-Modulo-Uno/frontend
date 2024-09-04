@@ -73,4 +73,8 @@ export const cuentasbloqueadas = (req, res) => {
         datos = data
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
+} 
+
+export const historialacceso = (req, res) => {
+    res.render("views.historialAcceso.ejs")
 }
