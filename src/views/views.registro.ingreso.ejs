@@ -9,7 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/permisos.css">
-    <link rel="stylesheet" href="/css/historialAcceso.css">
+    <link rel="stylesheet" href="/css/registroIngreso.css">
 </head>
 
 <body>
@@ -142,22 +142,8 @@
                 <div class="row mb-4 header-row">
                     <div class="col-12 d-flex">
                         <div class="row w-100">
-                            <div class="col-12 eib">
-                                <h1>Historial de Acceso</h1>
-                                <!-- barra de busqueda -->
-                                <form class="form">
-                                    <label for="search">
-                                        <input class="input" type="text" required="" placeholder="Buscar..." id="search">
-                                        <div class="fancy-bg"></div>
-                                        <div class="search">
-                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
-                                                <g>
-                                                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </label>
-                                </form>
+                            <div class="col-8">
+                                <h1>Panel de Registro de Ingresos</h1>
                             </div>
 
                         </div>
@@ -168,12 +154,11 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Fecha</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Horario</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Localización</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Dispositivo</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Navegador</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">IP</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">#</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">Fecha de Ingreso</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">Hora</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">Direccion IP</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">Ubicacion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -181,9 +166,9 @@
                                 <td>1</td>
                                 <td>15-08-2022</td>
                                 <td>22:02</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>  
+                                <td>****</td>
+                                <td>****</td>
+                               
                                
                             </tr>
 
@@ -192,9 +177,8 @@
                                 <td>2</td>
                                 <td>15-08-2022</td>
                                 <td>11:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>****</td>
+                                <td>****</td>
                                
                             </tr>
 
@@ -237,16 +221,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('click', () => {
-                const dropdownId = button.id.replace('button', 'dropdown');
-                const dropdown = document.getElementById(dropdownId);
-                dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
-            });
-        });
-        
-        </script>
+
     
     <script src="/js/botones.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
