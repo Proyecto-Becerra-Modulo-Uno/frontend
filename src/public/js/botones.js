@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.btn-delete').forEach(button => {
     button.addEventListener('click', function () {
         // Verificamos si el botón es el de eliminar (🚫)
@@ -92,4 +91,3 @@ function saveBlockingPolicies() {
     const modal = bootstrap.Modal.getInstance(document.getElementById('blockingPoliciesModal'));
     modal.hide();
 }
-

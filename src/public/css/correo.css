@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     overflow: hidden;
+    font-family: in;
 }
 .fondo{
     height: 100vh;
@@ -20,19 +21,56 @@
 }
 
 .formulario{
-    height: 400px;
-    width: 500px;
+    height: 350px;
+    width: 550px;
     background-color: #394dc0c5;
     position: absolute;
     z-index: 9999;
-    margin-top: -80px;
     border-radius: 15px;
     color: azure;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 10% 70%;
+}
+.form__comen{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px;
+    gap: 15px;
+}
+.form__titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Corbel';
+
+}
+.form__btn{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+i{
+    font-size: 40px;
+    cursor: pointer;
+}
+.parra{
+    display: none;
+    width: 450px;
+    height: 50px;
+    background-color:#333541;
+    border-radius: 15px;
+}
+.parra p{
+    padding: 5px;
+}
+::placeholder{
+    text-align: center;
+}
+
 input{
     margin: 10px;
     width: 400px;
@@ -47,13 +85,15 @@ a{
 }
 .boton{
     margin: 20px;
-    width: 420px;
+    width: 290px;
     height: 40px;
     border-radius: 10px;
     border: none;
     padding: 10px;
     transition: .2s;
     cursor: pointer;
+    font-family: 'Corbel';
+    color: #394DC0;
 }
 .boton:hover{
     background: #b4b4b4;
@@ -62,5 +102,5 @@ a{
 
 @font-face {
     font-family: 'Corbel';
-    src: url(../);
+    src: url(../font/CORBEL.TTF);
 }
