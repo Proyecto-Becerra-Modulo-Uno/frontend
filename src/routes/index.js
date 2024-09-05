@@ -1,7 +1,8 @@
-import Router from "express";
+import { Router } from "express";
+import rutaAdmin from "./routes.admin.js";
 
 const ruta = Router();
 
-ruta.use("/");
+ruta.use("/", rutaAdmin);
 
-export default ruta
+export default ruta;
