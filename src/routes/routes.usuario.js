@@ -16,6 +16,5 @@ rutaUsuario.get("/perfil",perfil);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
 rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
-//rutaUsuario.get("/historiala", historialacceso); // Admin
  
 export default rutaUsuario;
