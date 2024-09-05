@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+    overflow: hidden;
   }
 /* Estilo para el encabezado */
 nav {
@@ -168,12 +169,34 @@ nav .image-container img {
 
 /* Estilo para el recuadro que contiene la tabla */
 .box {
-    height: 60%;
+    max-height: 75%; /* Ajusta el valor según tus necesidades */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border: 1px solid #ccc; /* Opcional: agrega un borde para visualizar el área del div */
+    padding: 10px;
     border: 2px solid #1E3DEA;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 6px;
     box-shadow: 0 4px 8px rgba(30, 61, 234, 0.3); 
-    /* background-color: #1E3DEA; */
+}
+/* scroll */
+.box::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+}
+
+.box::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo del scroll */
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: #394DC0; /* Color del thumb (parte desplazable del scroll) */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #f1f1f1; /* Espacio alrededor del scroll */
+}
+
+/* Para Firefox */
+.box {
+    scrollbar-color: blue #f1f1f1; /* Color del scroll y del track */
+    scrollbar-width: thin; /* Tamaño del scroll */
 }
 
 /* Estilo para la tabla */
@@ -195,11 +218,8 @@ th {
     font-size: 20px;
     padding: 10px;
     text-align: center;
-    border: 1.5px solid #1E3DEA;
+    border: 1.5px solid #394DC0;
 }
-
-
-
 
 /* Estilo para el botón */
 .save-button {
@@ -218,8 +238,6 @@ th {
 }
 
 /* CAMPANA */
-/* From Uiverse.io by 3bdel3ziz-T */
-/*making bell shape with one div */
 .bell {
     border: 2.17px solid white;
     border-radius: 10px 10px 0 0;
