@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { cambiarcontrasena, dispositivosMovil, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, politicas, preguntas, recuperarClave, recuperarusuario } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, dispositivosMovil, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
 const rutaUsuario = Router();
 
@@ -12,5 +12,6 @@ rutaUsuario.get("/privacidad",politicas);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
 rutaUsuario.get("/dispositivos", dispositivosMovil);
+rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
 
 export default rutaUsuario
