@@ -84,24 +84,12 @@ th {
     /* Asegura que el texto esté alineado a la izquierda */
 }
 
-.gbtn {
+/* .gbtn {
     width: 20%;
     height: 45px;
     background-color: #4961E4;
     font-size: 15px;
-}
-
-.imgCel {
-    width: auto;
-    height: 34px;
-}
-
-/* td[scope="col"]{
-    text-align: center;
 } */
-
-
-/* header */
 
 
 /* barra de busqueda */
@@ -144,14 +132,6 @@ input:hover {
     border-color: #1E3DEA;
     background-color: #ffffff;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-}
-
-.icon {
-    position: absolute;
-    left: 1rem;
-    fill: #4961E4;
-    width: 1rem;
-    height: 1rem;
 }
 
 .icon {
