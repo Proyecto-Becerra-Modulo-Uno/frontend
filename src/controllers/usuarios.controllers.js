@@ -30,10 +30,6 @@ export const politicas = (req, res) => {
     res.render("views.privacidad.ejs")
 }
 
-export const historialacceso = (req, res) => {
-    res.render("views.historialAcceso.ejs")
-}
-
 export const detalles = (req, res) => {
     res.render("views.detalles.ejs")
 }
@@ -68,8 +64,4 @@ export const dispositivosMovil = (req, res) => {
 
 export const historialacceso = (req, res) => {
   res.render("views.historialAcceso.ejs");
-};
-
-export const eliminacionCuenta = (req, res) => {
-  res.render("views.eliminacionCuenta.ejs");
 };

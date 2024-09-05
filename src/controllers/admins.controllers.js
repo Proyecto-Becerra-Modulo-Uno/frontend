@@ -20,6 +20,10 @@ export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
+export const nuevousuario = (req, res) => {
+    res.render("views.nuevousuario.ejs")
+}
+
 export const condicionesc = (req, res) => {
     fetch(url + "/users/listar-politicas")
     .then(res => res.json())
