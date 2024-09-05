@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: in;
+}
+.fondo{
+    height: 100vh;
+    width: 100%;
+    background: #151c4180;
+    z-index: 9999;
+}
+.caja_segundaria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    height: 350px;
+    width: 550px;
+    background-color: #394dc0c5;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 15px;
+    color: azure;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 10% 70%;
+}
+.form__comen{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px;
+    gap: 15px;
+}
+.form__titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Corbel';
+
+}
+.form__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+i{
+    font-size: 40px;
+    cursor: pointer;
+}
+.parra{
+    display: none;
+    width: 450px;
+    height: 50px;
+    background-color:#333541;
+    border-radius: 15px;
+}
+.parra p{
+    padding: 5px;
+}
+::placeholder{
+    text-align: center;
+}
+
+input{
+    margin: 10px;
+    width: 400px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+a{
+    color: #ffff;
+}
+.boton{
+    margin: 20px;
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+    cursor: pointer;
+    font-family: 'Corbel';
+    color: #394DC0;
+}
+.boton:hover{
+    background: #b4b4b4;
+    transition: .2s;
+}
+
+@font-face {
+    font-family: 'Corbel';
+    src: url(../font/CORBEL.TTF);
+}

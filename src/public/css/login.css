@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: 'Corbel';
+}
+@font-face {
+    font-family: 'Corbel';
+    src: url(../font/CORBEL.TTF);
+}
+.fondo{
+    height: 100vh;
+    width: 100%;
+    background: #151c4180;
+    z-index: 9999;
+}
+.caja_segundaria{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    height: 500px;
+    width: 500px;
+    background-color: #394dc0c5;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -80px;
+    border-radius: 15px;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    margin: 20px;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+a{
+    color: #ffff;
+}
+.boton{
+    margin: 20px;
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+}
+.boton:hover{
+    background: #b4b4b4;
+    transition: .2s;
+}
+.linea{
+    display: flex;
+    align-items: center;
+}
+.linea > p{
+    margin: 10px;
+}
+.line{
+    height: 1px;
+    width: 150px;
+    display: flex;
+    background: #fff;
+}
+
+.metodos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+.metodos > a{
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: .2s;
+}
+.metodos > a:hover{
+    background: #b4b4b4;
+    margin-top: -1px;
+    transition: .2s;
+}
+.metodos > a > img {
+    height: 30px;
+    width: 30px;
+}
+
+/* ---------------------------------------------------- RESPONSI ---------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1250px) {
+    .formulario{
+        width: 350px;
+    }
+    input{
+        width: 250px;
+    }
+    .boton{
+        width: 270px;
+    }
+    
+    .line{
+        width: 120px;
+    }
+    
+}
+
+@media (max-height: 680px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Corbel';
+    }
+    .fondo{
+        height: 100vh;
+        width: 100%;
+        background: #151c4180;
+        z-index: 9999;
+    }
+    .formulario{
+        height: 380px;
+        width: 500px;
+        background-color: #394dc0c5;
+        position: absolute;
+        z-index: 9999;
+        margin-top: -20px;
+        border-radius: 15px;
+        color: azure;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px;
+    }
+    input{
+        margin: 10px;
+        width: 300px;
+        height: 10px;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+    }
+    .boton{
+        width: 320px;
+        height: 30px;
+        margin: 20px;
+        border-radius: 10px;
+        border: none;
+        padding: 1px;
+        transition: .2s;
+    }
+    .metodos > a{
+        height: 40px;
+        width: 40px;
+    }
+
+    .metodos > a > img {
+        height: 20px;
+        width: 20px;
+    }
+}

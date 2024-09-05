@@ -1,0 +1,185 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "inter";
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total de los elementos */
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(../font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+.fondo {
+    height: 100vh;
+    width: 100%;
+    background: #151c4180;
+    z-index: 9999;
+}
+
+.caja_segundaria {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    height: 500px;
+    width: 500px;
+    background-color: #394dC0;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 15px;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+a {
+    color: #ffff;
+}
+
+#listarol{
+    width: 60%;
+    height: 5%;
+}
+
+.boton {
+    margin: 20px;
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+    color: #394dC0;
+    font-family: "inter";
+}
+
+.boton:hover {
+    background: #b4b4b4;
+    transition: .2s;
+}
+
+.linea {
+    display: flex;
+    align-items: center;
+}
+
+.linea > p {
+    margin: 10px;
+}
+
+.line {
+    height: 1px;
+    width: 150px;
+    display: flex;
+    background: #000;
+}
+
+.metodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+.metodos > a {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: .2s;
+}
+
+.metodos > a:hover {
+    background: #b4b4b4;
+    margin-top: -1px;
+    transition: .2s;
+}
+
+.metodos > a > img {
+    height: 30px;
+    width: 30px;
+}
+
+
+/* Estilos para el cuadro de consentimiento */
+.consentimiento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 300px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.consentimiento input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #b4b4b4;
+}
+
+/* Estilos para la página de Política de Privacidad */
+.politica-privacidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #151c41;
+    color: white;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+    overflow-y: auto;  /* Habilitar scroll vertical */
+    min-height: 100vh;  /* Asegurar que la altura mínima sea el 100% de la ventana */
+    box-sizing: border-box; /* Incluir padding en la altura total del contenedor */
+}
+
+.politica-privacidad h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.politica-privacidad p, 
+.politica-privacidad ul {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.politica-privacidad a {
+    color: #b4b4b4;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.politica-privacidad a:hover {
+    color: #fff;
+    transition: .2s;
+}

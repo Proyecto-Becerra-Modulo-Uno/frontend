@@ -1,0 +1,14 @@
+.top-box {
+    height: 50px;
+    background-color: #394DC0; 
+    color: white; 
+}
+.top-box .icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.top-box .icon {
+    font-size: 24px; 
+    margin-left: 20px; 
+}

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.container_barra {
+    width: 100%;
+    height: 10%;
+    background-color: #1E3DEA;
+}
+
+.container_contenido {
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 8% 82%;
+    justify-items: center;
+}
+
+.container_contenido_barra2 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.container_texto {
+    width: 100%;    
+    height: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.texto1 {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.texto2 {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(82, 81, 81);
+}
+
+.container_contenido_formulario {
+    width: 75%;
+    height: 80%;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    margin-top: 10px;
+}
+
+.container_span {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-left: 100px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container_span span:last-child {
+    padding-top: 40px;
+}
+
+.container_input {
+    grid-column: 3;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+input {
+    width: 70%;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgb(90, 120, 255);
+}
+
+#password-strength {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container_contenido_botones {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 20px;
+}
+
+.btn-cancelar {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.btn-cancelar:hover {
+    opacity: 0.8;
+}
+
+.btn-save {
+    background-color: #3366cc;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 15px;
+}
+
+.btn-save:hover {
+    opacity: 0.8;
+}

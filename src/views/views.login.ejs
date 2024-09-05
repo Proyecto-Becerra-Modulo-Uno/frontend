@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+        <div class="caja_segundaria">
+            <div class="fondo"></div>
+            <form class="formulario">
+                <h1>BIENVENIDO A ERP</h1>
+                <input type="text" placeholder="Ingrese su usuario" id="usuario" required>
+                <input type="password" placeholder="Ingrese su contraseña" id="contrasena" required>
+                <button class="boton" type="submit">Ingresar</button>
+                <p>Recuperar usuario <a href="/correo">AQUI</a></p>
+                <p>Recuperar contraseña <a href="/recuperarClave">AQUI</a></p>
+
+                <div class="linea">
+                    <span class="line"></span>
+                    <p>O</p>
+                    <span class="line"></span>
+                </div>
+                <div class="metodos">
+                    <a href=""><img src="/img/google.png" ></a>
+                    <a href=""><img src="/img/microsoft.png" ></a>
+                    <a href=""><img src="/img/apple.png" ></a>
+                </div>
+            </form>
+        </div>
+        <input type="hidden" value="<%= url %>" id="url">
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/login.js"></script>
+</html>
