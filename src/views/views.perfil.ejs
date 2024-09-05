@@ -57,7 +57,7 @@
                     <div class="abajo">
                         <button class="btna btn--gris" id="btna">
                             Accesos
-                            <i class='bx bxs-down-arrow'></i>
+                            <i class='bx bxs-down-arrow' id="rotar"></i>
                         </button>
                         <button class="btna btn--azul" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar Cuentas Bloqueadas</button>
                     </div>
@@ -144,8 +144,11 @@
 // ABRIR LOS ACCESOS DE LA TABLA
 const acceso = document.getElementById('btna');
 const abriracceso = document.getElementById('acceso');
+const rotar = document.getElementById('rotar');
 acceso.addEventListener('click', () =>{
-    abriracceso.classList.toggle('active')
+    abriracceso.classList.toggle('active');
+    rotar.classList.toggle('icono');
+    // elemento.style.transform = "rotate(180deg)";
 })
 
 // INCREMENTO Y DECREMENTO DE LOS ICONOS

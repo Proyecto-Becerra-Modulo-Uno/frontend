@@ -261,6 +261,11 @@ nav{
 .mas{
     margin-left: 0px;
 }
+.icono{
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
 @media screen and (width <= 1010px) {
     .btn--azul, .btn--gris{
         margin-bottom: 15px;
