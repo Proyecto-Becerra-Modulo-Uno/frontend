@@ -19,13 +19,8 @@ export const cambiarcontrasena = (req, res) => {
 };
 
 export const recuperarusuario = (req, res) => {
-<<<<<<< HEAD
     res.render("views.recuperar.user.ejs")
 }
-=======
-  res.render("views.recucorreo.ejs");
-};
->>>>>>> e1e45b9d99b4e1823eec6dc841131a3c1b5f9a6e
 
 export const ingresarcodigo = (req, res) => {
   res.render("views.codigo.ejs");

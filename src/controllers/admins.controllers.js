@@ -10,7 +10,7 @@ export const panel = (req, res) => {
         datos = data
         res.render("views.panel.ejs", {users: data, url: url})
     })
-}
+}   
 
 export const notipopup = (req, res) => {
     res.render("views.popup.ejs")
