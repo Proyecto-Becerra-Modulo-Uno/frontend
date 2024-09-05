@@ -8,12 +8,13 @@
     <!-- icons bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- custom style  -->
-    <link rel="stylesheet" href="../css/dispositivos.movil.css">
+    <link rel="stylesheet" href="/css/dispositivos.movil.css">
+    <link rel="stylesheet" href="/css/popupn.css">
     <title>Dispositivos moviles</title>
 </head>
 <body class="devices_movil container-fluid h-100">
     <!-- partial navbar -->
-     <%- include("partials/partial.navbar.usuarios.ejs") %>
+     <%- include("partials/notificacion.ejs") %>
     
     <div class="devices_movil row"></div>
     <div class="devices_movil row"></div>
@@ -22,6 +23,8 @@
     
 
     <!-- framework bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="/js/notificaciones.js"></script>
 </html>
