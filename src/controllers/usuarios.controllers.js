@@ -27,7 +27,15 @@ export const ingresarcodigo = (req, res) => {
 };
 
 export const politicas = (req, res) => {
-  res.render("views.privacidad.ejs");
+    res.render("views.privacidad.ejs")
+}
+
+export const nuevousuario = (req, res) => {
+  res.render("views.nuevousuario.ejs")
+}
+
+export const perfil = (req, res) => {
+    res.render("views.perfil.ejs")
 };
 
 export const inicioAutentificacionDosPasos = (req, res) => {
@@ -40,8 +48,4 @@ export const elegirAutentificacionDosPasos = (req, res) => {
 
 export const dispositivosMovil = (req, res) => {
     res.render("views.dispositivos.movil.ejs")
-}
-
-export const historialacceso = (req, res) => {
-    res.render("views.historialAcceso.ejs")
 }
