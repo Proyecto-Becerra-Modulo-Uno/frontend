@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Corbel";
+  }
+  
+  @font-face {
+    font-family: "Corbel";
+    src: url(../font/CORBEL.TTF);
+  }
+  
+  body {
+    background-image: url("../img/bgRecuperarClave.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .containerBlur {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(21, 28, 65, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  .tituloCaja {
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    margin-top: -550px;
+    position: absolute;
+  }
+  
+  .mensaje {
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    margin: 10px;
+  }
+  
+  .containerCampo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+  
+
+  
+  .campo {
+    border-radius: 7px;
+    width: 60%;
+    height: 60px;
+    text-align: center;
+    border: none;
+  }
+  
+  .containerBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    border-radius: 10px;
+    width: 20%;
+    height: 60px;
+    border: none;
+    background-color: #394DC0;
+    transition: .2s;
+    cursor: pointer;
+
+  }
+  .btn:hover{
+    background: #394dc0b7;
+    transition: .2s;
+}
+  

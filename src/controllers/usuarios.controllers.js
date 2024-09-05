@@ -49,3 +49,6 @@ export const elegirAutentificacionDosPasos = (req, res) => {
 export const dispositivosMovil = (req, res) => {
     res.render("views.dispositivos.movil.ejs")
 }
+export const exportardatos = (req, res) => {
+  res.render("views.exportar.datos.ejs");
+};
