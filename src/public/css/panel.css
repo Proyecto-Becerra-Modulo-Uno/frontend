@@ -75,3 +75,9 @@ th{
   background-color: #4961E4;
   font-size: 15px;
 }
+
+/* Para los botones con fondo negro */
+.btn-key:hover .btn-icon, 
+.btn-delete:hover .btn-icon {
+    color: red; /* Cambia a otro color en lugar de negro */
+}
