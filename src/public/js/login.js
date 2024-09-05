@@ -16,6 +16,7 @@ const boton = document.querySelector(".boton").addEventListener("click", (e) => 
     .then(response => response.json())
     .then(data => {
         sessionStorage.setItem("token", data.body.token)
+        window.location.href = "/panel"
         fetch(url + "/users/historial-sesion", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
