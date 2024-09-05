@@ -17,7 +17,7 @@ const options = {
 fetch(url, options)
 .then(response => response.json())
 .then(data => {
-    window.location.href = "/panel"
+    
 })
 const btnAdd = document.querySelector(".agregar");
 btnAdd.addEventListener("click", () => {
