@@ -18,6 +18,6 @@ rutaUsuario.get("/eliminacionCuenta",eliminacionCuenta);
 rutaUsuario.get("/perfil",perfil);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
-rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
+rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
  
 export default rutaUsuario;
