@@ -75,6 +75,7 @@
     background-color: #394DC0;
     transition: .2s;
     cursor: pointer;
+    color: white;
 
   }
   .btn:hover{
@@ -82,3 +83,24 @@
     transition: .2s;
 }
   
+
+@media (max-width: 1250px){
+    .tituloCaja {
+        margin-top: -350px;
+        font-size: 30px;
+      }
+      
+      .mensaje {
+        font-size: 20px;
+      }
+
+      .campo {
+        height: 30px;
+      }
+
+      .btn {
+        width: 20%;
+        height: 30px;
+      }
+
+}
