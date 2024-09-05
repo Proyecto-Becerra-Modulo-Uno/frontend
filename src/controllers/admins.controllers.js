@@ -12,24 +12,12 @@ export const panel = (req, res) => {
     })
 }
 
-export const dispositivos = (req, res) => {
-    res.render("views.dispositivos.ejs")
-}
-
 export const notipopup = (req, res) => {
     res.render("views.popup.ejs")
 }
 
 export const registro = (req, res) => {
     res.render("views.registro.ejs")
-}
-
-export const verRegistro = (req, res) => {
-    res.render("views.registro.ejs")
-}
-
-export const ingresarcodigo = (req, res) => {
-    res.render("views.codigo.ejs")
 }
 
 export const condicionesc = (req, res) => {
@@ -52,10 +40,6 @@ export const configuracion = (req, res) => {
     res.render("views.configuracion.ejs")
 }
 
-export const registroIngreso = (req, res) => {
-    res.render("views.registro.ingreso.ejs")
-}
-
 export const registroSesion = (req, res) => {
     fetch(url + "/users/inicios")
     .then(res => res.json())
@@ -74,7 +58,3 @@ export const cuentasbloqueadas = (req, res) => {
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
 } 
-
-export const historialacceso = (req, res) => {
-    res.render("views.historialAcceso.ejs")
-}
