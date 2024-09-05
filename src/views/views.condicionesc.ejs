@@ -11,141 +11,52 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="aside col-2 col-md-2 d-flex flex-column justify-content-between">
-                <div>
-                    <div class="header d-flex align-items-center justify-content-center mt-5">
-                        <img class="title" src="/img/estrella-afilada-medio-trazo 1.png" alt="Apex-Logo" style="height: 50px; margin-right: 10px;">
-                        <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
-                    </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center mt-5">
-                        <!-- Ajustes Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between" id="settings-button">
-                            <span class="text-start">Ajustes</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="settings-dropdown" style="display: none; flex-direction: column; background-color: #4961E4; height: auto;">
-                            <button class="btn btn-secondary text-start">Cuenta</button>
-                            <button class="btn btn-secondary text-start">Plataforma</button>
-                            <button class="btn btn-secondary text-start">Autenticación de dos factores</button>
-                        </div>
-                
-                        <!-- Usuarios Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="users-button">
-                            <span class="text-start">Usuarios</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="users-dropdown" style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Listado</button>
-                            <button class="btn btn-secondary text-start">Permisos</button>
-                            <button class="btn btn-secondary text-start">Cuentas bloqueadas</button>
-                            <button class="btn btn-secondary text-start">Panel de control</button>
-                            <button class="btn btn-secondary text-start">Panel de seguridad</button>
-                            <button class="btn btn-secondary text-start">Eliminación de cuentas</button>
-                            <button class="btn btn-secondary text-start">Copias de seguridad</button>
-                        </div>
-                
-                        <!-- Registros Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="records-button">
-                            <span class="text-start">Registros</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="records-dropdown" style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
-                            <button class="btn btn-secondary text-start">Usuarios</button>
-                            <button class="btn btn-secondary text-start">Inicios de sesión</button>
-                            <button class="btn btn-secondary text-start">Detección</button>
-                            <button class="btn btn-secondary text-start">Monitoreo</button>
-                        </div>
-                
-                        <!-- Grupos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="groups-button">
-                            <span class="text-start">Grupos</span>
-                        </button>
-                
-                        <!-- Informes Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="reports-button">
-                            <span class="text-start">Informes</span>
-                        </button>
-                
-                        <!-- Accesos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="access-button">
-                            <span class="text-start">Accesos</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="access-dropdown" style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Historial</button>
-                            <button class="btn btn-secondary text-start">Intentos</button>
-                            <button class="btn btn-secondary text-start">Configuración</button>
-                        </div>
-                
-                        <!-- Exportar Datos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="export-button">
-                            <span class="text-start">Exportar Datos</span>
-                        </button>
-                
-                        <!-- Administración Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="admin-button">
-                            <span class="text-start">Administración</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="admin-dropdown" style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Permisos</button>
-                            <button class="btn btn-secondary text-start">Logs de Seguridad</button>
-                            <button class="btn btn-secondary text-start">Configuración de logs</button>
-                            <button class="btn btn-secondary text-start">Dispositivos</button>
-                        </div>
-                
-                        <!-- Configuración Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="config-button">
-                            <span class="text-start">Configuración</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="config-dropdown" style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Configuración del sistema</button>
-                            <button class="btn btn-secondary text-start">Preguntas de Seguridad</button>
-                            <button class="btn btn-secondary text-start">Encriptación de contraseñas</button>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="admin-section d-flex align-items-center justify-content-center mt-5">
-                    <div class="flex-column mt-5 me-5">
-                        <h1 style="color: white; font-size: 20px; margin-bottom: 0;">Administrador</h1>
-                        <p style="color: gainsboro;">admin@gmail.com</p> 
-                    </div>
-                    <div class="mt-4" style="color: white;">
-                        <img src="/img/menu-puntos-vertical 1.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <%- include('./components/menu'); %>
             <div class="content col-md-10" id="section1">
                 <div class="">
-                    <div class=" fw-bold mt-3">Duración de los Tokens</div>
-                    <input type="text" class="t1 px-3 rounded border-0 mt-3" placeholder="1" id="tiempoT" >
-                    <input type="text" class="t2 px-3 rounded border-0 mt-3" placeholder="min" id="medidaT">
+                    <div class="fw-bold mt-3">Duración de los Tokens</div>
+                    <div class="d-flex mt-3">
+                        <input type="number" class="form-control me-2" placeholder="1" id="tiempoT" style="width: 10%;" value="<%= politicas.body[0].duracion_token.match(/\d+/)[0] %>">
+                        <select class="form-select" id="medidaT" style="width: 10%;">
+                            <option value="m" <%= politicas.body[0].duracion_token.includes('m') ? 'selected' : '' %>>Minutos</option>
+                            <option value="h" <%= politicas.body[0].duracion_token.includes('h') ? 'selected' : '' %>>Horas</option>
+                            <option value="d" <%= politicas.body[0].duracion_token.includes('d') ? 'selected' : '' %>>Días</option>
+                            <option value="w" <%= politicas.body[0].duracion_token.includes('w') ? 'selected' : '' %>>Semanas</option>
+                            <option value="y" <%= politicas.body[0].duracion_token.includes('y') ? 'selected' : '' %>>Años</option>
+                        </select>
+                    </div>
+
                     <div class="fw-bold mt-3">Frecuencia Copia de Seguridad</div>
-                    <input type="text" class="t3 mx-auto px-3 rounded border-0 mt-3" placeholder="Semanal" >
+                    <div class="d-flex mt-3">
+                        <select class="form-select" id="frecuenciaCS" style="width: 20%;">
+                            <option value="Diaria" <%= politicas.body[0].frecuencia_copia_seguridad === 'Diaria' ? 'selected' : '' %>>Diaria</option>
+                            <option value="Semanal" <%= politicas.body[0].frecuencia_copia_seguridad === 'Semanal' ? 'selected' : '' %>>Semanal</option>
+                            <option value="Mensual" <%= politicas.body[0].frecuencia_copia_seguridad === 'Mensual' ? 'selected' : '' %>>Mensual</option>
+                            <option value="Anual" <%= politicas.body[0].frecuencia_copia_seguridad === 'Anual' ? 'selected' : '' %>>Anual</option>
+                        </select>
+                    </div>
+
                     <div class="fw-bold mt-3">Complejidad de las Contraseñas</div>
-                        <div class="col d-flex">
-                            <div class="mt-4">Cantidad de Caracteres</div>
-                            <input type="text" class="t1 px-3 rounded border-0 mx-3 mt-3" id="cantC" placeholder="1">
-                        </div>
-                        <div class="col d-flex">
-                            <div class="mt-4">Cantidad Mínima de Minúsculas</div>
-                            <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" id="" placeholder="1" id="cantMin">
-                        </div>
-                        <div class="col d-flex">
-                            <div class="mt-4">Cantidad Mínima de Mayúsculas</div>
-                            <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMay">
-                        </div>
-                        <div class="col d-flex">
-                            <div class="mt-4">Cantidad Mínima de Números</div>
-                            <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantNum">
-                        </div>
-                        <div class="col d-flex">
-                            <div class="mt-4">Cantidades Especiales</div>
-                            <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantEsp">
-                        </div>
+                    <div class="col d-flex">
+                        <div class="mt-4">Cantidad de Caracteres</div>
+                        <input type="number" class="t1 px-3 rounded border-0 mx-3 mt-3" id="cantC" placeholder="1" value="<%= politicas.body[0].longitud_minima_contrasena %>">
+                    </div>
+                    <div class="col d-flex">
+                        <div class="mt-4">Cantidad Mínima de Minúsculas</div>
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMin">
+                    </div>
+                    <div class="col d-flex">
+                        <div class="mt-4">Cantidad Mínima de Mayúsculas</div>
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMay">
+                    </div>
+                    <div class="col d-flex">
+                        <div class="mt-4">Cantidad Mínima de Números</div>
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantNum">
+                    </div>
+                    <div class="col d-flex">
+                        <div class="mt-4">Cantidades Especiales</div>
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantEsp">
+                    </div>
                 </div>
 
                 <div class="d-flex-end mt-5">
@@ -156,15 +67,6 @@
         </div>
     </div>
 </body>
-<script>
-    document.querySelectorAll('.btn-primary').forEach(button => {
-    button.addEventListener('click', () => {
-        const dropdownId = button.id.replace('button', 'dropdown');
-        const dropdown = document.getElementById(dropdownId);
-        dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
-    });
-});
-
-</script>
+<script src="/js/complejidad-contras.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
