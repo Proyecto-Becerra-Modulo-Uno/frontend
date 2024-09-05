@@ -58,3 +58,8 @@ export const registroSesion = (req, res) => {
 export const cuentasbloqueadas = (req, res) => {
     res.render("views.cuentas.bloqueadas.ejs")
 }
+
+
+export const informeActividad = (req, res) => {
+    res.render("views.informe.actividad.ejs")
+}
