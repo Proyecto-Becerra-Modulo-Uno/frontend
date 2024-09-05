@@ -25,3 +25,7 @@ export const politicas = (req, res) => {
 export const historialacceso = (req, res) => {
     res.render("views.historialAcceso.ejs")
 }
+
+export const historialcambios = (req, res) => {
+    res.render("views.historialCambios.ejs")
+}
