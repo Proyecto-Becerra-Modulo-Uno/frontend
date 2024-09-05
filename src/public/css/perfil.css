@@ -254,7 +254,7 @@ nav{
     text-align: center;
 }
 #max,
-#min {
+#min{
     font-size: 40px;
     cursor: pointer;
 }
