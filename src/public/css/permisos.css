@@ -24,6 +24,20 @@
     font-size: 18px;
     border: none; 
   }
+  .btn-action label{
+    display: none;
+  }
+
+  .btn-action:hover{
+    label{
+      position: absolute;
+      display: block;
+      background-color: white;
+      padding: 5px;
+      font-size: 14px;
+      text-wrap: nowrap;
+    }
+  }
   
   .btn-key {
     background-color: black;
@@ -55,6 +69,8 @@
   .btn-group .btn:last-child {
     margin-right: 0;
   }
+
+
   
   /* Estilos para el modal */
   .modal-body {

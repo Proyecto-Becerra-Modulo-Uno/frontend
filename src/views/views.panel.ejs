@@ -166,14 +166,21 @@
                                     <td class="estado"><%= user.Estado %></td>
                                     <td>
                                         <div class="btn-group" role="group">
-                                            <button style="background-color: black;" type="button" class="btn btn-key btn-sm btn-custom btn-group-custom" data-bs-toggle="modal" data-bs-target="#permissionsModal">
+                                            <button style="background-color: black;" type="button" class="btn btn-key btn-sm btn-custom btn-group-custom btn-action" data-bs-toggle="modal" data-bs-target="#permissionsModal">
                                                 <i class="fa-solid fa-key"></i>
+                                                <label for="">Editar permisos</label>
                                             </button>
-                                            <button style="background-color: blue;" type="button" class="btn btn-edit btn-sm">
+                                            <button style="background-color: blue;" type="button" class="btn btn-edit btn-sm btn-action">
                                                 <i class="fa-solid fa-pen"></i>
+                                                <label for="">Editar usuario</label>
                                             </button>
-                                            <button style="background-color: red;" type="button" class="btn btn-delete btn-sm">
+                                            <button style="background-color: black;" type="button" class="btn btn-delete btn-sm btn-action">
+                                                <i class="fa-solid fa-remove"></i>
+                                                <label for="">Revocar sesión</label>
+                                            </button>
+                                            <button style="background-color: red;" type="button" class="btn btn-delete btn-sm btn-action">
                                                 <i class="fa-solid fa-trash"></i>
+                                                <label for="">Eliminar usuario</label>
                                             </button>
                                         </div>
                                     </td>
