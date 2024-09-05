@@ -34,6 +34,10 @@ export const historialacceso = (req, res) => {
     res.render("views.historialAcceso.ejs")
 }
 
+export const detalles = (req, res) => {
+    res.render("views.detalles.ejs")
+}
+
 export const historialcambios = (req, res) => {
     res.render("views.historialCambios.ejs")
 }
