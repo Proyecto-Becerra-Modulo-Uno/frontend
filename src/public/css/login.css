@@ -4,6 +4,8 @@
 
 form{
     display: flex;
+    justify-content: center;
+    align-items: center;    
     flex-direction: column;
     background-color: var(--color-1);
     padding: 5vh;
@@ -17,7 +19,7 @@ h1{
     text-align: center;
 }
 
-input{
+input[type= "text"], input[type= "email"], input[type= "password"]{
     margin: 20px;
     width: 300px;
     height: 20px;
@@ -30,6 +32,26 @@ a{
     color: #ffff;
 }
 
+select{
+    width: 88%;
+    padding: 10px;
+    border-radius: 1vh;
+    outline: none;
+    border: none;
+}
+
+
+.group_list{
+    margin: 10px 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group_list p{
+    text-wrap: wrap;
+}
 .boton{
     margin: 20px;
     width: 320px;
@@ -86,76 +108,3 @@ a{
     width: 30px;
 }
 
-/* ---------------------------------------------------- RESPONSI ---------------------------------------------------------------------------------------------------------------- */
-
-/* @media (max-width: 1250px) {
-    .formulario{
-        width: 350px;
-    }
-    input{
-        width: 250px;
-    }
-    .boton{
-        width: 270px;
-    }
-    
-    .line{
-        width: 120px;
-    }
-    
-}
-
-@media (max-height: 680px) {
-    *{
-        margin: 0px;
-        padding: 0px;
-        font-family: 'Corbel';
-    }
-    .fondo{
-        height: 100vh;
-        width: 100%;
-        background: #151c4180;
-        z-index: 9999;
-    }
-    .formulario{
-        height: 380px;
-        width: 500px;
-        background-color: #394dc0c5;
-        position: absolute;
-        z-index: 9999;
-        margin-top: -20px;
-        border-radius: 15px;
-        color: azure;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin: 10px;
-    }
-    input{
-        margin: 10px;
-        width: 300px;
-        height: 10px;
-        border-radius: 10px;
-        border: none;
-        padding: 10px;
-    }
-    .boton{
-        width: 320px;
-        height: 30px;
-        margin: 20px;
-        border-radius: 10px;
-        border: none;
-        padding: 1px;
-        transition: .2s;
-    }
-    .metodos > a{
-        height: 40px;
-        width: 40px;
-    }
-
-    .metodos > a > img {
-        height: 20px;
-        width: 20px;
-    }
-} */
