@@ -23,61 +23,24 @@
                         <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
                     </div>
                     <div class="d-flex flex-column align-items-center justify-content-center mt-5">
-                        <!-- Ajustes Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between"
-                            id="settings-button">
-                            <span class="text-start">Ajustes</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="settings-dropdown"
-                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto;">
-                            <button class="btn btn-secondary text-start">Cuenta</button>
-                            <button class="btn btn-secondary text-start">Plataforma</button>
-                            <button class="btn btn-secondary text-start">Autenticación de dos factores</button>
-                        </div>
-
-                        <!-- Usuarios Dropdown -->
+                        <!-- Logs Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="users-button">
-                            <span class="text-start">Usuarios</span>
+                            id="admin-button">
+                            <span class="text-start">Logs</span>
                             <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
                         </button>
-                        <div id="users-dropdown"
+                        <div id="admin-dropdown"
                             style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Listado</button>
-                            <button class="btn btn-secondary text-start">Permisos</button>
-                            <button class="btn btn-secondary text-start">Cuentas bloqueadas</button>
-                            <button class="btn btn-secondary text-start">Panel de control</button>
-                            <button class="btn btn-secondary text-start">Panel de seguridad</button>
-                            <button class="btn btn-secondary text-start">Eliminación de cuentas</button>
-                            <button class="btn btn-secondary text-start">Copias de seguridad</button>
-                        </div>
-
-                        <!-- Registros Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="records-button">
-                            <span class="text-start">Registros</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="records-dropdown"
-                            style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
-                            <button class="btn btn-secondary text-start">Usuarios</button>
-                            <button class="btn btn-secondary text-start">Inicios de sesión</button>
-                            <button class="btn btn-secondary text-start">Detección</button>
-                            <button class="btn btn-secondary text-start">Monitoreo</button>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Logs de
+                                seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                logs</a>
                         </div>
 
                         <!-- Grupos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="groups-button">
-                            <span class="text-start">Grupos</span>
-                        </button>
-
-                        <!-- Informes Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="reports-button">
-                            <span class="text-start">Informes</span>
-                        </button>
+                        <a href="/#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Grupos</a>
 
                         <!-- Accesos Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
@@ -87,42 +50,80 @@
                         </button>
                         <div id="access-dropdown"
                             style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Historial</button>
-                            <button class="btn btn-secondary text-start">Intentos</button>
-                            <button class="btn btn-secondary text-start">Configuración</button>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Intentos de
+                                acceso</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                acceso</a>
                         </div>
 
-                        <!-- Exportar Datos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="export-button">
-                            <span class="text-start">Exportar Datos</span>
-                        </button>
+                        <!-- Modulos Dropdown -->
+                        <a href="#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Módulos</a>
 
-                        <!-- Administración Dropdown -->
+
+                        <!-- Usuarios Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="admin-button">
-                            <span class="text-start">Administración</span>
+                            id="users-button">
+                            <span class="text-start">Usuarios</span>
                             <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
                         </button>
-                        <div id="admin-dropdown"
+                        <div id="users-dropdown"
                             style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Permisos</button>
-                            <button class="btn btn-secondary text-start">Logs de Seguridad</button>
-                            <button class="btn btn-secondary text-start">Configuración de logs</button>
-                            <button class="btn btn-secondary text-start">Dispositivos</button>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Listado de
+                                usuarios</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Registros
+                                de
+                                usuarios</a>
+                            <a href="/bloqueos"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Cuentas
+                                bloqueadas</a>
+                            <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel
+                                de
+                                control</a>
                         </div>
 
-                        <!-- Configuración Dropdown -->
+                        <!-- Informes Dropdown -->
+                        <a href="/informeActividad"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
+
+                        <!-- Seguridad Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="config-button">
-                            <span class="text-start">Configuración</span>
+                            id="records-button">
+                            <span class="text-start">Seguridad</span>
                             <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
                         </button>
-                        <div id="config-dropdown"
-                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Configuración del sistema</button>
-                            <button class="btn btn-secondary text-start">Preguntas de Seguridad</button>
-                            <button class="btn btn-secondary text-start">Encriptación de contraseñas</button>
+                        <div id="records-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Copias de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Exportación
+                                de
+                                datos</a>
+                            <a href="/sesiones"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Inicios de
+                                sesión</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Detección</a>
+                            <a href="/historialc"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Monitoreo</a>
+                            <a href="/verificacionDoble1"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Autenticación de
+                                dos
+                                factores</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Ajustes de
+                                cuenta</a>
+                            <a href="/config"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración del
+                                sistema</a>
+                            <a href="/complejidadPreguntas"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Preguntas de
+                                Seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Encriptación de
+                                contraseñas</a>
                         </div>
                     </div>
                 </div>
