@@ -15,8 +15,8 @@ const boton = document.querySelector(".boton").addEventListener("click", (e) => 
     })
     .then(response => response.json())
     .then(data => {
+        const rol = data.body.rol
         sessionStorage.setItem("token", data.body.token)
-        window.location.href = "/panel"
         fetch(url + "/users/historial-sesion", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -28,7 +28,11 @@ const boton = document.querySelector(".boton").addEventListener("click", (e) => 
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            if (rol === 3) {
+                window.location.href = "/panel"
+            } else {
+                window.location.href = "/asasd"
+            }
         })
         .catch(err => console.log(err))
     })

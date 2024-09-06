@@ -26,12 +26,16 @@
                                 <div class="d-flex align-items-center">
                                     <div class="me-3">Tiempo de expiración de las sesiones</div>
                                     <input type="text" class="form-control" id="tiempoExpiracion" placeholder="1">
-                                    <select name="" id=""></select>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="min">Minutos</option>
+                                        <option value="h">Horas</option>
+                                        <option value="d">Dias</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4 d-flex align-items-center justify-content-end">
-                            <button class="btn btn-primary btn-custom">Guardar Cambios</button>
+                            <button class="btn btn-primary btn-custom guardar">Guardar Cambios</button>
                         </div>
                     </div>
                 </div>
