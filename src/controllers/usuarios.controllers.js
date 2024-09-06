@@ -6,6 +6,11 @@ export const recuperarClave = (req, res) => {
   res.render("views.recuperarClave.ejs");
 };
 
+export const comLogs = (req, res) => {
+  res.render("views.comlogs.ejs");
+};
+
+
 export const codigoRecuperacion = (req, res) => {
   res.render("views.codigoRecuperacion.ejs");
 };

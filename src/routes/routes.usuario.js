@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { cambiarcontrasena, codigoRecuperacion, dispositivosMovil, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, historialacceso, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, comLogs, dispositivosMovil, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, historialacceso, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
 const rutaUsuario = Router();
 
@@ -9,6 +9,7 @@ rutaUsuario.get("/codigoRecuperacion", codigoRecuperacion);
 rutaUsuario.get("/nuevousuario", nuevousuario)
 rutaUsuario.get("/nuevaClave", nuevaClave);
 rutaUsuario.get("/contrasena", cambiarcontrasena);
+rutaUsuario.get("/comlogs", comLogs);
 rutaUsuario.get("/correo", recuperarusuario);
 rutaUsuario.get("/codigo", ingresarcodigo);
 rutaUsuario.get("/privacidad",politicas);
