@@ -31,7 +31,15 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.table1 > * > * > *{
-    border: 1px rgb(168, 168, 168) solid;
+.thead1 > * > * , .tbody1 > * > * {
+    border: 1px rgb(139, 137, 137) solid;
+} 
+
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
