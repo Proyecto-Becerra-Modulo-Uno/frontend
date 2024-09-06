@@ -57,4 +57,7 @@ export const cuentasbloqueadas = (req, res) => {
         datos = data
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
-} 
+}
+export const grupos = (req, res) => {
+    res.render("views.grupos.ejs");
+}
