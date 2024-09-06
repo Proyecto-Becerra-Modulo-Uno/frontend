@@ -9,7 +9,7 @@
   .btn-delete {
     background-color: red;
     color: white;
-    border: none;
+    border: none; 
   }
   
   .btn-edit {
@@ -24,7 +24,21 @@
     font-size: 18px;
     border: none; 
   }
-  
+  .btn-action label{
+    display: none;
+  }
+
+  .btn-action:hover{
+    label{
+      position: absolute;
+      display: block;
+      background-color: white;
+      padding: 5px;
+      font-size: 14px;
+      text-wrap: nowrap;
+    }
+  }
+
   .btn-key {
     background-color: black;
     color: white;
@@ -55,6 +69,8 @@
   .btn-group .btn:last-child {
     margin-right: 0;
   }
+
+
   
   /* Estilos para el modal */
   .modal-body {
