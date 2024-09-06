@@ -22,5 +22,5 @@ rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
 rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
- 
-export default rutaUsuario;
+
+export default rutaUsuario

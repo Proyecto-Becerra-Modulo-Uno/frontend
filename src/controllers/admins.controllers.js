@@ -40,7 +40,16 @@ export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
 
-export const configuracion = (req, res) => {
+
+export const registroIngreso = (req, res) => {
+    res.render("views.registro.ingreso.ejs")
+}
+
+export const complejidadPreguntas = (req, res) => {
+    res.render("views.complejidad.preguntas.ejs")
+}
+
+export const config = (req, res) => {
     res.render("views.configuracion.ejs")
 }
 
@@ -62,3 +71,7 @@ export const cuentasbloqueadas = (req, res) => {
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
 } 
+
+export const informeActividad = (req, res) => {
+    res.render("views.informe.actividad.ejs")
+}
