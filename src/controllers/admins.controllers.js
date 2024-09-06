@@ -49,7 +49,7 @@ export const complejidadPreguntas = (req, res) => {
     res.render("views.complejidad.preguntas.ejs")
 }
 
-export const config = (req, res) => {
+export const configuracion = (req, res) => {
     res.render("views.configuracion.ejs")
 }
 
