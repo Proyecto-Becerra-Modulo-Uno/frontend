@@ -144,7 +144,7 @@
                         <div class="row w-100">
                             <div class="col-12 eib">
                                 <h1>Historial de Acceso</h1>
-                                <!-- Barra de busqueda -->
+                                <!-- barra de busqueda -->
                                 <div class="group">
                                     <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
                                         <g>
@@ -183,7 +183,6 @@
                                 <td scope="col"><img src="../img/smartphone.png" class="imgCel" alt="" srcset=""></td>
                                 <td class="dispositivo">Safari</td>
                                 <td class="ip">192.168.25.1</td>  
-                               
                             </tr>
 
                             <tr class="table-buscar">
@@ -202,11 +201,10 @@
                                 <td class="horario">11:02:24</td>
                                 <td class="localizacion">Indefinido</td>
                                 <td scope="col"><img src="../img/smartphone.png" class="imgCel" alt="" srcset=""></td>
-                                <td class="dispositivo">Safari</td>
+                                <td class="dispositivo">Chrome</td>
                                 <td class="ip">182.5.573.34</td>
                             </tr>
 
-                           
                         </tbody>
                     </table>
                 </div>
@@ -247,15 +245,14 @@
         </div>
         <script>
             document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('click', () => {
-                const dropdownId = button.id.replace('button', 'dropdown');
-                const dropdown = document.getElementById(dropdownId);
-                dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+                button.addEventListener('click', () => {
+                    const dropdownId = button.id.replace('button', 'dropdown');
+                    const dropdown = document.getElementById(dropdownId);
+                    dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+                });
             });
-        });
-        
+
         </script>
-    
     <script src="/js/botones.js"></script>
     <script src="/js/historialAcceso.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
