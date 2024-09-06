@@ -6,43 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas de seguridad</title>
     <link rel="stylesheet" href="/css/preguntas_seguridad.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <nav>
-        <h2>Nombre de usuario</h2>
-
-        <div class="image-container">
-            <!-- CAMPANA -->
-            <div class="notification">
-                <div class="bell-container">
-                    <div class="bell"></div>
+    <header>
+        <nav>
+            <div class="nav__item">
+                <i class='bx bxs-bell' id="abrir"></i>
+                <i class='bx bxs-user-circle' id="config"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="caja__notifica" id="notificaciones">
+        <div class="noti__main">
+            <div class="noti__head">
+                <p>Notificaciones</p>
+            </div>
+            <div class="noti__body">
+                <p>Borrar Notificaciones</p>
+            </div>
+            <div class="noti__footer">
+                <div class="toggle-container">
+                    <label for="toggle-switch" class="toggle-label">Desahabilitar notificaciones</label>
+                    <input type="checkbox" id="toggle-switch" class="toggle-switch">
+                    <label for="toggle-switch" class="switch"></label>
                 </div>
             </div>
-
-            <!-- AJUSTES -->
-            <button class="setting-btn">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar1"></span>
-            </button>
-
-            <!-- cerrar sesion -->
-            <button class="Btn">
-                <div class="sign">
-                    <svg viewBox="0 0 512 512">
-                        <path
-                            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
-                        </path>
-                    </svg>
-                </div>
-            </button>
-
         </div>
-    </nav>
+    </div>
+    <div class="config" id="configuracion">
+        <div class="noti__head">
+            <p>Configuración</p>
+        </div>
+        <div class="config__body">
+            <a href="">Autentificación de Dos Factores</a>
+            <a href="">Pongan las opciones aca cansones</a>
+            <a href="" class="cerrarSesion">Cerrar Sesión</a>
+        </div>
+    </div>
 
     <header>
-        
         <div class="title">
             <!-- FLECHA -->
             <div class="arrow">
@@ -64,16 +68,17 @@
                         </span>
                     </div>
                 </button>
-    
+
             </div>
             <center>
                 <h1>Preguntas de seguridad</h1>
-            <p>Tus preguntas de seguridad ayudan a mantener tu cuenta segura. Puede usarlos para restablecer su
-                contraseña
-            </p>
-        </center>
+                <p>Tus preguntas de seguridad ayudan a mantener tu cuenta segura. Puede usarlos para restablecer
+                    su
+                    contraseña
+                </p>
+            </center>
         </div>
-
+        <center>
         <form class="blue-box">
             <h3>¿Cuál fue tu primer proyecto o tarea en esta empresa?</h3>
             <div class="form-group">
@@ -91,7 +96,7 @@
                 <button type="" class="button2">Guardar cambios</button>
             </div>
         </form>
-
+    </center>
     </header>
 
     <!-- Modal Structure -->
@@ -116,7 +121,52 @@
             </form>
         </div>
     </div>
+    <script>
+        const abrir = document.getElementById('abrir');
+        const notificaciones = document.getElementById('notificaciones');
 
+        abrir.addEventListener('click', () => {
+            notificaciones.classList.toggle('active')
+
+        })
+
+        document.addEventListener("click", (event) => {
+            const isClickInside =
+                notificaciones.contains(event.target) ||
+                abrir.contains(event.target);
+
+            if (!isClickInside) {
+                notificaciones.classList.remove("active");
+            }
+        });
+
+        const abrirConfig = document.getElementById('config');
+        const configuracion = document.getElementById('configuracion');
+
+        abrirConfig.addEventListener('click', () => {
+            configuracion.classList.toggle('activeC')
+
+        })
+
+        document.addEventListener("click", (event) => {
+            const isClickInside =
+                configuracion.contains(event.target) ||
+                abrirConfig.contains(event.target);
+
+            if (!isClickInside) {
+                configuracion.classList.remove("activeC");
+            }
+        });
+
+        // document.addEventListener('DOMContentLoaded', ()=>{
+        //     const notificaciones = document.getElementById('notificaciones');
+        // if (notificaciones) {
+        //     notificaciones.style.display = '';
+        // }
+        // })
+
+
+    </script>
     <script src="/js/preguntas.seguridad.js"></script>
 </body>
 

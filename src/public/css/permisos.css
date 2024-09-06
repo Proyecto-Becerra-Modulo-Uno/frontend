@@ -9,7 +9,7 @@
   .btn-delete {
     background-color: red;
     color: white;
-    border: none;
+    border: none; 
   }
   
   .btn-edit {
@@ -38,7 +38,7 @@
       text-wrap: nowrap;
     }
   }
-  
+
   .btn-key {
     background-color: black;
     color: white;
