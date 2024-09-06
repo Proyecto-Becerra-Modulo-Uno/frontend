@@ -15,7 +15,7 @@
             <div class="nav__item">
                 <i class='bx bxs-bell' id="abrir"></i>
                 <i class='bx bxs-user-circle' id="config"></i>
-             </div>
+            </div>
         </nav>
     </header>
     <div class="caja__notifica" id="notificaciones">
@@ -44,14 +44,9 @@
             <a href="">Pongan las opciones aca cansones</a>
             <a href="" class="cerrarSesion">Cerrar Sesión</a>
         </div>
-    <main>
-      
-            
-        </div>
+    </div>
 
-    
-    <header1>
-        
+    <header>
         <div class="title">
             <!-- FLECHA -->
             <div class="arrow">
@@ -73,16 +68,17 @@
                         </span>
                     </div>
                 </button>
-    
+
             </div>
             <center>
                 <h1>Preguntas de seguridad</h1>
-            <p>Tus preguntas de seguridad ayudan a mantener tu cuenta segura. Puede usarlos para restablecer su
-                contraseña
-            </p>
-        </center>
+                <p>Tus preguntas de seguridad ayudan a mantener tu cuenta segura. Puede usarlos para restablecer
+                    su
+                    contraseña
+                </p>
+            </center>
         </div>
-
+        <center>
         <form class="blue-box">
             <h3>¿Cuál fue tu primer proyecto o tarea en esta empresa?</h3>
             <div class="form-group">
@@ -100,8 +96,8 @@
                 <button type="" class="button2">Guardar cambios</button>
             </div>
         </form>
-
-    </header1>
+    </center>
+    </header>
 
     <!-- Modal Structure -->
     <div id="questionModal" class="modal">
@@ -125,55 +121,53 @@
             </form>
         </div>
     </div>
-
     <script>
         const abrir = document.getElementById('abrir');
         const notificaciones = document.getElementById('notificaciones');
-    
-        abrir.addEventListener('click', () =>{
+
+        abrir.addEventListener('click', () => {
             notificaciones.classList.toggle('active')
-    
+
         })
-    
+
         document.addEventListener("click", (event) => {
-          const isClickInside =
-          notificaciones.contains(event.target) ||
-          abrir.contains(event.target);
-    
-          if (!isClickInside) {
-            notificaciones.classList.remove("active");
-          }
+            const isClickInside =
+                notificaciones.contains(event.target) ||
+                abrir.contains(event.target);
+
+            if (!isClickInside) {
+                notificaciones.classList.remove("active");
+            }
         });
-    
+
         const abrirConfig = document.getElementById('config');
         const configuracion = document.getElementById('configuracion');
-    
-        abrirConfig.addEventListener('click', () =>{
+
+        abrirConfig.addEventListener('click', () => {
             configuracion.classList.toggle('activeC')
-    
+
         })
-    
+
         document.addEventListener("click", (event) => {
-          const isClickInside =
-          configuracion.contains(event.target) ||
-          abrirConfig.contains(event.target);
-    
-          if (!isClickInside) {
-            configuracion.classList.remove("activeC");
-          }
+            const isClickInside =
+                configuracion.contains(event.target) ||
+                abrirConfig.contains(event.target);
+
+            if (!isClickInside) {
+                configuracion.classList.remove("activeC");
+            }
         });
-    
+
         // document.addEventListener('DOMContentLoaded', ()=>{
         //     const notificaciones = document.getElementById('notificaciones');
         // if (notificaciones) {
         //     notificaciones.style.display = '';
         // }
         // })
-    
-    
+
+
     </script>
     <script src="/js/preguntas.seguridad.js"></script>
 </body>
-
 
 </html>
