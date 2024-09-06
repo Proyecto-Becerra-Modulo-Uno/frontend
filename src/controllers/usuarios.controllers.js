@@ -67,6 +67,10 @@ export const dispositivosMovil = (req, res) => {
     res.render("views.dispositivos.movil.ejs")
 }
 
+export const exportardatos = (req, res) => {
+  res.render("views.exportar.datos.ejs");
+}
+
 export const sesionesActivasDesktop = (req, res) => {
     res.render("views.sesiones.activas.ejs")
 }
