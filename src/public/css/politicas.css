@@ -56,6 +56,11 @@ a {
     color: #ffff;
 }
 
+#listarol{
+    width: 60%;
+    height: 5%;
+}
+
 .boton {
     margin: 20px;
     width: 320px;
@@ -118,6 +123,7 @@ a {
     height: 30px;
     width: 30px;
 }
+
 
 /* Estilos para el cuadro de consentimiento */
 .consentimiento {

@@ -19,8 +19,7 @@ const options = {
 fetch(url, options)
     .then(response => response.json())
     .then(data => {
-
-    });
+});
 
 // Agregar Usuario
 const btnAdd = document.querySelector(".agregar");

@@ -7,11 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Contraseña</title>
     <link rel="stylesheet" href="/css/contrasena.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
+
+<!-- Inicio -->
 <body>
+    <header>
+        <nav>
+            <div class="nav__item">
+                <i class='bx bxs-bell' id="abrir"></i>
+                <i class='bx bxs-user-circle' id="config"></i>
+             </div>
+        </nav>
+    </header>
+    <div class="caja__notifica" id="notificaciones">
+        <div class="noti__main">
+            <div class="noti__head">
+                <p>Notificaciones</p>
+            </div>
+            <div class="noti__body">
+                <p>Borrar Notificaciones</p>
+            </div>
+            <div class="noti__footer">
+                <div class="toggle-container">
+                    <label for="toggle-switch" class="toggle-label">Desahabilitar notificaciones</label>
+                    <input type="checkbox" id="toggle-switch" class="toggle-switch">
+                    <label for="toggle-switch" class="switch"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="config" id="configuracion">
+        <div class="noti__head">
+            <p>Configuración</p>
+        </div>
+        <div class="config__body">
+            <a href="">Autentificación de Dos Factores</a>
+            <a href="">Pongan las opciones aca cansones</a>
+            <a href="" class="cerrarSesion">Cerrar Sesión</a>
+        </div>
+    </div>
+    
+<!-- Fin -->
+
     <div class="container">
-        <div class="container_barra"></div>
+        <!-- <div class="container_barra"></div> -->
         <div class="container_contenido">
             <div class="container_contenido_barra2">
                 <p class="texto1">Configuración de Cuenta</p>
@@ -42,6 +83,56 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const abrir = document.getElementById('abrir');
+        const notificaciones = document.getElementById('notificaciones');
+    
+        abrir.addEventListener('click', () =>{
+            notificaciones.classList.toggle('active')
+    
+        })
+    
+        document.addEventListener("click", (event) => {
+          const isClickInside =
+          notificaciones.contains(event.target) ||
+          abrir.contains(event.target);
+    
+          if (!isClickInside) {
+            notificaciones.classList.remove("active");
+          }
+        });
+    
+        const abrirConfig = document.getElementById('config');
+        const configuracion = document.getElementById('configuracion');
+    
+        abrirConfig.addEventListener('click', () =>{
+            configuracion.classList.toggle('activeC')
+    
+        })
+    
+        document.addEventListener("click", (event) => {
+          const isClickInside =
+          configuracion.contains(event.target) ||
+          abrirConfig.contains(event.target);
+    
+          if (!isClickInside) {
+            configuracion.classList.remove("activeC");
+          }
+        });
+    
+        // document.addEventListener('DOMContentLoaded', ()=>{
+        //     const notificaciones = document.getElementById('notificaciones');
+        // if (notificaciones) {
+        //     notificaciones.style.display = '';
+        // }
+        // })
+    
+    
+    </script>
+
+    
+
     <script src="./js/contrasena.js"></script>
 </body>
 
