@@ -1,0 +1,220 @@
+/* Archivo para montar carpeta en Git hub */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-arrow {
+  width: auto;
+  height: 20px;
+  position: relative;
+  margin-left: auto;
+}
+
+.row {
+  width: 100%;
+  height: 100vh;
+}
+
+#settings-button,
+#users-button,
+#records-button,
+#groups-button,
+#reports-button,
+#access-button,
+#export-button,
+#admin-button,
+#config-button {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.aside {
+  background-color: #1E3DEA;
+}
+
+.btn {
+  width: 100%;
+  height: 52px;
+  background-color: #4961E4;
+  font-size: 18px;
+}
+
+.admin-section {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+th {
+  background-color: #1E3DEA;
+}
+
+.header-row {
+  align-items: center;
+  height: 60px;
+}
+
+.header-row h1 {
+  margin: 0;
+  line-height: 60px;
+}
+
+.header-row .btn {
+  line-height: 40px;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+#settings-dropdown .btn,
+#users-dropdown .btn,
+#records-dropdown .btn,
+#access-dropdown .btn,
+#admin-dropdown .btn,
+#config-dropdown .btn {
+  line-height: 1;
+  /* Ajusta la altura de línea para evitar cortes */
+  padding: 10px;
+  /* Ajusta el padding si es necesario */
+  text-align: left;
+  /* Asegura que el texto esté alineado a la izquierda */
+}
+
+.gbtn {
+  width: 20%;
+  height: 45px;
+  background-color: #4961E4;
+  font-size: 15px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.cuadro {
+  width: 70%;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.titulo {
+  font-size: 25px;
+}
+
+.linea{
+  height: 1px;
+  background-color: black;
+  margin: 15px 0px;
+}
+
+.caja2{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 3fr;
+  padding: 10px 20px;
+}
+
+input{
+  width: 80px;
+  height: 70%;
+  padding-left: 5px;
+  outline: none;
+  border-radius: 2px;
+  border: solid 1px gray;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus{
+  border: solid 1px blue;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+
+}
+
+.caja_btn{
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.boton{
+  border: none;
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+}
+
+.boton:hover{
+  background-color: grey;
+}
+
+.btn--blue{
+  margin-left: 10px;
+  background-color: #1E3DEA;
+}
+
+.content {
+  flex: 1; /* Permite que la columna .content ocupe el espacio restante */
+  padding: 20px; /* Ajusta el padding según tus necesidades */
+}
+
+
+@media screen and (width<=1400px){
+  .aside {
+    width: 240px;
+    
+  }
+
+  .cuadro {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px black;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+}
+
+@media screen and (width<=1150px){
+
+  .cuadro {
+    height: 65%;
+  }
+
+  .caja2{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  }
+
+  input{
+    width: 80px;
+    height: 35px;
+    padding-left: 5px;
+    outline: none;
+    border-radius: 2px;
+    border: solid 1px gray;
+  }
+
+  .caja_btn{
+    grid-column:  1;
+  }
+  
+}

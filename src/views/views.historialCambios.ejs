@@ -9,7 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/permisos.css">
-    <link rel="stylesheet" href="css/historialAcceso.css">
+    <link rel="stylesheet" href="css/historialCambios.css">
 </head>
 
 <body>
@@ -23,61 +23,24 @@
                         <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
                     </div>
                     <div class="d-flex flex-column align-items-center justify-content-center mt-5">
-                        <!-- Ajustes Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between"
-                            id="settings-button">
-                            <span class="text-start">Ajustes</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="settings-dropdown"
-                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto;">
-                            <button class="btn btn-secondary text-start">Cuenta</button>
-                            <button class="btn btn-secondary text-start">Plataforma</button>
-                            <button class="btn btn-secondary text-start">Autenticación de dos factores</button>
-                        </div>
-
-                        <!-- Usuarios Dropdown -->
+                        <!-- Logs Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="users-button">
-                            <span class="text-start">Usuarios</span>
+                            id="admin-button">
+                            <span class="text-start">Logs</span>
                             <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
                         </button>
-                        <div id="users-dropdown"
+                        <div id="admin-dropdown"
                             style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Listado</button>
-                            <button class="btn btn-secondary text-start">Permisos</button>
-                            <button class="btn btn-secondary text-start">Cuentas bloqueadas</button>
-                            <button class="btn btn-secondary text-start">Panel de control</button>
-                            <button class="btn btn-secondary text-start">Panel de seguridad</button>
-                            <button class="btn btn-secondary text-start">Eliminación de cuentas</button>
-                            <button class="btn btn-secondary text-start">Copias de seguridad</button>
-                        </div>
-
-                        <!-- Registros Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="records-button">
-                            <span class="text-start">Registros</span>
-                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-                        </button>
-                        <div id="records-dropdown"
-                            style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
-                            <button class="btn btn-secondary text-start">Usuarios</button>
-                            <button class="btn btn-secondary text-start">Inicios de sesión</button>
-                            <button class="btn btn-secondary text-start">Detección</button>
-                            <button class="btn btn-secondary text-start">Monitoreo</button>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Logs de
+                                seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                logs</a>
                         </div>
 
                         <!-- Grupos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="groups-button">
-                            <span class="text-start">Grupos</span>
-                        </button>
-
-                        <!-- Informes Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="reports-button">
-                            <span class="text-start">Informes</span>
-                        </button>
+                        <a href="/#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Grupos</a>
 
                         <!-- Accesos Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
@@ -87,42 +50,80 @@
                         </button>
                         <div id="access-dropdown"
                             style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Historial</button>
-                            <button class="btn btn-secondary text-start">Intentos</button>
-                            <button class="btn btn-secondary text-start">Configuración</button>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Intentos de
+                                acceso</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                acceso</a>
                         </div>
 
-                        <!-- Exportar Datos Dropdown -->
-                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="export-button">
-                            <span class="text-start">Exportar Datos</span>
-                        </button>
+                        <!-- Modulos Dropdown -->
+                        <a href="#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Módulos</a>
 
-                        <!-- Administración Dropdown -->
+
+                        <!-- Usuarios Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="admin-button">
-                            <span class="text-start">Administración</span>
+                            id="users-button">
+                            <span class="text-start">Usuarios</span>
                             <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
                         </button>
-                        <div id="admin-dropdown"
+                        <div id="users-dropdown"
                             style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Permisos</button>
-                            <button class="btn btn-secondary text-start">Logs de Seguridad</button>
-                            <button class="btn btn-secondary text-start">Configuración de logs</button>
-                            <button class="btn btn-secondary text-start">Dispositivos</button>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Listado de
+                                usuarios</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Registros
+                                de
+                                usuarios</a>
+                            <a href="/bloqueos"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Cuentas
+                                bloqueadas</a>
+                            <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel
+                                de
+                                control</a>
                         </div>
 
-                        <!-- Configuración Dropdown -->
+                        <!-- Informes Dropdown -->
+                        <a href="/informeActividad"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
+
+                        <!-- Seguridad Dropdown -->
                         <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
-                            id="config-button">
-                            <span class="text-start">Configuración</span>
+                            id="records-button">
+                            <span class="text-start">Seguridad</span>
                             <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
                         </button>
-                        <div id="config-dropdown"
-                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                            <button class="btn btn-secondary text-start">Configuración del sistema</button>
-                            <button class="btn btn-secondary text-start">Preguntas de Seguridad</button>
-                            <button class="btn btn-secondary text-start">Encriptación de contraseñas</button>
+                        <div id="records-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Copias de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Exportación
+                                de
+                                datos</a>
+                            <a href="/sesiones"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Inicios de
+                                sesión</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Detección</a>
+                            <a href="/historialc"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Monitoreo</a>
+                            <a href="/verificacionDoble1"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Autenticación de
+                                dos
+                                factores</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Ajustes de
+                                cuenta</a>
+                            <a href="/config"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración del
+                                sistema</a>
+                            <a href="/complejidadPreguntas"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Preguntas de
+                                Seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Encriptación de
+                                contraseñas</a>
                         </div>
                     </div>
                 </div>
@@ -143,8 +144,8 @@
                     <div class="col-12 d-flex">
                         <div class="row w-100">
                             <div class="col-12 eib">
-                                <h1>Historial de Acceso</h1>
-                                <!-- barra de busqueda -->
+                                <h1>Historial de Cambios</h1>
+                                <!-- Barra de busqueda -->
                                 <div class="group">
                                     <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
                                         <g>
@@ -168,10 +169,8 @@
                                 <th style="background-color: #1E3DEA; color: white;" scope="col">N°</th>
                                 <th style="background-color: #1E3DEA; color: white;" scope="col">Fecha</th>
                                 <th style="background-color: #1E3DEA; color: white;" scope="col">Horario</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Localización</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Dispositivo</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">Navegador</th>
-                                <th style="background-color: #1E3DEA; color: white;" scope="col">IP</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">Permisos</th>
+                                <th style="background-color: #1E3DEA; color: white;" scope="col">Estados</th>
                             </tr>
                         </thead>
                         <tbody id="data">
@@ -179,32 +178,34 @@
                                 <td class="number">1</td>
                                 <td class="fecha">15-08-2022</td>
                                 <td class="horario">10:41:12</td>
-                                <td class="localizacion">Indefinido</td>
-                                <td scope="col"><img src="../img/smartphone.png" class="imgCel" alt="" srcset=""></td>
-                                <td class="dispositivo">Safari</td>
-                                <td class="ip">192.168.25.1</td>  
+                                <td class="permisos">Visualizar Accesos</td>
+                                <td class="estado">Habilitado</td>
                             </tr>
 
+                            </tr>
                             <tr class="table-buscar">
                                 <td class="number">2</td>
-                                <td class="fecha">22-11-2005</td>
-                                <td class="horario">09:22:04</td>
-                                <td class="localizacion">Indefinido</td>
-                                <td scope="col"><img src="../img/laptop.png" class="imgCel" alt="" srcset=""></td>
-                                <td class="dispositivo">Chrome</td>
-                                <td class="ip">203.0.113.42</td>
+                                <td class="fecha">29-11-2005</td>
+                                <td class="horario">10:33:44</td>
+                                <td class="permisos">Lista de bloqueos </td>
+                                <td class="estado">Deshabilitado</td>
                             </tr>
-
                             <tr class="table-active table-buscar">
                                 <td class="number">3</td>
-                                <td class="fecha">17-07-2024</td>
-                                <td class="horario">11:02:24</td>
-                                <td class="localizacion">Indefinido</td>
-                                <td scope="col"><img src="../img/smartphone.png" class="imgCel" alt="" srcset=""></td>
-                                <td class="dispositivo">Chrome</td>
-                                <td class="ip">182.5.573.34</td>
+                                <td class="fecha">22-04-2024</td>
+                                <td class="horario">10:33:06</td>
+                                <td class="permisos">Configurar contraseña</td>
+                                <td class="estado">Deshabilitado</td>
+                            </tr>
+                            <tr class="table-buscar">
+                                <td class="number">4</td>
+                                <td class="fecha">10-02-2022</td>
+                                <td class="horario">10:30:16</td>
+                                <td class="permisos">Configurar usuario</td>
+                                <td class="estado">Habilitado</td>
                             </tr>
 
+                           
                         </tbody>
                     </table>
                 </div>
@@ -245,16 +246,17 @@
         </div>
         <script>
             document.querySelectorAll('.btn-primary').forEach(button => {
-                button.addEventListener('click', () => {
-                    const dropdownId = button.id.replace('button', 'dropdown');
-                    const dropdown = document.getElementById(dropdownId);
-                    dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
-                });
+            button.addEventListener('click', () => {
+                const dropdownId = button.id.replace('button', 'dropdown');
+                const dropdown = document.getElementById(dropdownId);
+                dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
             });
-
+        });
+        
         </script>
+    
     <script src="/js/botones.js"></script>
-    <script src="/js/historialAcceso.js"></script>
+    <script src="/js/historialCambios.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

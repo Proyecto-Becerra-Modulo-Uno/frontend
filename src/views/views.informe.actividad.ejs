@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/permisos.css">
+    <link rel="stylesheet" href="/css/informeActividad.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="aside col-2 col-md-2 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="header d-flex align-items-center justify-content-center mt-5">
+                        <img class="title" src="/img/estrella-afilada-medio-trazo 1.png" alt="Apex-Logo"
+                            style="height: 50px; margin-right: 10px;">
+                        <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+                        <!-- Logs Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="admin-button">
+                            <span class="text-start">Logs</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="admin-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Logs de
+                                seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                logs</a>
+                        </div>
+
+                        <!-- Grupos Dropdown -->
+                        <a href="/#" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Grupos</a>
+
+                        <!-- Accesos Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="access-button">
+                            <span class="text-start">Accesos</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="access-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Intentos de
+                                acceso</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                acceso</a>
+                        </div>
+
+                        <!-- Modulos Dropdown -->
+                        <a href="#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Módulos</a>
+
+                        <!-- Usuarios Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="users-button">
+                            <span class="text-start">Usuarios</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="users-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Listado de
+                                usuarios</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Registros
+                                de usuarios</a>
+                            <a href="/bloqueos"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Cuentas
+                                bloqueadas</a>
+                            <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel
+                                de control</a>
+                        </div>
+
+                        <!-- Informes Dropdown -->
+                        <a href="/informeActividad"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
+
+                        <!-- Seguridad Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="records-button">
+                            <span class="text-start">Seguridad</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="records-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Copias de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Exportación
+                                de datos</a>
+                            <a href="/sesiones"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Inicios de
+                                sesión</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Detección</a>
+                            <a href="/historialc"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Monitoreo</a>
+                            <a href="/verificacionDoble1"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Autenticación de
+                                dos factores</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Ajustes de
+                                cuenta</a>
+                            <a href="/config"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración del
+                                sistema</a>
+                            <a href="/complejidadPreguntas"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Preguntas de
+                                Seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Encriptación de
+                                contraseñas</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="admin-section d-flex align-items-center justify-content-center mt-5">
+                    <div class="flex-column mt-5 me-5">
+                        <h1 style="color: white; font-size: 20px; margin-bottom: 0;">Administrador</h1>
+                        <p style="color: gainsboro;">admin@gmail.com</p>
+                    </div>
+                    <div class="mt-4" style="color: white;">
+                        <img src="/img/menu-puntos-vertical 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content col-md-10">
+
+                <h1 class="titulo">Generar Informes de actividad de usuario</h1>
+                <div class="linea"></div>
+
+                <div class="contenerdor_buscador">
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                            <g>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                </path>
+                            </g>
+                        </svg>
+                        <input type="search" class="input">
+                    </div>
+                </div>
+
+                <div class="container_tabla"> <!-- Contenedor tabla -->
+                    <table class="table table-hover"> <!-- TABLA -->
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Actividad</th>
+                                <th scope="col">Accciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data">
+                            <tr class="table-active">
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td> xxxx </td>
+                                <td>@mdo</td>
+                                <td scope="btnn">
+                                    <button class="boton">Generar Informe</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Mark</td>
+                                <td> xxxx </td>
+                                <td>@mdo</td>
+                                <td scope="btnn">
+                                    <button class="boton">Generar Informe</button>
+                                </td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">3</th>
+                                <td>Mark</td>
+                                <td> xxxx </td>
+                                <td>@mdo</td>
+                                <td scope="btnn">
+                                    <button class="boton">Generar Informe</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> <!-- CIERRE DE LA TABLA -->
+                </div> <!-- CIERRE CONTENEDOR TABLA -->
+
+
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.btn-primary').forEach(button => {
+                button.addEventListener('click', () => {
+                    const dropdownId = button.id.replace('button', 'dropdown');
+                    const dropdown = document.getElementById(dropdownId);
+                    dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+                });
+            });
+
+        </script>
+
+        <script src="/js/botones.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

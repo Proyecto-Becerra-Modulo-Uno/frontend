@@ -1,0 +1,353 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    overflow: hidden;
+  }
+/* Estilo para el encabezado */
+nav {
+    height: 20%;
+    background-color: #394DC0;
+    color: white;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+}
+
+nav .image-container {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    /* Esto empuja las imágenes hacia la derecha */
+}
+
+nav .image-container img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.log_perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* flecha*/
+.button {
+    display: block;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border: 0;
+}
+
+.button:before,
+.button:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+}
+
+.button:before {
+    border: 4px solid #ffffff;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+    border: 4px solid #394DC0;
+    transform: scale(1.3);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #000000;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+    transition: 0.4s;
+    transform: translateX(-56px);
+}
+
+
+.header button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.blue-box {
+    background-color: #394DC0;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 50%;
+    font-family: sans-serif;
+    gap: 30px;
+}
+
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button1 {
+    padding: 10px 20px;
+    margin-left: 110px;
+    border: none;
+    border-radius: 5px;
+    background-color: #404140;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button2 {
+    padding: 10px 20px;
+    margin-right: 110px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #080808;
+    cursor: pointer;
+}
+
+.button2:hover {
+    transition: 10ms;
+    background-color: #d1d1d1;
+}
+
+/* Estilo para el contenedor del recuadro */
+.container {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    /* Ocupa el 80% del alto de la ventana */
+}
+
+/* Estilo para el recuadro que contiene la tabla */
+.box {
+    max-height: 75%; /* Ajusta el valor según tus necesidades */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border: 1px solid #ccc; /* Opcional: agrega un borde para visualizar el área del div */
+    padding: 10px;
+    border: 2px solid #1E3DEA;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(30, 61, 234, 0.3); 
+}
+/* scroll */
+.box::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+}
+
+.box::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo del scroll */
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: #394DC0; /* Color del thumb (parte desplazable del scroll) */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #f1f1f1; /* Espacio alrededor del scroll */
+}
+
+/* Para Firefox */
+.box {
+    scrollbar-color: blue #f1f1f1; /* Color del scroll y del track */
+    scrollbar-width: thin; /* Tamaño del scroll */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    /* box-shadow: 0 4px 8px rgba(30, 61, 234, 0.3);  */
+    overflow: hidden; /* Asegura que el borde redondeado aplique a toda la tabla */
+}
+
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1.5px solid #1E3DEA;
+}
+
+th {
+    font-weight: bold; /* Aplica negrita a la primera fila (encabezados) */
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1.5px solid #394DC0;
+}
+
+/* Estilo para el botón */
+.save-button {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    background-color: #394DC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: darkblue;
+}
+
+/* CAMPANA */
+.bell {
+    border: 2.17px solid white;
+    border-radius: 10px 10px 0 0;
+    width: 15px;
+    height: 17px;
+    background: transparent;
+    display: block;
+    position: relative;
+    top: -3px;
+}
+
+.bell::before,
+.bell::after {
+    content: "";
+    background: white;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.17px;
+}
+
+.bell::before {
+    top: 100%;
+    width: 20px;
+}
+
+.bell::after {
+    top: calc(100% + 4px);
+    width: 7px;
+}
+
+.notification {
+    background: transparent;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 300ms;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification::before {
+    content: "1";
+    color: white;
+    font-size: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.notification:hover {
+    background: rgba(170, 170, 170, 0.062);
+}
+
+.notification:hover>.bell-container {
+    animation: bell-animation 650ms ease-out 0s 1 normal both;
+}
+
+@keyframes bell-animation {
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+        scale: 1.1;
+    }
+
+    60% {
+        transform: rotate(10deg);
+        scale: 1.1;
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* boton de revisado */
+.btn-revisado {
+    border: none;
+    outline: none;
+    background-color: #394DC0;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+  }
+  
+  .btn-revisado:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #9891fd;
+  }

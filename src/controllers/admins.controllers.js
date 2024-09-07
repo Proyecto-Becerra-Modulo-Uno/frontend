@@ -20,6 +20,10 @@ export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
+export const nuevousuario = (req, res) => {
+    res.render("views.nuevousuario.ejs")
+}
+
 export const condicionesc = (req, res) => {
     fetch(url + "/users/listar-politicas")
     .then(res => res.json())
@@ -34,6 +38,15 @@ export const verificacionDoble1 = (req, res) => {
 
 export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
+}
+
+
+export const registroIngreso = (req, res) => {
+    res.render("views.registro.ingreso.ejs")
+}
+
+export const complejidadPreguntas = (req, res) => {
+    res.render("views.complejidad.preguntas.ejs")
 }
 
 export const configuracion = (req, res) => {
@@ -63,6 +76,11 @@ export const cuentasbloqueadas = (req, res) => {
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
 }
+
 export const grupos = (req, res) => {
     res.render("views.grupos.ejs");
+} 
+
+export const informeActividad = (req, res) => {
+    res.render("views.informe.actividad.ejs")
 }
