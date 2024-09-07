@@ -50,7 +50,12 @@ export const complejidadPreguntas = (req, res) => {
 }
 
 export const configuracion = (req, res) => {
-    res.render("views.configuracion.ejs")
+    fetch(url + "/users/listar-politicas")
+    .then(res => res.json())
+    .then(data => {
+        res.render("views.configuracion.ejs", {configuracion: data})
+    })
+    .catch(err => console.error(err))
 }
 
 export const registroSesion = (req, res) => {
@@ -70,6 +75,10 @@ export const cuentasbloqueadas = (req, res) => {
         datos = data
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
+}
+
+export const grupos = (req, res) => {
+    res.render("views.grupos.ejs");
 } 
 
 export const informeActividad = (req, res) => {

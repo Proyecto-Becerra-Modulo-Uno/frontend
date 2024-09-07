@@ -19,13 +19,18 @@
                         <div class="col-8">
                             <h1>Configuración del sistema</h1>
                             <div class="d-flex flex-column mt-4">
+                                <!-- Mostrar intentos fallidos -->
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="me-3">Configurar número de intentos fallidos <br> para el inicio de sesión</div>
-                                    <input type="text" class="form-control" id="intentosFallidos" placeholder="1">
+                                    <input type="text" class="form-control" id="intentosFallidos" 
+                                           placeholder="1" value="<%= configuracion.body[0].intentos_fallidos_permitidos || '' %>">
                                 </div>
+
+                                <!-- Mostrar tiempo de expiración de sesión (convertido a minutos) -->
                                 <div class="d-flex align-items-center">
                                     <div class="me-3">Tiempo de expiración de las sesiones</div>
-                                    <input type="text" class="form-control" id="tiempoExpiracion" placeholder="1">
+                                    <input type="text" class="form-control" id="tiempoExpiracion" 
+                                           placeholder="1" value="<%= Math.round(configuracion.body[0].tiempo_expiracion_sesion / 60) || '' %>">
                                     <select class="form-select" aria-label="Default select example">
                                         <option value="min">Minutos</option>
                                         <option value="h">Horas</option>
