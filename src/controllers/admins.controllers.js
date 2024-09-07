@@ -37,7 +37,12 @@ export const verificacionDoble2 = (req, res) => {
 }
 
 export const configuracion = (req, res) => {
-    res.render("views.configuracion.ejs")
+    fetch(url + "/users/listar-politicas")
+    .then(res => res.json())
+    .then(data => {
+        res.render("views.configuracion.ejs", {configuracion: data})
+    })
+    .catch(err => console.error(err))
 }
 
 export const registroSesion = (req, res) => {
