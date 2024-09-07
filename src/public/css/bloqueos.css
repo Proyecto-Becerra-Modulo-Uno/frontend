@@ -5,6 +5,12 @@
     justify-content: center;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
 .modal-body {
     background-color: #2B2C33;
     color: white;

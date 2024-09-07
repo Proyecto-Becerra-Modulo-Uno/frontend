@@ -26,6 +26,7 @@
                         <tr>
                             <th style="background-color: #394DC0; color: white;">Dirección</th>
                             <th style="background-color: #394DC0; color: white;">Dispositivo</th>
+                            <th style="background-color: #394DC0; color: white;">Navegador</th>
                             <th style="background-color: #394DC0; color: white;">Ubicación</th>
                             <th style="background-color: #394DC0; color: white;">Fecha</th>
                             <th style="background-color: #394DC0; color: white;">Hora</th>
@@ -36,6 +37,7 @@
                         <tr class="bg-light">
                             <td><%= registro.direccion_ip %></td>
                             <td><%= registro.dispositivo %></td>
+                            <td>Opera</td>
                             <td>Brasil</td>
                             <td><%= new Date(registro.fecha_inicio_sesion).toLocaleDateString() %></td>
                             <td><%= new Date(registro.fecha_inicio_sesion).toLocaleTimeString() %></td>
