@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/politicas.css">
-    <script src="/src/public/js/index.js"></script>
     <title>Login</title>
-    <!-- Agregar el script de reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
@@ -14,18 +12,17 @@
         <div class="fondo"></div>
         <div class="formulario">
             <h1>REGISTRO</h1>
-            <input type="text" placeholder="Nombre Completo">
-            <input type="email" placeholder="Correo Electronico">
-            <input type="password" placeholder="Contraseña">
-            <input type="password" placeholder="Confirmar Contraseña">
-            <!-- Lista de roles -->
+            <input type="text" placeholder="Nombre Completo" class="nombre">
+            <input type="text" placeholder="Nombre Completo" class="usuario">
+            <input type="email" placeholder="Correo Electronico" class="correo">
+            <input type="password" placeholder="Contraseña" class="contrasena">
+            <input type="password" placeholder="Confirmar Contraseña" class="confirmar">
             <select name="rol" id="listarol" placeholder="Seleccione un rol">
                 <option selected disabled>Seleccione un rol: </option>
                 <option value="Administrador">Administrador</option>
                 <option value="Programador">Programador</option>
             </select>
             
-            <!-- Cuadro de consentimiento de tratamiento de datos -->
             <div class="consentimiento">
                 <input type="checkbox" id="consentimiento_datos" required>
                 <label for="consentimiento_datos">
@@ -34,7 +31,6 @@
                 </label>
             </div>
             
-            <!-- Añadir el widget de reCAPTCHA -->
             <div class="g-recaptcha" data-sitekey="6LehqjMqAAAAAFyuvGgqBC_Jt46wMvAcNWwuTn_L"></div>
 
             <input class="boton" type="submit" value="Continuar">

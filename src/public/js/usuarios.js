@@ -20,6 +20,8 @@ submit.addEventListener("click", () => {
             })
         })
         .then(data => {
+            console.log(data);
+            alert("Se ha creado con éxito")
             window.location.href = "/panel"
         })
         .catch(err => console.log(err))
