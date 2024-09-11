@@ -78,7 +78,9 @@ export const cuentasbloqueadas = (req, res) => {
 }
 
 export const grupos = (req, res) => {
-    res.render("views.grupos.ejs");
+    fetch(url + "/listar-grupos")
+    .then(res => res.json())
+    .then(data => res.render("views.grupos.ejs", {grupos: data}))
 } 
 
 export const informeActividad = (req, res) => {

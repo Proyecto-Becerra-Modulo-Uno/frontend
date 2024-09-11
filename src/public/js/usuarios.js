@@ -8,7 +8,7 @@ submit.addEventListener("click", () => {
     const contrasena = document.querySelector(".contrasena").value;
     const confirmar = document.querySelector(".confirmar").value;
     const check = document.getElementById("consentimiento_datos");
-
+    const rol = document.querySelector("#listarol").value;
     if (usuario && nombre && correo && (contrasena === confirmar) && check.checked) {
         fetch(url + "/users", {
             method: "POST",
@@ -17,14 +17,16 @@ submit.addEventListener("click", () => {
                 usuario: usuario,  
                 nombre: nombre, 
                 email: correo, 
-                contrasena: contrasena
+                contrasena: contrasena,
+                rol: rol,
+                estado: 1
             })
         })
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json(); // O cualquier formato de respuesta que esperes
+            return response.json();
         })
         .then(data => {
             Swal.fire({
