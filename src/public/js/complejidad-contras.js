@@ -2,7 +2,7 @@ const url = localStorage.getItem('url');
 const btn = document.getElementById("btnG").addEventListener("click", () => {
     const num = document.getElementById("tiempoT").value;
     const time = document.getElementById("medidaT").value;
-    const longitud = document.getElementById("cantC").value;
+    const longitud = parseInt(document.getElementById("cantC").value);
     const frecuencia = document.getElementById("frecuenciaCS").value;
     fetch(url + "/users/actualizar-politicas", {
         method: "PUT",
