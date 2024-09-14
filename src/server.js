@@ -10,20 +10,20 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-const app = express();
-app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "views"));
-app.use(express.json());
+const server = express();
+server.set("view engine", "ejs");
+server.use(express.static(path.join(__dirname, "public")));
+server.set("views", path.join(__dirname, "views"));
+server.use(express.json());
 
 
-app.set("port", process.env.PORT || 3000);
+server.set("port", process.env.PORT || 3000);
 
-app.use("/", ruta);
+server.use("/", ruta);
 
 
 // app.use("/", (req, res) => {
 //     res.render("views.error.ejs");
 // });
 
-export default app;
+export default server;
