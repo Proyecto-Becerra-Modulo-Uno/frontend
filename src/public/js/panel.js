@@ -16,11 +16,11 @@ const options = {
     }
 };
 
-fetch(url, options)
+fetch(url + "/oauth", options)
     .then(response => response.json())
     .then(data => {
-});
-
+    }
+);
 // Agregar Usuario
 const btnAdd = document.querySelector(".agregar");
 btnAdd.addEventListener("click", () => {
