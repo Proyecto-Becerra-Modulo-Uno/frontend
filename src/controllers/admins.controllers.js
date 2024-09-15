@@ -13,3 +13,14 @@ export const configuracionPoliticas = (req, res) => {
 export const exportdata = (req, res) => {
     res.render("view.exportdb.ejs");
 }
+
+export const ssl = (req, res) => {
+    let datos = "";
+    const recurso = url + "/certificates";
+    fetch(recurso)
+    .then(res=>res.json())
+    .then(data=>{
+        datos = data.body;
+        res.render("view.ssl.ejs", {datos:datos});
+    })
+}
