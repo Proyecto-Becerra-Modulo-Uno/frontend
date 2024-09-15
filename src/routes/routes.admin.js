@@ -1,11 +1,13 @@
 import { Router } from "express";
 import { condicionesc, configuracion, cuentasbloqueadas, dispositivos, historialacceso, notipopup, panel, registro, registroIngreso, registroSesion, verificacionDoble1, verificacionDoble2, verRegistro } from "../controllers/admins.controllers.js";
+import { notiActi } from "../controllers/usuarios.controllers.js";
 const rutaAdmin = Router();
 
 rutaAdmin.get("/panel", panel)
 rutaAdmin.get("/dis", dispositivos) //Elimina esto paulina, es lo mismo que /sesiones
 rutaAdmin.get("/notipop", notipopup)//???
 rutaAdmin.get("/registro", registro)
+rutaAdmin.get("/notia", notiActi)
 rutaAdmin.get("/co", condicionesc)
 rutaAdmin.get("/verificacionDoble1", verificacionDoble1)
 rutaAdmin.get("/verificacionDoble2", verificacionDoble2)
