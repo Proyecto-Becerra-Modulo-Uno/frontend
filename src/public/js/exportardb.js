@@ -3,7 +3,7 @@ document.getElementById('exportButton').addEventListener('click', async () => {
     statusElement.textContent = 'Exportando...';
     
     try {
-        const response = await fetch('http://localhost:3000/export-database');
+        const response = await fetch('http://localhost:3000/export-database?format=csv');
         if (!response.ok) throw new Error('Error en la exportación');
         
         const blob = await response.blob();
