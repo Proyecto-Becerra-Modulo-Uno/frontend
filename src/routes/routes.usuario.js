@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { cambiarcontrasena, codigoRecuperacion, comLogs, dispositivosMovil, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, comLogs, dispositivosMovil, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario } from "../controllers/usuarios.controllers.js";
 
 const rutaUsuario = Router();
 
@@ -16,6 +16,7 @@ rutaUsuario.get("/privacidad",politicas);
 rutaUsuario.get("/perfil",perfil);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
+rutaUsuario.get("/listabn", listaBN);
 rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
 //rutaUsuario.get("/historiala", historialacceso); // Admin
  

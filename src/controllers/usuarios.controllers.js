@@ -59,6 +59,10 @@ export const dispositivosMovil = (req, res) => {
     res.render("views.dispositivos.movil.ejs")
 }
 
+export const listaBN = (req, res) => {
+  res.render("views.lista.ejs")
+}
+
 export const notiActi = (req, res) => {
   const recurso = url + "/users/actividades-sospechosas";
   fetch(recurso)
