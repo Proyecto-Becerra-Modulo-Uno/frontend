@@ -58,7 +58,7 @@ BTN.addEventListener("click", (e) => {
             if (rol === 3) {
                 window.location.href = "/panel"; 
             } else {
-                window.location.href = "/uasfjsafja"; // Pongan el del usuario normal eh
+                window.location.href = "/panelUsuario"; // Pongan el del usuario normal eh
             }
         })
         .catch(err => console.log(err));

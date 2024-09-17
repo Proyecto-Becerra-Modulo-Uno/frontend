@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { cambiarcontrasena, codigoRecuperacion, comLogs, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, exportardatos, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, comLogs, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, exportardatos, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, panelUsuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
 const rutaUsuario = Router();
 
@@ -22,5 +22,8 @@ rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos
 rutaUsuario.get("/exportar-datos", exportardatos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
 rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
+
+// Ruta usuario
+rutaUsuario.get("/panelUsuario", panelUsuario);
 
 export default rutaUsuario

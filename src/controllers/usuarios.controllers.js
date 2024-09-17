@@ -78,3 +78,8 @@ export const sesionesActivasDesktop = (req, res) => {
 export const historialacceso = (req, res) => {
   res.render("views.historialAcceso.ejs");
 };
+
+// Ruta usuario
+export const panelUsuario = (req, res) => {
+  res.render("views.panel.usuario.ejs");
+};
