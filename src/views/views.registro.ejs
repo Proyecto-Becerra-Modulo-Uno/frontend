@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/politicas.css">
-    <script src="/src/public/js/index.js"></script>
     <title>Login</title>
-    <!-- Agregar el script de reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Asegura que SweetAlert2 se muestra sobre otros elementos */
+        .swal2-container {
+            z-index: 9999 !important; /* Ajusta el valor si es necesario */
+        }
+    </style>
 </head>
 <body>
     <div class="caja_segundaria">
         <div class="fondo"></div>
         <div class="formulario">
             <h1>REGISTRO</h1>
-            <input type="text" placeholder="Nombre Completo">
-            <input type="email" placeholder="Correo Electronico">
-            <input type="password" placeholder="Contraseña">
-            <input type="password" placeholder="Confirmar Contraseña">
-            <!-- Lista de roles -->
-            <select name="rol" id="listarol" placeholder="Seleccione un rol">
+            <input type="text" placeholder="Nombre Completo" class="nombre" required>
+            <input type="text" placeholder="Nombre de usuario" class="usuario" required>
+            <input type="email" placeholder="Correo Electronico" class="correo" required>
+            <input type="password" placeholder="Contraseña" class="contrasena" required>
+            <input type="password" placeholder="Confirmar Contraseña" class="confirmar" required>
+            <select name="rol" id="listarol" placeholder="Seleccione un rol" required>
                 <option selected disabled>Seleccione un rol: </option>
-                <option value="Administrador">Administrador</option>
-                <option value="Programador">Programador</option>
-            </select>
-            
-            <!-- Cuadro de consentimiento de tratamiento de datos -->
+                <option value="1">Administrador</option>
+                <option value="2">Invitado</option>
+                <option value="3">Moderador</option>
+                <option value="4">Usuario</option>
+            </select>            
             <div class="consentimiento">
                 <input type="checkbox" id="consentimiento_datos" required>
                 <label for="consentimiento_datos">
@@ -34,12 +41,11 @@
                 </label>
             </div>
             
-            <!-- Añadir el widget de reCAPTCHA -->
             <div class="g-recaptcha" data-sitekey="6LehqjMqAAAAAFyuvGgqBC_Jt46wMvAcNWwuTn_L"></div>
 
             <input class="boton" type="submit" value="Continuar">
         </div>
     </div>
+    <script src="/js/usuarios.js"></script>
 </body>
-<script src="/js/usuarios.js"></script>
 </html>

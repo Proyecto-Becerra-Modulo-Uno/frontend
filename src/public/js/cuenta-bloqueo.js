@@ -8,4 +8,4 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Edit account with ID:', accountId);
         });
     });
-});
+}); 

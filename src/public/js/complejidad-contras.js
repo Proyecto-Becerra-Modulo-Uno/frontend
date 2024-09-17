@@ -9,24 +9,31 @@ const btn = document.getElementById("btnG").addEventListener("click", () => {
     const cantMay = document.getElementById("cantMay").value;
     const cantNum = document.getElementById("cantNum").value;
     const cantEsp = document.getElementById("cantEsp").value;
-    
+    const num = document.getElementById("tiempoT").value;
+    const time = document.getElementById("medidaT").value;
+
     fetch(url + "/users/actualizar-politicas", {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
             longitud: longitud,
+
             duracion: tiempoT,
             frecuencia: frecuencia,
             intervalo: intervalo,
             cant_min_minusculas: cantMin,
             cant_min_mayusculas: cantMay,
             cant_min_numeros: cantNum,
-            cant_min_caracteres_esp: cantEsp
+            cant_min_caracteres_esp: cantEsp,
+            duracion: num + time,
+            frecuencia: frecuencia,
+            intervalo: intervalo
+
         })
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        alert("Bien")
     })
     .catch(err => console.error(err))
 });

@@ -1,5 +1,7 @@
 import { Router } from "express";
-import { cambiarcontrasena, codigoRecuperacion, comLogs, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, exportardatos, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, panelUsuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
+
+import { cambiarcontrasena, codigoRecuperacion, comLogs, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, exportardatos, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, panelUsuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop, listaBN } from "../controllers/usuarios.controllers.js";
+
 
 const rutaUsuario = Router();
 
@@ -19,6 +21,9 @@ rutaUsuario.get("/eliminacionCuenta",eliminacionCuenta);
 rutaUsuario.get("/perfil",perfil);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
+rutaUsuario.get("/listabn", listaBN);
+rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
+//rutaUsuario.get("/historiala", historialacceso); // Admin
 rutaUsuario.get("/exportar-datos", exportardatos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
 rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
@@ -27,3 +32,4 @@ rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
 rutaUsuario.get("/panelUsuario", panelUsuario);
 
 export default rutaUsuario
+
