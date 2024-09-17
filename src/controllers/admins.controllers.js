@@ -46,16 +46,20 @@ export const registroIngreso = (req, res) => {
 }
 
 export const reporting = (req, res) => {
-    let datos = '';
-    const recursos = url + '/auth/log_seguridad'
-    fetch(recursos)
-    .then(res=>res.json())
-    .then(data=>{
-        datos = data.body[0];
-        res.render("views.reportes.ejs", {datos: datos})
+    const recurso = url + '/auth/log_seguridad';
+    fetch(recurso)
+    .then(res => res.json())
+    .then(data => {
+        // Asegúrate de que `data.body` sea un array
+        const datos = data.body;
+        res.render("views.reporteingreso.ejs", { datos: datos });
     })
-    //res.render("views.reporteingreso.ejs")
-}
+    .catch(error => {
+        console.error('Error fetching data:', error);
+        res.render("views.reporteingreso.ejs", { datos: [] }); // Renderiza sin datos si hay error
+    });
+};
+
 
 
 export const complejidadPreguntas = (req, res) => {
