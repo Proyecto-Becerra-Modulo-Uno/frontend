@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/css/login.css">
     <title>Apex | Registrar nuevo usuario</title>
+=======
+    <link rel="stylesheet" href="/css/politicas.css">
+    <title>Login</title>
+>>>>>>> origin/dev_FREDDY_GIRALDO
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Asegura que SweetAlert2 se muestra sobre otros elementos */
+        .swal2-container {
+            z-index: 9999 !important; /* Ajusta el valor si es necesario */
+        }
+    </style>
 </head>
 <body>
     <main>
         <form class="formulario">
             <h1>REGISTRO</h1>
+<<<<<<< HEAD
             <input type="text" placeholder="Nombre Completo">
             <input type="email" placeholder="Correo Electronico">
             <input type="password" placeholder="Contraseña">
@@ -22,15 +37,42 @@
             </select>
             <!-- Cuadro de consentimiento de tratamiento de datos -->
             <div class="group_list">
+=======
+            <input type="text" placeholder="Nombre Completo" class="nombre" required>
+            <input type="text" placeholder="Nombre de usuario" class="usuario" required>
+            <input type="email" placeholder="Correo Electronico" class="correo" required>
+            <input type="password" placeholder="Contraseña" class="contrasena" required>
+            <input type="password" placeholder="Confirmar Contraseña" class="confirmar" required>
+            <select name="rol" id="listarol" placeholder="Seleccione un rol" required>
+                <option selected disabled>Seleccione un rol: </option>
+                <option value="1">Administrador</option>
+                <option value="2">Invitado</option>
+                <option value="3">Moderador</option>
+                <option value="4">Usuario</option>
+            </select>            
+            <div class="consentimiento">
+>>>>>>> origin/dev_FREDDY_GIRALDO
                 <input type="checkbox" id="consentimiento_datos" required>
                 <p>Acepto los
                     <a href="/privacidad">términos y pólitica de privacidad</a>.</p>
             </div>
+<<<<<<< HEAD
             <!-- Añadir el widget de reCAPTCHA -->
+=======
+            
+>>>>>>> origin/dev_FREDDY_GIRALDO
             <div class="g-recaptcha" data-sitekey="6LehqjMqAAAAAFyuvGgqBC_Jt46wMvAcNWwuTn_L"></div>
             <input class="boton" type="submit" value="Continuar">
+<<<<<<< HEAD
         </form>
     </main>
 </body>
 <script src="/js/usuarios.js"></script>
 </html>
+=======
+        </div>
+    </div>
+    <script src="/js/usuarios.js"></script>
+</body>
+</html>
+>>>>>>> origin/dev_FREDDY_GIRALDO

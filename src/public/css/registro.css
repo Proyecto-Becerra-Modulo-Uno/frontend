@@ -12,3 +12,7 @@
     font-size: 24px; 
     margin-left: 20px; 
 }
+/* Asegura que SweetAlert2 se muestra sobre otros elementos */
+.swal2-container {
+    z-index: 9999 !important; /* Ajusta el valor si es necesario */
+}

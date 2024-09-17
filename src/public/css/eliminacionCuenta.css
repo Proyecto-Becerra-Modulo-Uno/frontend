@@ -1,0 +1,148 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Corbel";
+}
+
+@font-face {
+  font-family: "Corbel";
+  src: url(../font/CORBEL.TTF);
+}
+
+.bgContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 9fr;
+}
+
+.navBar {
+  grid-row: 1;
+  background-color: #394dc0;
+  width: calc(100% - 10px);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.iconContainer {
+  margin: 10px;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconNotification {
+  width: 36px;
+}
+
+.iconPerfil {
+  width: 36px;
+}
+
+.mainContainer {
+  grid-row: 2;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+  width: 50%;
+  height: 80%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.titleContainer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px dashed black;
+}
+
+.messageContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.razonContainer {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+}
+
+.sugerenciaContainer {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+}
+
+.preguntaContainer {
+  width: 30%;
+}
+
+.pregunta {
+  font-size: 18px;
+}
+
+.inputContainer {
+  width: 100%;
+}
+
+.inputText {
+  width: calc(95% - 10px);
+  height: calc(80% - 10px);
+  flex-wrap: wrap;
+  resize: none;
+  scrollbar-width: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.bgBtn {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.btnCancelar {
+  width: 120px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: rgb(214, 4, 4);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btnEnviar {
+  width: 120px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: #394dc0;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}

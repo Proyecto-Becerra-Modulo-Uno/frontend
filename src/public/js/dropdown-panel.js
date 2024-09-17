@@ -6,4 +6,7 @@ document.querySelectorAll('.btn-primary').forEach(button => {
             dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
         });
     }
+
 });
+
+

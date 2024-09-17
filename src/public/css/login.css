@@ -60,6 +60,7 @@ select{
     border: none;
     padding: 10px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .boton:hover{
