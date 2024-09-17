@@ -4,7 +4,7 @@ const login = async () => {
     const url = document.getElementById("url").value
 
     sessionStorage.setItem("urlApex", process.env.BACKEND_URL)
-    const urlApex = sessionStorage.getItem("urlApex") + "/login"
+    const urlApex = sessionStorage.getItem("urlApex") + "/users/login"
     const options = {
         method: "POST",
         headers: {
