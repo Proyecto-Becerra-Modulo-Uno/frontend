@@ -4,12 +4,14 @@ import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from "url";
 import ruta from "./routes/index.js";
+import cors from "cors"
 config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.use(cors())
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));

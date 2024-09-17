@@ -1,10 +1,13 @@
 import { Router } from "express";
-import { condicionesc, configuracion, cuentasbloqueadas, dispositivos, historialacceso, notipopup, panel, registro, registroIngreso, registroSesion, verificacionDoble1, verificacionDoble2, verRegistro } from "../controllers/admins.controllers.js";
-import { notiActi } from "../controllers/usuarios.controllers.js";
+import { condicionesc, configuracion, cuentasbloqueadas, notipopup, panel, registro, registroSesion, verificacionDoble1, verificacionDoble2 } from "../controllers/admins.controllers.js";
+import { dispositivosMovil, notiActi } from "../controllers/usuarios.controllers.js";
+import { nuevousuario, retencion} from "../controllers/admins.controllers.js";
+import { complejidadPreguntas, grupos, informeActividad } from "../controllers/admins.controllers.js";
+
 const rutaAdmin = Router();
 
 rutaAdmin.get("/panel", panel)
-rutaAdmin.get("/dis", dispositivos) //Elimina esto paulina, es lo mismo que /sesiones
+rutaAdmin.get("/dis", dispositivosMovil) //Elimina esto paulina, es lo mismo que /sesiones
 rutaAdmin.get("/notipop", notipopup)//???
 rutaAdmin.get("/registro", registro)
 rutaAdmin.get("/notia", notiActi)
@@ -15,6 +18,12 @@ rutaAdmin.get("/config", configuracion)
 //rutaAdmin.get("/registroIngreso", registroIngreso) Elimina esto también, es lo mismo que /sesiones
 rutaAdmin.get("/sesiones", registroSesion)
 rutaAdmin.get("/bloqueos", cuentasbloqueadas)//ya corregido
+rutaAdmin.get("/panel", panel);
+rutaAdmin.get("/datos", retencion);
+rutaAdmin.get("/grupos", grupos);
+rutaAdmin.get("/nuevousuario", nuevousuario);
+rutaAdmin.get("/complejidadPreguntas", complejidadPreguntas)
+rutaAdmin.get("/informeActividad", informeActividad)
 
-// Todo lo que te dije tambien elimina las vistas y el controlador
-export default rutaAdmin
+
+export default rutaAdmin;

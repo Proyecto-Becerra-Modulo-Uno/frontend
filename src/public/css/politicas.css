@@ -30,7 +30,7 @@
 }
 
 .formulario {
-    height: 500px;
+    height: 600px;
     width: 500px;
     background-color: #394dC0;
     position: absolute;
@@ -54,6 +54,11 @@ input {
 
 a {
     color: #ffff;
+}
+
+#listarol{
+    width: 60%;
+    height: 5%;
 }
 
 .boton {
@@ -118,6 +123,7 @@ a {
     height: 30px;
     width: 30px;
 }
+
 
 /* Estilos para el cuadro de consentimiento */
 .consentimiento {

@@ -39,6 +39,18 @@ export const politicas = (req, res) => {
     res.render("views.privacidad.ejs")
 }
 
+export const detalles = (req, res) => {
+    res.render("views.detalles.ejs")
+}
+
+export const historialcambios = (req, res) => {
+    res.render("views.historialCambios.ejs")
+}
+
+export const eliminacionCuenta = (req, res) => {
+    res.render("views.eliminacionCuenta.ejs")
+}
+
 export const nuevousuario = (req, res) => {
   res.render("views.nuevousuario.ejs")
 }
@@ -48,16 +60,17 @@ export const perfil = (req, res) => {
 };
 
 export const inicioAutentificacionDosPasos = (req, res) => {
-    res.render("views.inicio.autentificacion.dos.pasos.ejs")
-}
+  res.render("views.inicio.autentificacion.dos.pasos.ejs");
+};
 
 export const elegirAutentificacionDosPasos = (req, res) => {
-    res.render("views.elegir.autentificacion.dos.pasos.ejs")
-}
+  res.render("views.elegir.autentificacion.dos.pasos.ejs");
+};
 
 export const dispositivosMovil = (req, res) => {
     res.render("views.dispositivos.movil.ejs")
 }
+
 
 export const listaBN = (req, res) => {
   res.render("views.lista.ejs")
@@ -76,4 +89,16 @@ export const notiActi = (req, res) => {
       console.error('Error fetching data:', error);
       res.render("views.notiact.ejs", { datos: [] }); // Pasar un array vacío en caso de error
     });
+};
+
+export const exportardatos = (req, res) => {
+  res.render("views.exportar.datos.ejs");
+}
+
+export const sesionesActivasDesktop = (req, res) => {
+    res.render("views.sesiones.activas.ejs")
+}
+
+export const historialacceso = (req, res) => {
+  res.render("views.historialAcceso.ejs");
 };

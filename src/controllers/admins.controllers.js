@@ -12,10 +12,6 @@ export const panel = (req, res) => {
     })
 }
 
-export const dispositivos = (req, res) => {
-    res.render("views.dispositivos.ejs")
-}
-
 export const notipopup = (req, res) => {
     res.render("views.popup.ejs")
 }
@@ -24,12 +20,8 @@ export const registro = (req, res) => {
     res.render("views.registro.ejs")
 }
 
-export const verRegistro = (req, res) => {
-    res.render("views.registro.ejs")
-}
-
-export const ingresarcodigo = (req, res) => {
-    res.render("views.codigo.ejs")
+export const nuevousuario = (req, res) => {
+    res.render("views.nuevousuario.ejs")
 }
 
 export const condicionesc = (req, res) => {
@@ -48,12 +40,22 @@ export const verificacionDoble2 = (req, res) => {
     res.render("views.verificacionDoble2.ejs")
 }
 
-export const configuracion = (req, res) => {
-    res.render("views.configuracion.ejs")
-}
 
 export const registroIngreso = (req, res) => {
     res.render("views.registro.ingreso.ejs")
+}
+
+export const complejidadPreguntas = (req, res) => {
+    res.render("views.complejidad.preguntas.ejs")
+}
+
+export const configuracion = (req, res) => {
+    fetch(url + "/users/listar-politicas")
+    .then(res => res.json())
+    .then(data => {
+        res.render("views.configuracion.ejs", {configuracion: data})
+    })
+    .catch(err => console.error(err))
 }
 
 export const registroSesion = (req, res) => {
@@ -67,7 +69,7 @@ export const registroSesion = (req, res) => {
 
 export const cuentasbloqueadas = (req, res) => {
     let datos = {};
-    fetch(url + "/users")
+    fetch(url + "/bloqueos")
     .then(res => res.json())
     .then(data => {
         datos = data
@@ -78,3 +80,19 @@ export const cuentasbloqueadas = (req, res) => {
 export const historialacceso = (req, res) => {
     res.render("views.historialAcceso.ejs")
 }
+
+export const retencion = (req, res) => {
+    res.render("views.retencion.datos.ejs")
+}
+
+
+export const grupos = (req, res) => {
+    fetch(url + "/listar-grupos")
+    .then(res => res.json())
+    .then(data => res.render("views.grupos.ejs", {grupos: data}))
+} 
+
+export const informeActividad = (req, res) => {
+    res.render("views.informe.actividad.ejs")
+}
+
