@@ -45,6 +45,19 @@ export const registroIngreso = (req, res) => {
     res.render("views.registro.ingreso.ejs")
 }
 
+export const reporting = (req, res) => {
+    let datos = '';
+    const recursos = url + '/auth/log_seguridad'
+    fetch(recursos)
+    .then(res=>res.json())
+    .then(data=>{
+        datos = data.body[0];
+        res.render("views.reportes.ejs", {datos: datos})
+    })
+    //res.render("views.reporteingreso.ejs")
+}
+
+
 export const complejidadPreguntas = (req, res) => {
     res.render("views.complejidad.preguntas.ejs")
 }

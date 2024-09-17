@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { condicionesc, configuracion, cuentasbloqueadas,notipopup, nuevousuario, panel, registro, registroSesion, retencion, verificacionDoble1, verificacionDoble2} from "../controllers/admins.controllers.js";
+import { condicionesc, configuracion, cuentasbloqueadas,notipopup, nuevousuario, panel, registro, registroSesion, reporting, retencion, verificacionDoble1, verificacionDoble2} from "../controllers/admins.controllers.js";
 import {  complejidadPreguntas, grupos, informeActividad, } from "../controllers/admins.controllers.js";
 
 const rutaAdmin = Router();
@@ -22,6 +22,7 @@ rutaAdmin.get("/grupos", grupos);
 rutaAdmin.get("/nuevousuario", nuevousuario);
 rutaAdmin.get("/complejidadPreguntas", complejidadPreguntas)
 rutaAdmin.get("/informeActividad", informeActividad)
+rutaAdmin.get("/reporteingrso", reporting)
 
 
 export default rutaAdmin;

@@ -10,18 +10,19 @@ config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
-app.use(cors())
-app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "views"));
+const server = express();
 
-app.set("port", process.env.PORT || 3000);
+server.set("port", process.env.PORT || 3200);
+server.use(cors())
+server.set("view engine", "ejs");
+server.use(express.static(path.join(__dirname, "public")));
+server.set("views", path.join(__dirname, "views"));
 
-app.use("/", ruta);
 
-// app.use("/", (req, res) => {
-//     res.render("views.error.ejs");
-// });
+server.use("/", ruta);
 
-export default app;
+server.use("/", (req, res) => {
+    res.render("views.error.ejs");
+});
+
+export default server;
