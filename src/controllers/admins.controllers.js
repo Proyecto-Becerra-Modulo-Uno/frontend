@@ -55,7 +55,7 @@ export const registroSesion = (req, res) => {
 
 export const cuentasbloqueadas = (req, res) => {
     let datos = {};
-    fetch(url + "/users")
+    fetch(url + "/bloqueos")
     .then(res => res.json())
     .then(data => {
         datos = data
