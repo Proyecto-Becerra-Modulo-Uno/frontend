@@ -15,7 +15,7 @@ rutaAdmin.get("/config", configuracion);
 rutaAdmin.get("/sesiones", registroSesion);
 
 
-rutaAdmin.get("/bloqueos", cuentasbloqueadas);//ya corregido
+rutaAdmin.get("/bloqueos", cuentasbloqueadas);
 rutaAdmin.get("/datos", retencion);
 
 rutaAdmin.get("/grupos", grupos);
