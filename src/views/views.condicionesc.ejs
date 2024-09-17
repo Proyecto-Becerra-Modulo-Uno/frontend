@@ -16,7 +16,7 @@
                 <div class="">
                     <div class="fw-bold mt-3">Duración de los Tokens</div>
                     <div class="d-flex mt-3">
-                        <input type="number" class="form-control me-2" placeholder="1" id="tiempoT" style="width: 10%;" value="<%= politicas.body[0].duracion_token.match(/\d+/)[0] %>">
+                        <input type="number" class="form-control me-2" placeholder="1" id="tiempoT" style="width: 10%;" value="<%= politicas.body[0].duracion_token.replace(/\D/g, '') %>">
                         <select class="form-select" id="medidaT" style="width: 10%;">
                             <option value="m" <%= politicas.body[0].duracion_token.includes('m') ? 'selected' : '' %>>Minutos</option>
                             <option value="h" <%= politicas.body[0].duracion_token.includes('h') ? 'selected' : '' %>>Horas</option>
@@ -41,28 +41,50 @@
                         <div class="mt-4">Cantidad de Caracteres</div>
                         <input type="number" class="t1 px-3 rounded border-0 mx-3 mt-3" id="cantC" placeholder="1" value="<%= politicas.body[0].longitud_minima_contrasena %>">
                     </div>
+                    
                     <div class="col d-flex">
                         <div class="mt-4">Cantidad Mínima de Minúsculas</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMin">
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMin" value="<%= politicas.body[0].cant_min_min %>">
                     </div>
+
                     <div class="col d-flex">
                         <div class="mt-4">Cantidad Mínima de Mayúsculas</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMay">
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMay" value="<%= politicas.body[0].cant_min_may %>">
                     </div>
+
                     <div class="col d-flex">
                         <div class="mt-4">Cantidad Mínima de Números</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantNum">
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantNum" value="<%= politicas.body[0].cant_min_num %>">
                     </div>
+
                     <div class="col d-flex">
                         <div class="mt-4">Cantidades Especiales</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantEsp">
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantEsp" value="<%= politicas.body[0].cant_caracteres_esp %>">
+                    </div>
+
+                    <div class="col d-flex">
+                        <div class="mt-4">Intervalos de cambios de contraseña (días)</div>
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantInt" value="<%= politicas.body[0].intervalos_cambio_contrasena %>">
+                        <select class="form-select mt-3" id="intervaloCS" style="width: 10%;">
+                            <option value="Diaria" selected>Días</option>
+                        </select>
+                    </div>
+
+                    <div class="col d-flex">
+                        <div class="mt-4">Duración de Contraseña</div>   
+                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="Cantidad" id="cantEsp" value="<%= politicas.body[0].tiempo_expiracion_sesion %>">
+                        <select class="form-select mt-3" id="frecuenciaCS" style="width: 10%;">
+                            <option value="Dias" <%= politicas.body[0].duracion_token.includes('d') ? 'selected' : '' %>>Días</option>
+                            <option value="Semanal" <%= politicas.body[0].duracion_token.includes('w') ? 'selected' : '' %>>Semanas</option>
+                            <option value="Mensual" <%= politicas.body[0].duracion_token.includes('m') ? 'selected' : '' %>>Meses</option>
+                            <option value="Anual" <%= politicas.body[0].duracion_token.includes('y') ? 'selected' : '' %>>Años</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="d-flex-end mt-5">
                     <button class="btn btn-primary gbtn" id="btnG">Guardar Cambios</button>
                 </div>
-
             </div>
         </div>
     </div>

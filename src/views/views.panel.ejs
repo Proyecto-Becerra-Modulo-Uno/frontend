@@ -48,7 +48,7 @@
                                     <td><%= user.Nombre.split(' ')[0] %></td> 
                                     <td><%= user.Nombre.split(' ')[1] || '' %></td> 
                                     <td><%= user.Correo %></td> 
-                                    <td>****</td> 
+                                    <td></td> 
                                     <td>    
                                         <select class="form-select">
                                             <option value="2" <%= user.Rol === 'Usuario' ? 'selected' : '' %>>Usuario</option>
@@ -68,8 +68,15 @@
                                                 <i class="fa-solid fa-pen"></i>
                                                 <label for="">Editar usuario</label>
                                             </button>
+
+                                            <button style="background-color: rgba(44, 42, 42, 0.395)" type="button" class="btn btn-edit btn-sm btn-action">
+                                                <i class="fa-solid fa-lock"></i>
+                                                <label for="">Bloquear Usuario</label>
+                                            </button>
+
                                             <button style="background-color: black;" type="button" class="btn btn-delete btn-sm btn-action">
-                                                <i class="fa-solid fa-remove"></i>
+                                                 <i class="fa-solid fa-remove"></i>
+
                                                 <label for="">Revocar sesión</label>
                                             </button>
                                             <button style="background-color: red;" type="button" class="btn btn-delete btn-sm btn-action">

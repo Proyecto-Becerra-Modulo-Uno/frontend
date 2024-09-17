@@ -16,6 +16,7 @@
   width: 100%; 
   height: 100vh;
 }
+
 #settings-button, 
 #users-button, 
 #records-button, 
@@ -74,4 +75,10 @@ th{
   height: 45px;
   background-color: #4961E4;
   font-size: 15px;
+}
+
+/* Para los botones con fondo negro */
+.btn-key:hover .btn-icon, 
+.btn-delete:hover .btn-icon {
+    color: red; /* Cambia a otro color en lugar de negro */
 }

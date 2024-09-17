@@ -6,6 +6,11 @@ export const recuperarClave = (req, res) => {
   res.render("views.recuperarClave.ejs");
 };
 
+export const comLogs = (req, res) => {
+  res.render("views.comlogs.ejs");
+};
+
+
 export const codigoRecuperacion = (req, res) => {
   res.render("views.codigoRecuperacion.ejs");
 };
@@ -59,8 +64,16 @@ export const elegirAutentificacionDosPasos = (req, res) => {
 };
 
 export const dispositivosMovil = (req, res) => {
-  res.render("views.dispositivos.movil.ejs");
-};
+    res.render("views.dispositivos.movil.ejs")
+}
+
+export const exportardatos = (req, res) => {
+  res.render("views.exportar.datos.ejs");
+}
+
+export const sesionesActivasDesktop = (req, res) => {
+    res.render("views.sesiones.activas.ejs")
+}
 
 export const historialacceso = (req, res) => {
   res.render("views.historialAcceso.ejs");
