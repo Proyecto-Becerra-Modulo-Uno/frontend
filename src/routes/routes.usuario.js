@@ -15,6 +15,7 @@ rutaUsuario.get("/nuevaClave", nuevaClave);
 rutaUsuario.get("/contrasena", cambiarcontrasena);
 rutaUsuario.get("/comlogs", comLogs);
 rutaUsuario.get("/correo", recuperarusuario);
+rutaUsuario.get("/recuperar", recuperarusuario);
 rutaUsuario.get("/codigo", ingresarcodigo);
 rutaUsuario.get("/privacidad",politicas);
 rutaUsuario.get("/detalles", detalles);

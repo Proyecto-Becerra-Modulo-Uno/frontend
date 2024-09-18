@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/politicas.css">
     <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Apex | Registrar nuevo usuario</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -17,9 +19,8 @@
     </style>
 </head>
 <body>
-    <div class="caja_segundaria">
-        <div class="fondo"></div>
-        <div class="formulario">
+    <main>
+        <form class="formulario">
             <h1>REGISTRO</h1>
             <input type="text" placeholder="Nombre Completo" class="nombre" required>
             <input type="text" placeholder="Nombre de usuario" class="usuario" required>
@@ -34,18 +35,26 @@
                 <option value="4">Usuario</option>
             </select>            
             <div class="consentimiento">
+            <input type="text" placeholder="Nombre Completo">
+            <input type="email" placeholder="Correo Electronico">
+            <input type="password" placeholder="Contraseña">
+            <input type="password" placeholder="Confirmar Contraseña">
+            <select name="rol" id="listarol" placeholder="Seleccione un rol">
+                <option selected disabled>Seleccione un rol</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Programador">Programador</option>
+            </select>
+            <!-- Cuadro de consentimiento de tratamiento de datos -->
+            <div class="group_list">
                 <input type="checkbox" id="consentimiento_datos" required>
-                <label for="consentimiento_datos">
-                    Acepto el tratamiento de mis datos personales conforme a la 
-                    <a href="/privacidad">política de privacidad</a>.
-                </label>
+                <p>Acepto los
+                    <a href="/privacidad">términos y pólitica de privacidad</a>.</p>
             </div>
-            
             <div class="g-recaptcha" data-sitekey="6LehqjMqAAAAAFyuvGgqBC_Jt46wMvAcNWwuTn_L"></div>
-
             <input class="boton" type="submit" value="Continuar">
         </div>
     </div>
     <script src="/js/usuarios.js"></script>
 </body>
 </html>
+

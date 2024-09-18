@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'CorbelR';
+    src: url(/font/CORBEL.TTF);
+}
+
+@font-face {
+    font-family: 'interR';
+    src: url(/font/);
+}
+
+:root{
+    --color-1: #151c41;
+}
