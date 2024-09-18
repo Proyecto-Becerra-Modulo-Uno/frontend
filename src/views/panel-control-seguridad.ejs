@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control de Seguridad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/panel-seguridad.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-shield-alt"></i> Panel de Control de Seguridad</h1>
+    </header>
+    <main class="dashboard">
+        <section class="panel">
+            <h2><i class="fas fa-chart-line"></i> Actividades Sospechosas por Día</h2>
+            <canvas id="actividadesChart"></canvas>
+        </section>
+        <section class="panel">
+            <h2><i class="fas fa-certificate"></i> Estado de Certificados</h2>
+            <div class="table-container">
+                <table id="certificadosTable">
+                    <thead>
+                        <tr>
+                            <th>Dominio</th>
+                            <th>Proveedor</th>
+                            <th>Estado</th>
+                            <th>Fecha de Expiración</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="panel">
+            <h2><i class="fas fa-pie-chart"></i> Certificados por Estado</h2>
+            <canvas id="certificadosEstadoChart"></canvas>
+        </section>
+        <section class="panel">
+            <h2><i class="fas fa-users"></i> Administradores Activos</h2>
+            <div class="table-container">
+                <table id="adminTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="panel">
+            <h2><i class="fas fa-user-check"></i> Administradores por Estado</h2>
+            <canvas id="adminEstadoChart"></canvas>
+        </section>
+        <section class="panel">
+            <h2><i class="fas fa-lock"></i> Políticas de Bloqueo</h2>
+            <div id="politicasBloqueo"></div>
+        </section>
+    </main>
+    <script>
+        window.actividades = <%- JSON.stringify(actividades) %>;
+        window.estadoCertificados = <%- JSON.stringify(estadoCertificados) %>;
+        window.certificadosPorEstado = <%- JSON.stringify(certificadosPorEstado) %>;
+        window.administradoresActivos = <%- JSON.stringify(administradoresActivos) %>;
+        window.administradoresPorEstado = <%- JSON.stringify(administradoresPorEstado) %>;
+        window.politicasBloqueo = <%- JSON.stringify(politicasBloqueo) %>;
+    </script>
+    <script src="/js/dashboard2.js"></script>
+</body>
+</html>

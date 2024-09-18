@@ -113,3 +113,44 @@ export const informeActividad = (req, res) => {
     res.render("views.informe.actividad.ejs")
 }
 
+
+export const panel_control_seguridad = (req, res) => {
+    const urls = {
+        actividades: url + '/actividades-por-dia?fecha_inicio=2024-01-01&fecha_fin=2024-12-31',
+        estadoCertificados: url + '/estado-certificados',
+        certificadosPorEstado: url + '/certificados-por-estado',
+        administradoresActivos: url + '/administradores-activos',
+        administradoresPorEstado: url + '/administradores-por-estado',
+        politicasBloqueo: url + '/politicas-bloqueo'
+    };
+
+    Promise.all([
+        fetch(urls.actividades).then(res => res.json()),
+        fetch(urls.estadoCertificados).then(res => res.json()),
+        fetch(urls.certificadosPorEstado).then(res => res.json()),
+        fetch(urls.administradoresActivos).then(res => res.json()),
+        fetch(urls.administradoresPorEstado).then(res => res.json()),
+        fetch(urls.politicasBloqueo).then(res => res.json())
+    ])
+    .then(([actividades, estadoCertificados, certificadosPorEstado, administradoresActivos, administradoresPorEstado, politicasBloqueo]) => {
+        res.render("panel-control-seguridad.ejs", {
+            actividades: actividades.body || [],
+            estadoCertificados: estadoCertificados.body || [],
+            certificadosPorEstado: certificadosPorEstado.body || [],
+            administradoresActivos: administradoresActivos.body || [],
+            administradoresPorEstado: administradoresPorEstado.body || [],
+            politicasBloqueo: politicasBloqueo.body || {}
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+        res.render("panel-control-seguridad.ejs", {
+            actividades: [],
+            estadoCertificados: [],
+            certificadosPorEstado: [],
+            administradoresActivos: [],
+            administradoresPorEstado: [],
+            politicasBloqueo: {}
+        });
+    });
+};
