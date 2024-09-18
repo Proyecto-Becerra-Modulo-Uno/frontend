@@ -8,17 +8,17 @@ const rutaAdmin = Router();
 
 
 rutaAdmin.get("/panel", panel)
-rutaAdmin.get("/dis", dispositivosMovil) //Elimina esto paulina, es lo mismo que /sesiones
-rutaAdmin.get("/notipop", notipopup)//???
+
+rutaAdmin.get("/dis", dispositivosMovil)
+rutaAdmin.get("/notipop", notipopup)
 rutaAdmin.get("/registro", registro)
 rutaAdmin.get("/notia", notiActi)
 rutaAdmin.get("/co", condicionesc)
 rutaAdmin.get("/verificacionDoble1", verificacionDoble1)
 rutaAdmin.get("/verificacionDoble2", verificacionDoble2)
 rutaAdmin.get("/config", configuracion)
-//rutaAdmin.get("/registroIngreso", registroIngreso) Elimina esto también, es lo mismo que /sesiones
 rutaAdmin.get("/sesiones", registroSesion)
-rutaAdmin.get("/bloqueos", cuentasbloqueadas)//ya corregido
+rutaAdmin.get("/bloqueos", cuentasbloqueadas)
 rutaAdmin.get("/panel", panel);
 rutaAdmin.get("/datos", retencion);
 rutaAdmin.get("/grupos", grupos);

@@ -1,100 +1,109 @@
-<div class="aside col-2 col-md-2 d-flex flex-column justify-content-between">
-    <div>
+<div class="aside col-2 col-md-2 d-flex flex-column" style="color: white;">
+    <div class="d-flex flex-column justify-content-between" style="flex-grow: 1;">
+        <!-- Encabezado -->
         <div class="header d-flex align-items-center justify-content-center mt-5">
             <img class="title" src="/img/estrella-afilada-medio-trazo 1.png" alt="Apex-Logo"
                 style="height: 50px; margin-right: 10px;">
             <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
         </div>
-        <div class="d-flex flex-column align-items-center justify-content-center mt-5">
-
+        <!-- Contenido principal -->
+        <div class="d-flex flex-column align-items-center justify-content-center mt-2" style="flex-grow: 1;">
             <!-- Logs Dropdown -->
-            <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="admin-button">
+            <button class="btn-action d-flex align-items-center justify-content-between mt-2" id="admin-button">
                 <span class="text-start">Logs</span>
-                <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div id="admin-dropdown"
-                style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Logs de seguridad</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
-                    logs</a>
+            <div id="admin-dropdown" style="display: none; flex-direction: column; height: auto; width: 100%;">
+                <div class="dropdown">
+                    <a href="#" class="btn text-start text-light text-decoration-none">Logs de seguridad</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Configuración de
+                        logs</a>
+                </div>
             </div>
 
             <!-- Grupos Dropdown -->
-            <a href="/#" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Grupos</a>
+            <a href="/#" class="btn-action d-flex align-items-center justify-content-between mt-2">Grupos</a>
 
             <!-- Accesos Dropdown -->
-            <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="access-button">
+            <button class="btn-action d-flex align-items-center justify-content-between mt-2" id="access-button">
                 <span class="text-start">Accesos</span>
-                <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div id="access-dropdown"
-                style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Intentos de acceso</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
-                    acceso</a>
+            <div id="access-dropdown" style="display: none; flex-direction: column; height: auto; width: 100%;">
+                <div class="dropdown">
+                    <a href="#" class="btn text-start text-light text-decoration-none">Intentos de acceso</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Configuración de
+                        acceso</a>
+                </div>
             </div>
 
             <!-- Modulos Dropdown -->
-            <a href="#" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Módulos</a>
+            <a href="#"
+                class="btn-action d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Módulos</a>
 
             <!-- Usuarios Dropdown -->
-            <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="users-button">
+            <button class="btn-action d-flex align-items-center justify-content-between mt-2" id="users-button">
                 <span class="text-start">Usuarios</span>
-                <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div id="users-dropdown"
-                style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Listado de usuarios</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Registros de
-                    usuarios</a>
-                <a href="/bloqueos" class="btn btn-secondary text-start text-light text-decoration-none">Cuentas
-                    bloqueadas</a>
-                <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
-                    control</a>
+            <div id="users-dropdown" style="display: none; flex-direction: column; height: auto; width: 100%;">
+                <div class="dropdown">
+                    <a href="#" class="btn text-start text-light text-decoration-none">Listado de usuarios</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Registros de
+                        usuarios</a>
+                    <a href="/bloqueos" class="btn text-start text-light text-decoration-none">Cuentas
+                        bloqueadas</a>
+                    <a href="/panel" class="btn text-start text-light text-decoration-none">Panel de
+                        control</a>
+                    <a href="/usuarios-inactivos" class="btn text-start text-light text-decoration-none">Usuarios
+                        inactivos</a>
+                </div>
             </div>
 
             <!-- Informes Dropdown -->
-            <a href="/informeActividad" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
+            <a href="/informeActividad"
+                class=" btn btn-action d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
 
             <!-- Seguridad Dropdown -->
-            <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="records-button">
+            <button class="btn btn-action d-flex align-items-center justify-content-between mt-2" id="records-button">
                 <span class="text-start">Seguridad</span>
-                <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div id="records-dropdown"
-                style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Panel de seguridad</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Copias de seguridad</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Exportación de
-                    datos</a>
-                <a href="/sesiones" class="btn btn-secondary text-start text-light text-decoration-none">Inicios de
-                    sesión</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Detección</a>
-                <a href="/historialc" class="btn btn-secondary text-start text-light text-decoration-none">Monitoreo</a>
-                <a href="/verificacionDoble1"
-                    class="btn btn-secondary text-start text-light text-decoration-none">Autenticación de dos
-                    factores</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Ajustes de cuenta</a>
-                <a href="/config" class="btn btn-secondary text-start text-light text-decoration-none">Configuración del
-                    sistema</a>
-                <a href="/complejidadPreguntas" class="btn btn-secondary text-start text-light text-decoration-none">Preguntas de
-                    Seguridad</a>
-                <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Encriptación de
-                    contraseñas</a>
+            <div id="records-dropdown" style="display: none; flex-direction: column; height: 100%; width: 100%;">
+                <div class="dropdown">
+                    <a href="#" class="btn text-start text-light text-decoration-none">Panel de seguridad</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Copias de seguridad</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Exportación de
+                        datos</a>
+                    <a href="/sesiones" class="btn text-start text-light text-decoration-none">Inicios de
+                        sesión</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Detección</a>
+                    <a href="/historialc" class="btn text-start text-light text-decoration-none">Monitoreo</a>
+                    <a href="/verificacionDoble1" class="btn text-start text-light text-decoration-none">Autenticación de
+                        dos
+                        factores</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Ajustes de cuenta</a>
+                    <a href="/config" class="btn text-start text-light text-decoration-none">Configuración del
+                        sistema</a>
+                    <a href="/complejidadPreguntas" class="btn text-start text-light text-decoration-none">Preguntas de
+                        Seguridad</a>
+                    <a href="#" class="btn text-start text-light text-decoration-none">Encriptación de
+                        contraseñas</a>
+                </div>
             </div>
         </div>
-    </div>
 
-
-    <div class="admin-section d-flex align-items-center justify-content-center mt-5">
-        <div class="flex-column mt-5 me-5">
-            <h1 style="color: white; font-size: 20px; margin-bottom: 0;">Administrador</h1>
-            <p style="color: gainsboro;">admin@gmail.com</p>
-        </div>
-        <div class="mt-4" style="color: white;">
-            <img src="/img/menu-puntos-vertical 1.png" alt="">
+        <!-- Pie de menu -->
+        <div class="d-flex justify-content-center align-items-center gap-4" style="margin-top: auto;">
+            <div>
+                <p>Administrador</p>
+                <p>admin@gmail.com</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-ellipsis-vertical" style="font-size: 2rem;"></i>
+            </div>
         </div>
     </div>
 </div>
 
-<script src="/js/dropdown-panel.js"></script>
+<script src="/js/components/dropdown-panel.js"></script>
