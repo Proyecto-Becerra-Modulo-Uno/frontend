@@ -5,6 +5,7 @@ import path from 'path';
 config();
 
 const url = process.env.BACKEND_URL;
+
 export const panel = (req, res) => {
     let datos = {};
     fetch(url + "/users")
@@ -20,7 +21,7 @@ export const notipopup = (req, res) => {
 }
 
 export const registro = (req, res) => {
-    res.render("views.registro.ejs")
+    res.render("admin/views.registro.ejs")
 }
 
 export const nuevousuario = (req, res) => {
@@ -61,11 +62,11 @@ export const configuracion = (req, res) => {
     .catch(err => console.error(err))
 }
 
-export const registroSesion = (req, res) => {
+export const registroDispositivos = (req, res) => {
     fetch(url + "/users/inicios")
     .then(res => res.json())
     .then(data => {
-        res.render("views.registroSesión.ejs", {registros: data})
+        res.render("admin/views.registro.dispositivos.ejs", {registros: data})
     })
     .catch(err => console.error(err))
 }
@@ -81,7 +82,7 @@ export const cuentasbloqueadas = (req, res) => {
 } 
 
 export const historialacceso = (req, res) => {
-    res.render("views.historialAcceso.ejs")
+    res.render("views.historialAcceso.ejs") 
 }
 
 export const retencion = (req, res) => {

@@ -20,7 +20,7 @@ h1{
     text-align: center;
 }
 
-input[type= "text"], input[type= "email"], input[type= "password"]{
+input[type= "text"], input[type= "email"], input[type= "password"], input[type= "number"]{
     width: 80%;
     border-radius: 10px;
     border: none;
