@@ -69,18 +69,19 @@ export const registroSesion = (req, res) => {
 
 export const cuentasbloqueadas = (req, res) => {
     let datos = {};
-    fetch(url + "/users")
+    fetch(url + "/bloqueos")
     .then(res => res.json())
     .then(data => {
         datos = data
         res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
-}
 
-export const grupos = (req, res) => {
-    res.render("views.grupos.ejs");
 } 
 
-export const informeActividad = (req, res) => {
-    res.render("views.informe.actividad.ejs")
+export const historialacceso = (req, res) => {
+    res.render("views.historialAcceso.ejs")
+}
+
+export const retencion = (req, res) => {
+    res.render("views.retencion.datos.ejs")
 }
