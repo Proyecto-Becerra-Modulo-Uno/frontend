@@ -113,16 +113,15 @@
   /* Estilo del slider (bolita) */
   .switch-slider {
     position: absolute;
-    top: 4px; /* centrar verticalmente */
-    left: 4px; /* centrar horizontalmente */
-    width: 25px; /* ancho de la bolita */
-    height: 25px; /* altura de la bolita */
+    top: 4px; 
+    left: 4px; 
+    width: 25px; 
+    height: 25px;
     background-color: white;
     border-radius: 55%; 
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
-  
-  /* Estilo del input oculto */
+
   .switch-input {
     display: none;
   }
@@ -139,3 +138,7 @@
   .btn-secondary {
       background-color: #1E3DEA;
   }
+
+
+
+  
