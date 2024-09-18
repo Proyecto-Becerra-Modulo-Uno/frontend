@@ -55,8 +55,17 @@
             </div>
 
             <!-- Informes Dropdown -->
-            <a href="/informeActividad" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
-
+            <!-- <a href="/informeActividad" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a> -->
+            <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="informes-button">
+                <span class="text-start">Informes</span>
+                <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+            </button>
+            <div id="informes-dropdown"
+                style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                <a href="/reporteingrso" class="btn btn-secondary text-start text-light text-decoration-none">reportes de logs</a>
+                <!-- <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
+                    control</a> -->
+            </div>
             <!-- Seguridad Dropdown -->
             <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="records-button">
                 <span class="text-start">Seguridad</span>
