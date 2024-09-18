@@ -13,6 +13,7 @@ form{
     color: #fff;
     font-family: 'CorbelR';
     text-align: center;
+    gap: 3vh;
 }
 
 h1{
@@ -20,12 +21,10 @@ h1{
 }
 
 input[type= "text"], input[type= "email"], input[type= "password"]{
-    margin: 20px;
-    width: 300px;
-    height: 20px;
+    width: 80%;
     border-radius: 10px;
     border: none;
-    padding: 10px;
+    padding: 2vh;
 }
 
 a{
