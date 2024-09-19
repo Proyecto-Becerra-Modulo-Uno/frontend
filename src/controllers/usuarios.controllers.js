@@ -101,3 +101,6 @@ export const historialacceso = (req, res) => {
 export const usuariosInactivos = (req, res) =>{
   res.render("views.usuarios.inactivos.ejs")
 }
+export const vistaprincipalusuario = (req, res)=>{
+  res.render("view.vistaprincipalusuario.ejs")
+}
