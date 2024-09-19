@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { cambiarcontrasena, codigoRecuperacion, comLogs, dispositivosMovil, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, comLogs, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario } from "../controllers/usuarios.controllers.js";
 
 import { detalles,  eliminacionCuenta, exportardatos, historialcambios, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
@@ -25,11 +25,11 @@ rutaUsuario.get("/perfil",perfil);
 rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos);
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
 rutaUsuario.get("/listabn", listaBN);
-rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
+// rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
 //rutaUsuario.get("/historiala", historialacceso); // Admin
 rutaUsuario.get("/exportar-datos", exportardatos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
-rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
+// rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
 
 export default rutaUsuario
 

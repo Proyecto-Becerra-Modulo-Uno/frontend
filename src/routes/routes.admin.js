@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { condicionesc, configuracion, cuentasbloqueadas, notipopup, panel, registro, registroSesion, verificacionDoble1, verificacionDoble2 } from "../controllers/admins.controllers.js";
-import { dispositivosMovil, notiActi } from "../controllers/usuarios.controllers.js";
+import {  notiActi } from "../controllers/usuarios.controllers.js";
 import { nuevousuario, retencion} from "../controllers/admins.controllers.js";
 import { complejidadPreguntas, grupos, informeActividad } from "../controllers/admins.controllers.js";
 import { configuracionPoliticas, crearBackup, exportdata, listarBackups, preguntasSeguridad, restaurarBackup, ssl } from "../controllers/admins.controllers.js";
@@ -8,7 +8,6 @@ const rutaAdmin = Router();
 
 
 rutaAdmin.get("/panel", panel)
-rutaAdmin.get("/dis", dispositivosMovil) //Elimina esto paulina, es lo mismo que /sesiones
 rutaAdmin.get("/notipop", notipopup)//???
 rutaAdmin.get("/registro", registro)
 rutaAdmin.get("/notia", notiActi)
