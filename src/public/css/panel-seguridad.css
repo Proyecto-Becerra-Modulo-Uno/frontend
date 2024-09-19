@@ -1,10 +1,10 @@
 /* styles.css */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
+    --primary-color: #1e3dea;
+    --secondary-color: #394dc0;
     --background-color: #ecf0f1;
     --panel-background: #ffffff;
-    --text-color: #333333;
+    --text-color: #2B2C33;
 }
 
 body {
