@@ -1,3 +1,7 @@
+@import url("main.css");
+@import url("login.css");
+@import url("components/backgroud.form.css");
+
 .top-box {
     height: 50px;
     background-color: #394DC0; 
@@ -12,7 +16,23 @@
     font-size: 24px; 
     margin-left: 20px; 
 }
-/* Asegura que SweetAlert2 se muestra sobre otros elementos */
+
 .swal2-container {
-    z-index: 9999 !important; /* Ajusta el valor si es necesario */
+    z-index: 9999 !important;
+}
+
+.consentimiento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.registro{
+    background-image: url(/img/forms/bg2.jpg);
+}
+
+.formulario{
+    transform: scale(0.8);
+    width: 30%;
 }

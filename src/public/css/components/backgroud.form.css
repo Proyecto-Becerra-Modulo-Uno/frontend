@@ -4,7 +4,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/login.png);
+    background-image: url(/img/forms/bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

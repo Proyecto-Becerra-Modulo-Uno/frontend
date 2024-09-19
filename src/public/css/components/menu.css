@@ -1,0 +1,30 @@
+.aside {
+  background-color: var(--color-1);
+  min-height: 100vh;
+}
+
+.btn-action {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 2vh;
+    border-radius: 1vh;
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--color-2);
+    box-shadow: 0 0 2vh #0000004f;
+}
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 0;
+  gap: 1vh;
+}
+
+.dropdown a{
+  width: 100%;
+  padding: 2vh;
+  background-color: rgb(37, 37, 122);
+  border-radius: 1vh;
+}

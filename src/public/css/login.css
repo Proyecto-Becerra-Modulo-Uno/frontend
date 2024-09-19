@@ -1,5 +1,5 @@
 @import "main.css";
-@import "backgroud.form.css";
+@import "components/backgroud.form.css";
 
 
 form{
@@ -13,19 +13,18 @@ form{
     color: #fff;
     font-family: 'CorbelR';
     text-align: center;
+    gap: 3vh;
 }
 
 h1{
     text-align: center;
 }
 
-input[type= "text"], input[type= "email"], input[type= "password"]{
-    margin: 20px;
-    width: 300px;
-    height: 20px;
+input[type= "text"], input[type= "email"], input[type= "password"], input[type= "number"]{
+    width: 80%;
     border-radius: 10px;
     border: none;
-    padding: 10px;
+    padding: 2vh;
 }
 
 a{

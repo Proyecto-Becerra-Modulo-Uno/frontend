@@ -31,7 +31,7 @@ const btnDelete = document.querySelectorAll(".btn-delete").forEach(btn => {
     const id = row.querySelector(".id_usuario").textContent.trim();
     const url = localStorage.getItem("url");
 
-    fetch(url + `/users/estado/${id}`, {
+    fetch(url +` /users/estado/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

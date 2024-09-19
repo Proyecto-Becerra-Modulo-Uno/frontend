@@ -97,3 +97,7 @@ export const sesionesActivasDesktop = (req, res) => {
 export const historialacceso = (req, res) => {
   res.render("views.historialAcceso.ejs");
 };
+
+export const usuariosInactivos = (req, res) =>{
+  res.render("views.usuarios.inactivos.ejs")
+}

@@ -4,6 +4,7 @@ import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from "url";
 import ruta from "./routes/index.js";
+import rutaAdmin from "./routes/routes.admin.js";
 import cors from "cors";
 
 config();
@@ -23,6 +24,7 @@ server.use(cors())
 server.set("port", process.env.PORT || 3000);
 
 server.use("/", ruta);
+server.use("/admin", rutaAdmin)
 
 export default server;
 

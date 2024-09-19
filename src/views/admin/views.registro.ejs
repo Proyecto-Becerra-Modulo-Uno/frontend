@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/politicas.css">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/registro.css">
     <title>Apex | Registrar nuevo usuario</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- SweetAlert2 -->
@@ -19,37 +17,27 @@
     </style>
 </head>
 <body>
-    <main>
+    <main class="registro">
         <form class="formulario">
-            <h1>REGISTRO</h1>
-            <input type="text" placeholder="Nombre Completo" class="nombre" required>
+            <h1>CREAR USUARIO</h1>
             <input type="text" placeholder="Nombre de usuario" class="usuario" required>
+            <input type="text" placeholder="Nombre Completo" class="nombre" required>
             <input type="email" placeholder="Correo Electronico" class="correo" required>
             <input type="password" placeholder="Contraseña" class="contrasena" required>
-            <input type="password" placeholder="Confirmar Contraseña" class="confirmar" required>
             <select name="rol" id="listarol" placeholder="Seleccione un rol" required>
                 <option selected disabled>Seleccione un rol: </option>
                 <option value="1">Administrador</option>
                 <option value="2">Invitado</option>
                 <option value="3">Moderador</option>
                 <option value="4">Usuario</option>
-            </select>            
+            </select> 
+            <input type="number" placeholder="123-456-7890" class="number" required>          
             <div class="consentimiento">
-            <input type="text" placeholder="Nombre Completo">
-            <input type="email" placeholder="Correo Electronico">
-            <input type="password" placeholder="Contraseña">
-            <input type="password" placeholder="Confirmar Contraseña">
-            <select name="rol" id="listarol" placeholder="Seleccione un rol">
-                <option selected disabled>Seleccione un rol</option>
-                <option value="Administrador">Administrador</option>
-                <option value="Programador">Programador</option>
-            </select>
-            <!-- Cuadro de consentimiento de tratamiento de datos -->
-            <div class="group_list">
                 <input type="checkbox" id="consentimiento_datos" required>
-                <p>Acepto los
-                    <a href="/privacidad">términos y pólitica de privacidad</a>.</p>
+                <p>Acepto
+                    <a href="/privacidad">pólitica de privacidad</a>.</p>
             </div>
+            
             <div class="g-recaptcha" data-sitekey="6LehqjMqAAAAAFyuvGgqBC_Jt46wMvAcNWwuTn_L"></div>
             <input class="boton" type="submit" value="Continuar">
         </div>
@@ -57,4 +45,3 @@
     <script src="/js/usuarios.js"></script>
 </body>
 </html>
-
