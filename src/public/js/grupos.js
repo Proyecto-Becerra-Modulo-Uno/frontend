@@ -52,7 +52,16 @@ BTN_CREAR.addEventListener("click", () => {
             return Promise.all(addParticipantsPromises);
         })
         .then(() => {
-            console.log("Todos los integrantes añadidos correctamente");
+            Swal.fire({
+                title: '¡Éxito!',
+                text: 'Se ha creado el grupo con éxito.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/grupos";
+                }
+            });
         })
         .catch(err => console.error("Error añadiendo integrantes: " + err));
     })
