@@ -2,7 +2,7 @@
 @import url("components/menu.css");
 
 .content {
-  padding-top: 20px;
+  padding-top: 20px; 
 }
 
 @media screen and (max-width: 767px){
