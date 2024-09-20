@@ -32,6 +32,8 @@ rutaAdmin.get('/backups', listarBackups);
 rutaAdmin.post('/create-backup', crearBackup);
 rutaAdmin.post('/restore-backup', restaurarBackup);
 rutaAdmin.get("/principalusuario", vistaprincipalusuario);
+// rutaAdmin.get("/sesiones", registrosesiones);//no entiendo porque no esta verifica esta 
+
 
 rutaAdmin.get("/logs", comLogs);
 

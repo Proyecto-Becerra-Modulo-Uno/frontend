@@ -84,7 +84,7 @@ BTN.addEventListener("click", (e) => {
             if (rol === 3) {
                 window.location.href = "/panel";
             } else {
-                window.location.href = "/usuario-normal"; //pongan la ruta del usuaroo normal
+                window.location.href = "/usuario-normal"; 
             }
         })
         .catch(err => {
