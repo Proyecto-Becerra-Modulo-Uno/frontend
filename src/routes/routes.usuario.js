@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { cambiarcontrasena, codigoRecuperacion, comLogs, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, usuariosInactivos } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, comLogs, elegirAutentificacionDosPasos, historialacceso, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, usuariosInactivos } from "../controllers/usuarios.controllers.js";
 
 import { detalles,  eliminacionCuenta, exportardatos, historialcambios, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
@@ -15,9 +15,7 @@ rutaUsuario.get("/codigo-recuperacion", codigoRecuperacion);
 
 //rutas desorganizadas
 rutaUsuario.get("/preguntas", preguntas);
-
 rutaUsuario.get("/nuevousuario", nuevousuario)
-
 rutaUsuario.get("/contrasena", cambiarcontrasena);
 rutaUsuario.get("/comlogs", comLogs);
 // rutaUsuario.get("/correo", recuperarusuario); //correo hay que cambiar
@@ -31,7 +29,7 @@ rutaUsuario.get("/inicio-autentificaion-dos-pasos",inicioAutentificacionDosPasos
 rutaUsuario.get("/elegir-autentificaion-dos-pasos",elegirAutentificacionDosPasos);
 rutaUsuario.get("/listabn", listaBN);
 // rutaUsuario.get("/dispositivos", dispositivosMovil); // ???? Ni idea de qué es esto
-//rutaUsuario.get("/historiala", historialacceso); // Admin
+rutaUsuario.get("/historiala", historialacceso); // Admin
 rutaUsuario.get("/exportar-datos", exportardatos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
 // rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
