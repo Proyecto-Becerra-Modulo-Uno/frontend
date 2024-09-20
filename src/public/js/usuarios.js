@@ -17,12 +17,7 @@ submit.addEventListener("click", (e) => {
     // Convertir el valor de rol a un número entero
     rol = parseInt(rol);
 
-    // Crear el arreglo de datos
-    const datos = [usuario, nombre, correo, telefono, contrasena, rol];
-
-    // Mostrar los datos en la consola
-    console.log('Datos del formulario:', datos);
-    
+   
     // Verificación de los campos
     if (usuario && nombre && correo && contrasena && telefono) {
         fetch(url + "/users", {

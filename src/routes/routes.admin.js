@@ -8,19 +8,24 @@ import {  panel_control_seguridad, reporting} from "../controllers/admins.contro
 
 
 const rutaAdmin = Router();
+// Rutas organizadas
 
-rutaAdmin.get("/panel", panel)
+rutaAdmin.get("/panel", panel);
+rutaAdmin.get("/admin/registro", registro);
+rutaAdmin.get("/cuentas-bloqueadas", cuentasbloqueadas);
+
+rutaAdmin.get("/crear-grupos", grupos);
+
+// Rutas desorganizadas
+
 rutaAdmin.get("/notipop", notipopup)//???
-rutaAdmin.get("/registro", registro)
 rutaAdmin.get("/notia", notiActi)
 rutaAdmin.get("/co", condicionesc)
 rutaAdmin.get("/verificacionDoble1", verificacionDoble1)
 rutaAdmin.get("/verificacionDoble2", verificacionDoble2)
 rutaAdmin.get("/config", configuracion)
 
-rutaAdmin.get("/bloqueos", cuentasbloqueadas)
 rutaAdmin.get("/datos", retencion);
-rutaAdmin.get("/grupos", grupos);
 rutaAdmin.get("/nuevousuario", nuevousuario);
 rutaAdmin.get("/complejidadPreguntas", complejidadPreguntas)
 rutaAdmin.get("/informeActividad", informeActividad)

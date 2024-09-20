@@ -16,6 +16,7 @@ rutaUsuario.get("/nueva-clave", nuevaClave);
 rutaUsuario.get("/codigo-recuperacion", codigoRecuperacion);
 
 //rutas desorganizadas
+
 rutaUsuario.get("/preguntas", preguntas);
 rutaUsuario.get("/nuevousuario", nuevousuario)
 rutaUsuario.get("/contrasena", cambiarcontrasena);

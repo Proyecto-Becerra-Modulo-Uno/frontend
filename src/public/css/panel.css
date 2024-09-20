@@ -5,9 +5,64 @@
   padding-top: 20px; 
 }
 
-@media screen and (max-width: 767px){
-  .aside{
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-group button {
+  position: relative;
+  padding: 1rem;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: #ddd; 
+}
+
+.btn-group button p {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 20;
+}
+
+.btn-group button:hover p {
+  display: block;
+  opacity: 1;
+}
+
+.btn-group i {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-group button:nth-child(4), .btn-group button:nth-child(5){
+  background-color: red;
+}
+
+.btn-group button:nth-child(4) i, .btn-group button:nth-child(5) i{
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .aside {
     display: none !important;
   }
 }
+
 

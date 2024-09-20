@@ -90,7 +90,7 @@ export const registroDispositivos = (req, res) => {
 
 export const cuentasbloqueadas = (req, res) => {
     let datos = {};
-    fetch(url + "/bloqueos")
+    fetch(url + "/admin/cuentas-bloqueadas")
     .then(res => res.json())
     .then(data => {
         datos = data
@@ -110,7 +110,7 @@ export const retencion = (req, res) => {
 export const grupos = (req, res) => {
     fetch(url + "/listar-grupos")
     .then(res => res.json())
-    .then(data => res.render("views.grupos.ejs", {grupos: data}))
+    .then(data => res.render("admin/views.grupos.ejs", {grupos: data}))
 } 
 
 export const informeActividad = (req, res) => {
