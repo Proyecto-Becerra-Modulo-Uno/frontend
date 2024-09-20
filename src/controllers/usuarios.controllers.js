@@ -104,3 +104,7 @@ export const usuariosInactivos = (req, res) =>{
 export const vistaprincipalusuario = (req, res)=>{
   res.render("view.vistaprincipalusuario.ejs")
 }
+// Ruta usuario
+export const panelUsuario = (req, res) => {
+  res.render("views.panel.usuario.ejs");
+};

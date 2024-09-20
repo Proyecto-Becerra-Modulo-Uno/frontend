@@ -1,9 +1,10 @@
 import { Router } from "express";
 
-import { cambiarcontrasena, codigoRecuperacion, comLogs, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, usuariosInactivos} from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, comLogs, elegirAutentificacionDosPasos, ingresarcodigo, inicioAutentificacionDosPasos, listaBN, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario} from "../controllers/usuarios.controllers.js";
 
 import { detalles,  eliminacionCuenta, exportardatos, historialcambios, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 import { historialacceso } from "../controllers/admins.controllers.js";
+import { panelUsuario } from "../controllers/usuarios.controllers.js";
 
 
 const rutaUsuario = Router();
@@ -35,6 +36,9 @@ rutaUsuario.get("/exportar-datos", exportardatos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
 // rutaUsuario.get("/dispositivos", dispositivosMovil); // ????
 
+
+// Ruta usuario
+rutaUsuario.get("/panelUsuario", panelUsuario);
 
 export default rutaUsuario
 
