@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .row {
+    margin-bottom: 30px;
+  }
+  
+  #usersChart, #revenueChart, #ordersChart, #categoriesChart {
+    height: 300px;
+  }
