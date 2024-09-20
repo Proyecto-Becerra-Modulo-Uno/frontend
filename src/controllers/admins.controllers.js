@@ -94,7 +94,7 @@ export const cuentasbloqueadas = (req, res) => {
     .then(res => res.json())
     .then(data => {
         datos = data
-        res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
+        res.render("admin/views.cuentas.bloqueadas.ejs", {users: data, url: url})
     })
 } 
 
