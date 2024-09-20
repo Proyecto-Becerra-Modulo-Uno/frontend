@@ -154,7 +154,7 @@ input:hover {
 
 .container_tabla {
     /* height: 85%; */
-    max-height: 65%;
+    height: 60%;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
     padding: 15px 30px;
@@ -226,6 +226,29 @@ input:hover {
     /* Ajusta el padding según tus necesidades */
 }
 
+/* Contenedor del boton de generador */
+.contenedor_boton {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.btn-verde {
+    width: 240px;
+    height: 65px;
+    border-radius: 15px;
+    background-color: #ff9a57;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.btn-verde:hover {
+    background-color: rgb(100, 111, 255);
+    border: solid 1px #0707ff44;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
 
 @media screen and (width<=1500px) {
 

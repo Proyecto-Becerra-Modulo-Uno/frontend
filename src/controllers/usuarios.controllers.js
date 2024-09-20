@@ -1,3 +1,7 @@
+import { config } from "dotenv";
+config();
+const url = process.env.BACKEND_URL;
+
 export const preguntas = (req, res) => {
   res.render("views.preguntas.seguridad.ejs");
 };
@@ -24,8 +28,8 @@ export const cambiarcontrasena = (req, res) => {
 };
 
 export const recuperarusuario = (req, res) => {
-  res.render("views.recucorreo.ejs");
-};
+    res.render("views.recuperar.user.ejs")
+}
 
 export const ingresarcodigo = (req, res) => {
   res.render("views.codigo.ejs");
@@ -63,9 +67,24 @@ export const elegirAutentificacionDosPasos = (req, res) => {
   res.render("views.elegir.autentificacion.dos.pasos.ejs");
 };
 
-export const dispositivosMovil = (req, res) => {
-    res.render("views.dispositivos.movil.ejs")
+export const listaBN = (req, res) => {
+  res.render("views.lista.ejs")
 }
+
+export const notiActi = (req, res) => {
+  const recurso = url + "/users/actividades-sospechosas";
+  fetch(recurso)
+    .then(res => res.json())
+    .then(data => {
+      let datos = Array.isArray(data.body) ? data.body : [data.body];
+      console.log('Datos a renderizar:', datos); // Agregar este log para depuración
+      res.render("views.notiact.ejs", { datos: datos });
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      res.render("views.notiact.ejs", { datos: [] }); // Pasar un array vacío en caso de error
+    });
+};
 
 export const exportardatos = (req, res) => {
   res.render("views.exportar.datos.ejs");
@@ -77,4 +96,15 @@ export const sesionesActivasDesktop = (req, res) => {
 
 export const historialacceso = (req, res) => {
   res.render("views.historialAcceso.ejs");
+};
+
+export const usuariosInactivos = (req, res) =>{
+  res.render("views.usuarios.inactivos.ejs")
+}
+export const vistaprincipalusuario = (req, res)=>{
+  res.render("view.vistaprincipalusuario.ejs")
+}
+// Ruta usuario
+export const panelUsuario = (req, res) => {
+  res.render("views.panel.usuario.ejs");
 };

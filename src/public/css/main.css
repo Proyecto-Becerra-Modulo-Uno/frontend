@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; 
+}
+@font-face {
+  font-family: "CorbelR";
+  src: url(/font/CORBEL.TTF);
+}
+
+@font-face {
+  font-family: "interR";
+  src: url(/font/);
+}
+
+:root {
+  --color-1: #151c41;
+  --color-2: #fff;
+  --color-btn-menu: #0521aa;
+}

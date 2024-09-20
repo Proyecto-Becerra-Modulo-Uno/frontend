@@ -3,23 +3,27 @@ const url1 = localStorage.setItem("url", input);
 const url = localStorage.getItem("url");
 let intentosFallidos = 0;
 let intentosPermitidos = 0;
+
 fetch(url + "/users/listar-politicas")
     .then(response => response.json())
     .then(data => {
-        intentosPermitidos = data.body[0].intentos_fallidos_permitidos; 
+        intentosPermitidos = data.body[0].intentos_fallidos_permitidos;
     })
     .catch(err => {
         console.log(err);
         alert("Error al obtener las políticas del sistema.");
     });
-const BTN = document.querySelector(".boton")
+
+const BTN = document.querySelector(".boton");
 BTN.addEventListener("click", (e) => {
     e.preventDefault();
+    
     if (intentosFallidos >= intentosPermitidos) {
         alert("Has alcanzado el límite de intentos fallidos. Por favor, intenta más tarde.");
         BTN.style.display = "none";
         return;
     }
+
     const usuario = document.querySelector("#usuario").value;
     const contrasena = document.querySelector("#contrasena").value;
 
@@ -36,14 +40,36 @@ BTN.addEventListener("click", (e) => {
         if (data.status === 404 || data.status === 401) {
             intentosFallidos++;
             alert("Correo o contraseña incorrecta");
+
             if (intentosFallidos >= intentosPermitidos) {
-                alert("Has alcanzado el límite de intentos fallidos. No podrás seguir intentando.");
+                fetch(url + "/users/bloquearIntentos", {
+                    headers: { "Content-Type": "application/json" },
+                    method: "PUT",
+                    body: JSON.stringify({
+                        email: usuario,
+                        estado: 3
+                    })
+                })
+                .then(() => {
+                    alert("Has alcanzado el límite de intentos fallidos. Tu cuenta fue bloqueada.");
+                })
+                .catch(err => {
+                    console.log(err);
+                    alert("Error al bloquear la cuenta.");
+                });
             }
             return;
         }
+
+        if (data.status === 403) {
+            alert("Esta cuenta está bloqueada, no es posible ingresar.");
+            return;
+        }
+
         intentosFallidos = 0;
         const rol = data.body.rol;
-        sessionStorage.setItem("token", data.body.token); 
+        sessionStorage.setItem("token", data.body.token);
+
         fetch(url + "/users/historial-sesion", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -56,12 +82,19 @@ BTN.addEventListener("click", (e) => {
         .then(response => response.json())
         .then(() => {
             if (rol === 3) {
-                window.location.href = "/panel"; 
+                window.location.href = "/panel";
             } else {
-                window.location.href = "/panel"; // Pongan el del usuario normal eh
+                window.location.href = "/usuario-normal"; 
+
+                // window.location.href = "/panelUsuario"; // Pongan el del usuario normal eh 
+
+                // window.location.href = "/usuario-normal"; //pongan la ruta del usuaroo normal
             }
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            console.log(err);
+            alert("Error al registrar el historial de sesión.");
+        });
     })
     .catch(err => {
         console.log(err);
