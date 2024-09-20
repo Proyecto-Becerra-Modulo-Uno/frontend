@@ -16,8 +16,10 @@ const options = {
   },
 };
 fetch(url, options)
-  .then((response) => response.json())
-  .then((data) => { });
+.then(response => response.json())
+.then(data => {
+    window.location.href = "/"
+})
 const btnAdd = document.querySelector(".agregar");
 btnAdd.addEventListener("click", () => {
   window.location.href = "/registro";
