@@ -10,10 +10,6 @@ export const recuperarClave = (req, res) => {
   res.render("views.recuperarClave.ejs");
 };
 
-export const comLogs = (req, res) => {
-  res.render("views.comlogs.ejs");
-};
-
 
 export const codigoRecuperacion = (req, res) => {
   res.render("views.codigoRecuperacion.ejs");
@@ -98,9 +94,7 @@ export const historialacceso = (req, res) => {
   res.render("views.historialAcceso.ejs");
 };
 
-export const usuariosInactivos = (req, res) =>{
-  res.render("views.usuarios.inactivos.ejs")
-}
+
 export const vistaprincipalusuario = (req, res)=>{
   res.render("view.vistaprincipalusuario.ejs")
 }

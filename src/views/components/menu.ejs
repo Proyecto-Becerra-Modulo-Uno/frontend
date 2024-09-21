@@ -21,7 +21,7 @@
             </div>
 
             <!-- Grupos Dropdown -->
-            <a href="/crear-grupos" class="btn-action d-flex align-items-center justify-content-between mt-2">Grupos</a>
+            <a href="/admin/crear-grupos"" class="btn-action d-flex align-items-center justify-content-between mt-2">Grupos</a>
 
             <!-- Informes Dropdown -->
             <a href="/informeActividad"
@@ -51,14 +51,12 @@
             </button>
             <div id="users-dropdown" style="display: none; flex-direction: column; height: auto; width: 100%;">
                 <div class="dropdown">
-                    <a href="/registros-dispositivos" class="btn text-start text-light text-decoration-none">Registros de inicio de sesión</a>
+                    <a href="/admin/registro-dispositivos" class="btn text-start text-light text-decoration-none">Registros de inicio de sesión</a>
                     <a href="#" class="btn text-start text-light text-decoration-none">Registros de
                         usuarios</a>
-                    <a href="/cuentas-bloqueadas" class="btn text-start text-light text-decoration-none">Cuentas
+                    <a href="/admin/cuentas-bloqueadas" class="btn text-start text-light text-decoration-none">Cuentas
                         bloqueadas</a>
-                    <a href="/panel" class="btn text-start text-light text-decoration-none">Panel de
-                        control</a>
-                    <a href="/usuarios-inactivos" class="btn text-start text-light text-decoration-none">Usuarios
+                    <a href="/admin/usuarios-inactivos" class="btn text-start text-light text-decoration-none">Usuarios
                         inactivos</a>
                 </div>
             </div>
@@ -81,7 +79,6 @@
                     <a href="/verificacionDoble1" class="btn text-start text-light text-decoration-none">Autenticación de
                         dos
                         factores</a>
-                    <a href="#" class="btn text-start text-light text-decoration-none">Ajustes de cuenta</a>
                     <a href="/config" class="btn text-start text-light text-decoration-none">Configuración del
                         sistema</a>
                     <a href="/complejidadPreguntas" class="btn text-start text-light text-decoration-none">Preguntas de
@@ -93,13 +90,20 @@
         </div>
 
         <!-- Pie de menu -->
+
         <div class="d-flex justify-content-center align-items-center gap-4" style="margin-top: auto;">
             <div>
                 <p>Administrador</p>
                 <p>admin@gmail.com</p>
             </div>
             <div>
-                <i class="fa-solid fa-ellipsis-vertical" style="font-size: 2rem;"></i>
+                <i class="fa-solid fa-ellipsis-vertical" style="font-size: 2rem;" id="menu-toggle"></i>
+            </div>
+        
+            <!-- Menú flotante -->
+            <div id="dropdown-menu" class="dropdown-menu" style="display: none; position: absolute; z-index: 1000;">
+                <a href="/ajuste" class="dropdown-item">Ajustes</a>
+                <a href="/login" class="dropdown-item">Cerrar sesión</a>
             </div>
         </div>
     </div>
