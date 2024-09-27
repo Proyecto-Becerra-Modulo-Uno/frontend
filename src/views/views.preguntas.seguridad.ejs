@@ -5,169 +5,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas de seguridad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/permisos.css">
     <link rel="stylesheet" href="/css/preguntas_seguridad.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="nav__item">
-                <i class='bx bxs-bell' id="abrir"></i>
-                <i class='bx bxs-user-circle' id="config"></i>
-            </div>
-        </nav>
-    </header>
-    <div class="caja__notifica" id="notificaciones">
-        <div class="noti__main">
-            <div class="noti__head">
-                <p>Notificaciones</p>
-            </div>
-            <div class="noti__body">
-                <p>Borrar Notificaciones</p>
-            </div>
-            <div class="noti__footer">
-                <div class="toggle-container">
-                    <label for="toggle-switch" class="toggle-label">Desahabilitar notificaciones</label>
-                    <input type="checkbox" id="toggle-switch" class="toggle-switch">
-                    <label for="toggle-switch" class="switch"></label>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="aside col-2 col-md-2 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="header d-flex align-items-center justify-content-center mt-5">
+                        <img class="title" src="/img/estrella-afilada-medio-trazo 1.png" alt="Apex-Logo"
+                            style="height: 50px; margin-right: 10px;">
+                        <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+                        <!-- Logs Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="admin-button">
+                            <span class="text-start">Logs</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="admin-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Logs de
+                                seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                logs</a>
+                        </div>
+
+                        <!-- Grupos Dropdown -->
+                        <a href="/#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Grupos</a>
+
+                        <!-- Accesos Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="access-button">
+                            <span class="text-start">Accesos</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="access-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Intentos de
+                                acceso</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración de
+                                acceso</a>
+                        </div>
+
+                        <!-- Modulos Dropdown -->
+                        <a href="#"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Módulos</a>
+
+
+                        <!-- Usuarios Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="users-button">
+                            <span class="text-start">Usuarios</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="users-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Listado de
+                                usuarios</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Registros
+                                de
+                                usuarios</a>
+                            <a href="/bloqueos"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Cuentas
+                                bloqueadas</a>
+                            <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel
+                                de
+                                control</a>
+                        </div>
+
+                        <!-- Informes Dropdown -->
+                        <a href="/informeActividad"
+                            class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
+
+                        <!-- Seguridad Dropdown -->
+                        <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2"
+                            id="records-button">
+                            <span class="text-start">Seguridad</span>
+                            <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
+                        </button>
+                        <div id="records-dropdown"
+                            style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Copias de
+                                seguridad</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Exportación
+                                de
+                                datos</a>
+                            <a href="/sesiones"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Inicios de
+                                sesión</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Detección</a>
+                            <a href="/historialc"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Monitoreo</a>
+                            <a href="/verificacionDoble1"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Autenticación de
+                                dos
+                                factores</a>
+                            <a href="#" class="btn btn-secondary text-start text-light text-decoration-none">Ajustes de
+                                cuenta</a>
+                            <a href="/config"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Configuración del
+                                sistema</a>
+                            <a href="/complejidadPreguntas"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Preguntas de
+                                Seguridad</a>
+                            <a href="#"
+                                class="btn btn-secondary text-start text-light text-decoration-none">Encriptación de
+                                contraseñas</a>
+                        </div>
+                    </div>
                 </div>
+
+
+                <div class="admin-section d-flex align-items-center justify-content-center mt-5">
+                    <div class="flex-column mt-5 me-5">
+                        <h1 style="color: white; font-size: 20px; margin-bottom: 0;">Administrador</h1>
+                        <p style="color: gainsboro;">admin@gmail.com</p>
+                    </div>
+                    <div class="mt-4" style="color: white;">
+                        <img src="/img/menu-puntos-vertical 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content col-md-10">
+                <header>
+                    <div class="title">
+                        <center>
+                            <h1>Preguntas de seguridad</h1>
+                            <p>Tus preguntas de seguridad ayudan a mantener tu cuenta segura. Puede usarlos para
+                                restablecer
+                                su
+                                contraseña
+                            </p>
+                        </center>
+                    </div>
+                    <center>
+                        <div class="blue-box">
+
+                            <div id="preguntas-list">
+
+                                <!-- <div class="caja_cont_pregunta">
+                                    <h4>Pregunta:</h4>
+                                    <p class="dos">¿Cuál fue tu primer proyecto o tarea en esta empresa?</p>
+                                    <h4 class="tres">Respuesta:</h4>
+                                    <p class="cuatro">nose</p>
+                                    <div class="cja_boton">
+                                        <button class="boton3">Editar</button>
+                                    </div>
+                                </div> -->
+
+                            </div>
+
+                        
+                            <div class="buttons">
+                                <button type="" class="button1">Agregar pregunta</button>
+                            </div>
+                        </div>
+                </header>
+
+
+                <!-- Modal Structure -->
+                <div id="questionModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Agregar nueva pregunta</h2>
+                        <form id="modalForm">
+                            <div class="form-group">
+                                <div class="inputGroup">
+                                    <input type="text" required="" autocomplete="off" id="pregunta">
+                                    <label for="name">Escribe tu pregunta:</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="inputGroup">
+                                    <input type="text" required="" autocomplete="off" id="respuesta">
+                                    <label for="name">Escribe tu respuesta:</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="button2" id="guardar-pregunta" data-index="">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
-    <div class="config" id="configuracion">
-        <div class="noti__head">
-            <p>Configuración</p>
-        </div>
-        <div class="config__body">
-            <a href="">Autentificación de Dos Factores</a>
-            <a href="">Pongan las opciones aca cansones</a>
-            <a href="" class="cerrarSesion">Cerrar Sesión</a>
-        </div>
-    </div>
 
-    <header>
-        <div class="title">
-            <!-- FLECHA -->
-            <div class="arrow">
-                <button class="button">
-                    <div class="button-box">
-                        <span class="button-elem">
-                            <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
-                                </path>
-                            </svg>
-                        </span>
-                        <span class="button-elem">
-                            <svg viewBox="0 0 46 40">
-                                <path
-                                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
-                                </path>
-                            </svg>
-                        </span>
-                    </div>
-                </button>
-
-            </div>
-            <center>
-                <h1>Preguntas de seguridad</h1>
-                <p>Tus preguntas de seguridad ayudan a mantener tu cuenta segura. Puede usarlos para restablecer
-                    su
-                    contraseña
-                </p>
-            </center>
-        </div>
-        <center>
-        <form class="blue-box">
-            <h3>¿Cuál fue tu primer proyecto o tarea en esta empresa?</h3>
-            <div class="form-group">
-                <label for="first-project">Respuesta</label>
-                <input type="text" id="first-project" name="first-project">
-            </div>
-
-            <h3>¿Cuál fue el nombre de tu primera capacitación o curso en esta empresa?</h3>
-            <div class="form-group">
-                <label for="first-training">Respuesta</label>
-                <input type="text" id="first-training" name="first-training">
-            </div>
-            <div class="buttons">
-                <button type="" class="button1">Agregar otra pregunta</button>
-                <button type="" class="button2">Guardar cambios</button>
-            </div>
-        </form>
-    </center>
-    </header>
-
-    <!-- Modal Structure -->
-    <div id="questionModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Agregar nueva pregunta</h2>
-            <form id="modalForm">
-                <div class="form-group">
-                    <div class="inputGroup">
-                        <input type="text" required="" autocomplete="off">
-                        <label for="name">Escribe tu pregunta:</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="inputGroup">
-                        <input type="text" required="" autocomplete="off">
-                        <label for="name">Escribe tu respuesta:</label>
-                    </div>
-                </div>
-                <button type="submit" class="button2">Guardar</button>
-            </form>
-        </div>
-    </div>
-    <script>
-        const abrir = document.getElementById('abrir');
-        const notificaciones = document.getElementById('notificaciones');
-
-        abrir.addEventListener('click', () => {
-            notificaciones.classList.toggle('active')
-
-        })
-
-        document.addEventListener("click", (event) => {
-            const isClickInside =
-                notificaciones.contains(event.target) ||
-                abrir.contains(event.target);
-
-            if (!isClickInside) {
-                notificaciones.classList.remove("active");
-            }
-        });
-
-        const abrirConfig = document.getElementById('config');
-        const configuracion = document.getElementById('configuracion');
-
-        abrirConfig.addEventListener('click', () => {
-            configuracion.classList.toggle('activeC')
-
-        })
-
-        document.addEventListener("click", (event) => {
-            const isClickInside =
-                configuracion.contains(event.target) ||
-                abrirConfig.contains(event.target);
-
-            if (!isClickInside) {
-                configuracion.classList.remove("activeC");
-            }
-        });
-
-        // document.addEventListener('DOMContentLoaded', ()=>{
-        //     const notificaciones = document.getElementById('notificaciones');
-        // if (notificaciones) {
-        //     notificaciones.style.display = '';
-        // }
-        // })
-
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/preguntas.seguridad.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -116,23 +116,24 @@ h1 {
 }
 
 /* Diseño de los select */
-.selectores{
+.selectores {
     width: 200px;
     height: 40px;
 }
 
 /* Diseño de los inputs */
-.cajass{
+.cajass {
     width: 80px;
     text-align: center;
     background-color: rgb(224, 224, 224);
 }
-.cambio{
+
+.cambio {
     height: 40px;
     margin-left: 40px;
 }
 
-.camb{
+.camb {
     margin-left: 40px;
 }
 
@@ -163,4 +164,32 @@ h1 {
 .gboton:hover {
     background-color: gainsboro;
     color: black;
+}
+
+
+.content {
+    flex: 1;
+    /* Permite que la columna .content ocupe el espacio restante */
+    padding: 20px;
+    /* Ajusta el padding según tus necesidades */
+}
+
+
+@media screen and (width<=1500px) {
+
+    .aside {
+        width: 240px;
+    }
+
+    .caja_informacion{
+        width: 90%;
+        height: 800px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr;
+    }
+
+    .informacion_caja1 {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    
 }
