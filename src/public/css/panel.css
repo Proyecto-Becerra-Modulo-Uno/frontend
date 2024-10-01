@@ -82,3 +82,14 @@ th{
 .btn-delete:hover .btn-icon {
     color: red; /* Cambia a otro color en lugar de negro */
 }
+#admin-mini-menu {
+  display: none; 
+  position: absolute; 
+  top: -80px; 
+  right: -50px; 
+  background-color: #4961E4; 
+  padding: 10px; 
+  border-radius: 5px; 
+  z-index: 100; 
+  width: 150px;
+}
