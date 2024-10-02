@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/login.css" />
     <title>Apex | Iniciar sesión</title>
+    <link rel="shortcut icon" href="/img/logo/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main class="login">
@@ -13,8 +14,10 @@
           <input type="text" placeholder="Ingrese su correo o usuario" id="usuario" required />
           <input type="password" placeholder="Ingrese su contraseña" id="contrasena" required />
           <button class="boton" type="submit">Ingresar</button>
-          <a href="/recuperar-usuario">Recuperar usuario</a>
-          <a href="/recuperar-clave">Recuperar contraseña</a>
+          <div class="links ">
+            <a href="/recuperar-usuario">Recuperar usuario</a>
+            <a href="/recuperar-clave">Recuperar contraseña</a>
+          </div>
 
 
           <div class="linea">
@@ -32,6 +35,6 @@
     </main>
     <input type="hidden" value="<%= url %>" id="url">
   </body>
-  <script src="/js/login.js"></script>
+  <script src="/js/services/login.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

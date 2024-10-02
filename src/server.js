@@ -18,22 +18,10 @@ server.set("view engine", "ejs");
 server.use(express.static(path.join(__dirname, "public")));
 server.set("views", path.join(__dirname, "views"));
 server.use(express.json());
+
 server.use(cors())
-server.use("/", (req, res) =>{
-    res.render("views.asignarPermisoModulos.ejs")
-});
 
 server.set("port", process.env.PORT || 3000);
-
-server.use("/", ruta);
-server.use("/admin", rutaAdmin)
-
-server.set("port", process.env.PORT || 3200);
-server.use(cors())
-server.set("view engine", "ejs");
-server.use(express.static(path.join(__dirname, "public")));
-server.set("views", path.join(__dirname, "views"));
-
 
 server.use("/", ruta);
 

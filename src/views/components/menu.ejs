@@ -2,7 +2,7 @@
     <div class="d-flex flex-column justify-content-between" style="flex-grow: 1;">
         <!-- Encabezado -->
         <a class="header d-flex align-items-center justify-content-center mt-5 text-decoration-none" href="/panel">
-            <img class="title" src="/img/estrella-afilada-medio-trazo 1.png" alt="Apex-Logo"
+            <img class="title" src="/img/logo/logoApex.png" alt="Apex-Logo"
                 style="height: 50px; margin-right: 10px;">
             <h1 style="color: white; font-size: 30px; font-weight:700">Apex</h1>
         </a>
@@ -19,11 +19,9 @@
                     <a href="#" class="btn text-start text-light text-decoration-none">Intentos de acceso</a>
                 </div>
             </div>
-        </div>
-        <div class="d-flex flex-column align-items-center justify-content-center mt-5">
 
             <!-- Grupos Dropdown -->
-            <a href="/grupos" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Grupos</a>
+            <a href="/admin/crear-grupos"" class="btn-action d-flex align-items-center justify-content-between mt-2">Grupos</a>
 
             <!-- Informes Dropdown -->
             <a href="/informeActividad"
@@ -53,33 +51,15 @@
             </button>
             <div id="users-dropdown" style="display: none; flex-direction: column; height: auto; width: 100%;">
                 <div class="dropdown">
-                    <a href="/registros-dispositivos" class="btn text-start text-light text-decoration-none">Registros de inicio de sesión</a>
+                    <a href="/admin/registro-dispositivos" class="btn text-start text-light text-decoration-none">Registros de inicio de sesión</a>
                     <a href="#" class="btn text-start text-light text-decoration-none">Registros de
                         usuarios</a>
-                    <a href="/bloqueos" class="btn text-start text-light text-decoration-none">Cuentas
+                    <a href="/admin/cuentas-bloqueadas" class="btn text-start text-light text-decoration-none">Cuentas
                         bloqueadas</a>
-                    <a href="/panel" class="btn text-start text-light text-decoration-none">Panel de
-                        control</a>
-                    <a href="/usuarios-inactivos" class="btn text-start text-light text-decoration-none">Usuarios
+                    <a href="/admin/usuarios-inactivos" class="btn text-start text-light text-decoration-none">Usuarios
                         inactivos</a>
                 </div>
             </div>
-
-            <!-- Informes Dropdown -->
-            <!-- <a href="/informeActividad" class=" btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a> -->
-            <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="informes-button">
-                <span class="text-start">Informes</span>
-                <img class="dropdown-arrow" src="/img/angulo-hacia-abajo 1.png" alt="">
-            </button>
-            <div id="informes-dropdown"
-                style="display: none; flex-direction: column; background-color: #4961E4; height: auto; width: 100%;">
-                <a href="/reporteingrso" class="btn btn-secondary text-start text-light text-decoration-none">reportes de logs</a>
-                <!-- <a href="/panel" class="btn btn-secondary text-start text-light text-decoration-none">Panel de
-                    control</a> -->
-            </div>
-
-            <!-- dashboard Dropdown -->
-            <a href="/panel-seguridad" class= "btn btn-primary d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Dashboard</a>
 
             <!-- Seguridad Dropdown -->
             <button class="btn btn-action d-flex align-items-center justify-content-between mt-2" id="records-button">
@@ -99,7 +79,6 @@
                     <a href="/verificacionDoble1" class="btn text-start text-light text-decoration-none">Autenticación de
                         dos
                         factores</a>
-                    <a href="#" class="btn text-start text-light text-decoration-none">Ajustes de cuenta</a>
                     <a href="/config" class="btn text-start text-light text-decoration-none">Configuración del
                         sistema</a>
                     <a href="/complejidadPreguntas" class="btn text-start text-light text-decoration-none">Preguntas de
@@ -107,38 +86,27 @@
                     <a href="#" class="btn text-start text-light text-decoration-none">Encriptación de
                         contraseñas</a>
                 </div>
-            <!-- <button class="btn btn-primary d-flex align-items-center justify-content-between mt-2" id="cerrarSesion">
-                <span class="text-start">Cerrar Sesion</span>
-            </button>
-            <div id="records-dropdown"
-                style="display: none; flex-direction: column; background-color: #4961E4; height: 100%; width: 100%;">
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Panel de seguridad</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Copias de seguridad</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Exportación de datos</a>
-                <a href="/dis" class="btn btn-secondary text-start text-light text-decoration-none">Inicios de sesión</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Detección</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Monitoreo</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Autenticación de dos factores</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Ajustes de cuenta</a>
-                <a href="/config" class="btn btn-secondary text-start text-light text-decoration-none">Configuración del sistema</a>
-                <a href="/preguntas" class="btn btn-secondary text-start text-light text-decoration-none">Preguntas de Seguridad</a>
-                <a href="/" class="btn btn-secondary text-start text-light text-decoration-none">Encriptación de contraseñas</a>
-            </div> -->
+            </div>
         </div>
 
         <!-- Pie de menu -->
+
         <div class="d-flex justify-content-center align-items-center gap-4" style="margin-top: auto;">
             <div>
                 <p>Administrador</p>
                 <p>admin@gmail.com</p>
             </div>
             <div>
-                <i class="fa-solid fa-ellipsis-vertical" style="font-size: 2rem;"></i>
+                <i class="fa-solid fa-ellipsis-vertical" style="font-size: 2rem;" id="menu-toggle"></i>
+            </div>
+        
+            <!-- Menú flotante -->
+            <div id="dropdown-menu" class="dropdown-menu" style="display: none; position: absolute; z-index: 1000;">
+                <a href="/ajuste" class="dropdown-item">Ajustes</a>
+                <a href="/login" class="dropdown-item">Cerrar sesión</a>
             </div>
         </div>
     </div>
 </div>
 
 <script src="/js/components/dropdown-panel.js"></script>
-<script src="/js/dropdown-panel.js"></script>
-<script src="/js/inactividad.js"></script>

@@ -1,19 +1,16 @@
 @import "main.css";
 @import "components/backgroud.form.css";
 
-
 form{
     display: flex;
-    justify-content: center;
-    align-items: center;    
     flex-direction: column;
     background-color: var(--color-1);
-    padding: 5vh;
     border-radius: 2vh;
     color: #fff;
     font-family: 'CorbelR';
     text-align: center;
-    gap: 3vh;
+    padding: 5vh;
+    gap: 2vh;
 }
 
 h1{
@@ -21,7 +18,6 @@ h1{
 }
 
 input[type= "text"], input[type= "email"], input[type= "password"], input[type= "number"]{
-    width: 80%;
     border-radius: 10px;
     border: none;
     padding: 2vh;
@@ -31,47 +27,31 @@ a{
     color: #ffff;
 }
 
-select{
-    width: 88%;
-    padding: 10px;
-    border-radius: 1vh;
-    outline: none;
-    border: none;
-}
-
-
-.group_list{
-    margin: 10px 0;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.group_list p{
-    text-wrap: wrap;
-}
 .boton{
-    margin: 20px;
-    width: 320px;
-    height: 40px;
     border-radius: 10px;
     border: none;
-    padding: 10px;
     transition: .2s;
     cursor: pointer;
+    padding: 2vh    ;
 }
 
 .boton:hover{
     background: #b4b4b4;
     transition: .2s;
 }
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
 .linea{
     display: flex;
     align-items: center;
 }
 .linea > p{
-    margin: 10px;
+    margin: 0 10px;
 }
 .line{
     height: 1px;

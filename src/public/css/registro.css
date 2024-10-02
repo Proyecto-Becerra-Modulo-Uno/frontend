@@ -1,38 +1,53 @@
 @import url("main.css");
-@import url("login.css");
 @import url("components/backgroud.form.css");
 
-.top-box {
-    height: 50px;
-    background-color: #394DC0; 
-    color: white; 
-}
-.top-box .icons {
-    margin-left: auto;
+form{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-1);
+    border-radius: 2vh;
+    color: #fff;
+    font-family: 'CorbelR';
+    text-align: center;
+    padding: 5vh;
+    gap: 2vh;
+    width: 30%;
 }
-.top-box .icon {
-    font-size: 24px; 
-    margin-left: 20px; 
+
+
+input{
+    border-radius: 10px;
+    border: none;
+    padding: 2vh;
+}
+
+a{
+    color: #ffff;
+}
+
+.consentimiento{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.g-recaptcha{
+    display: flex;
+    justify-content: center;
 }
 
 .swal2-container {
     z-index: 9999 !important;
 }
 
-.consentimiento{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2vh;
+
+select{
+    padding: 10px;
+    border-radius: 1vh;
+    outline: none;
+    border: none;
 }
 
 .registro{
     background-image: url(/img/forms/bg2.jpg);
-}
-
-.formulario{
-    transform: scale(0.8);
-    width: 30%;
 }

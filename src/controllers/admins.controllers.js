@@ -14,22 +14,50 @@ export const panel = (req, res) => {
         datos = data
         res.render("views.panel.ejs", {users: data, url: url})
     })
-}   
-
-export const notipopup = (req, res) => {
-    res.render("views.popup.ejs")
 }
 
 export const registro = (req, res) => {
     res.render("admin/views.registro.ejs")
 }
 
+export const cuentasbloqueadas = (req, res) => {
+    let datos = {};
+    fetch(url + "/admin/cuentas-bloqueadas")
+    .then(res => res.json())
+    .then(data => {
+        datos = data
+        res.render("admin/views.cuentas.bloqueadas.ejs", {users: data, url: url})
+    })
+}
+
+export const usuariosInactivos = (req, res) =>{
+    res.render("admin/views.usuarios.inactivos.ejs")
+}
+
+
+export const grupos = (req, res) => {
+    fetch(url + "/listar-grupos")
+    .then(res => res.json())
+    .then(data => res.render("admin/views.grupos.ejs", {grupos: data}))
+} 
+
+export const configurarLogs = (req, res) => {
+    res.render("admin/views.configurar.logs.ejs");
+  };
+
+
+export const notipopup = (req, res) => {
+    res.render("views.popup.ejs")
+}
+
+
+
 export const nuevousuario = (req, res) => {
     res.render("views.nuevousuario.ejs")
 }
 
 export const condicionesc = (req, res) => {
-    fetch(url + "/users/listar-politicas")
+    fetch(url + "/politicas")
     .then(res => res.json())
     .then(data => {
         res.render("views.condicionesc.ejs", {politicas: data})
@@ -66,6 +94,7 @@ export const reporting = (req, res) => {
 
 
 
+
 export const complejidadPreguntas = (req, res) => {
     res.render("admin/views.complejidad.preguntas.ejs")
 }
@@ -80,23 +109,16 @@ export const configuracion = (req, res) => {
 }
 
 export const registroDispositivos = (req, res) => {
-    fetch(url + "/users/inicios")
-    .then(res => res.json())
-    .then(data => {
-        res.render("admin/views.registro.dispositivos.ejs", {registros: data})
-    })
-    .catch(err => console.error(err))
-}
+    fetch(url + "/admin/lista-sesiones")
+        .then(response => response.json())
+        .then(data => {
+            res.render("admin/views.registro.dispositivos.ejs", { registros: data.body });
+        })
+        .catch(err => console.error(err));
+};
 
-export const cuentasbloqueadas = (req, res) => {
-    let datos = {};
-    fetch(url + "/bloqueos")
-    .then(res => res.json())
-    .then(data => {
-        datos = data
-        res.render("views.cuentas.bloqueadas.ejs", {users: data, url: url})
-    })
-} 
+
+
 
 export const historialacceso = (req, res) => {
     res.render("views.historialAcceso.ejs") 
@@ -107,11 +129,6 @@ export const retencion = (req, res) => {
 }
 
 
-export const grupos = (req, res) => {
-    fetch(url + "/listar-grupos")
-    .then(res => res.json())
-    .then(data => res.render("views.grupos.ejs", {grupos: data}))
-} 
 
 export const informeActividad = (req, res) => {
     res.render("views.informe.actividad.ejs")
