@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { condicionesc, configuracion, cuentasbloqueadas, notipopup, panel, registro, registroSesion, verificacionDoble1, verificacionDoble2 } from "../controllers/admins.controllers.js";
 import { dispositivosMovil, notiActi } from "../controllers/usuarios.controllers.js";
-import { nuevousuario, retencion} from "../controllers/admins.controllers.js";
-import { complejidadPreguntas, grupos, informeActividad } from "../controllers/admins.controllers.js";
 import { configuracionPoliticas, crearBackup, exportdata, listarBackups, preguntasSeguridad, restaurarBackup, ssl } from "../controllers/admins.controllers.js";
+import { condicionesc, configuracion, cuentasbloqueadas, notipopup, nuevousuario, panel, panel_control_seguridad, registro, registroSesion, reporting, retencion, verificacionDoble1, verificacionDoble2} from "../controllers/admins.controllers.js";
+import {  complejidadPreguntas, grupos, informeActividad, } from "../controllers/admins.controllers.js";
+
 const rutaAdmin = Router();
 
 
@@ -32,6 +32,9 @@ rutaAdmin.get('/ssl', ssl)
 rutaAdmin.get('/backups', listarBackups);
 rutaAdmin.post('/create-backup', crearBackup);
 rutaAdmin.post('/restore-backup', restaurarBackup);
+
+rutaAdmin.get("/reporteingrso", reporting)
+rutaAdmin.get("/panel-seguridad", panel_control_seguridad)
 
 export default rutaAdmin
 
