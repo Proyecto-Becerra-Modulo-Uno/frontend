@@ -65,6 +65,12 @@ transform: translate(550px);
     font-size: 110%;
 }
 
+.boton-reenviar-codigo{
+    border: none;
+    height: 20px;
+    width: 200px;
+    border-radius: 30px;
+}
 
 .contenedor2__input{
     border: none; /* Elimina el borde predeterminado */
@@ -106,7 +112,7 @@ transform: translate(550px);
 }
 
 .boton-atras--pantalla2{
-    transform: translate(0, 0px);
+    transform: translate(-10px, 0px);
 }
 
 .boton-atras:hover {

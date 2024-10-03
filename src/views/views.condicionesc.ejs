@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styleco.css">
     <link rel="stylesheet" href="/css/panel.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
             <%- include('./components/menu'); %>
-            <div class="content col-md-10" id="section1">
-                <div class="">
-                    <div class="fw-bold mt-3">Duración de los Tokens</div>
-                    <div class="d-flex mt-3">
-                        <input type="number" class="form-control me-2" placeholder="1" id="tiempoT" style="width: 10%;" value="<%= politicas.body[0].duracion_token.replace(/\D/g, '') %>">
-                        <select class="form-select" id="medidaT" style="width: 10%;">
-                            <option value="m" <%= politicas.body[0].duracion_token.includes('m') ? 'selected' : '' %>>Minutos</option>
-                            <option value="h" <%= politicas.body[0].duracion_token.includes('h') ? 'selected' : '' %>>Horas</option>
-                            <option value="d" <%= politicas.body[0].duracion_token.includes('d') ? 'selected' : '' %>>Días</option>
-                            <option value="w" <%= politicas.body[0].duracion_token.includes('w') ? 'selected' : '' %>>Semanas</option>
-                            <option value="y" <%= politicas.body[0].duracion_token.includes('y') ? 'selected' : '' %>>Años</option>
-                        </select>
+                <div class="content col-md-10" id="section1">
+                    <div class="contenedor">
+
+                        <div class="caja_informacion">
+
+                            <div class="informacion_caja1">
+                                <h1>Duración de los Tokens</h1>
+                                <div class="caja_input">
+                                    <input type="number" class="form-control me-2 cajass cambio" id="tiempoT"
+                                         value="">
+                                    <select class="form-select selectores" id="medidaT" >
+                                        <option value="m">Minutos</option>
+                                        <option value="h">Horas</option>
+                                        <option value="d">Días</option>
+                                        <option value="w">Semanas</option>
+                                        <option value="y">Años</option>
+                                    </select>
+                                </div>
+                                <h1>Frecuencia Copia de Seguridad</h1>
+                                <select class="form-select selectores camb" id="frecuenciaCS" style="width: 20%;">
+                                    <option value="Diaria">Diaria</option>
+                                    <option value="Semanal">Semanal</option>
+                                    <option value="Mensual">Mensual</option>
+                                    <option value="Anual">Anual</option>
+                                </select>
+
+                            </div>
+
+                            <div class="informacion_caja2">
+
+                                <h1>Complejidad de las Contraseñas</h1>
+                                <div class="caja_grilla">
+                                    <p>Cantidad de Caracteres:</p>
+                                    <input type="number" class="t1 px-3 rounded border-0 mx-3 mt-3 cajass" id="cantC"
+                                     value="">
+                                    <p>Cantidad Mínima de Minúsculas:</p>
+                                    <input type="number" class="mt-3 t1 px-3 rounded border-0 mx-3 cajass"
+                                        id="cantMin">
+                                    <p>Cantidad Mínima de Mayúsculas:</p>
+                                    <input type="number" class="mt-3 t1 px-3 rounded border-0 mx-3 cajass"
+                                        id="cantMay">
+                                    <p>Cantidad Mínima de Números:</p>
+                                    <input type="number" class="mt-3 t1 px-3 rounded border-0 mx-3 cajass"
+                                        id="cantNum">
+                                    <p>Cantidades Especiales:</p>
+                                    <input type="number" class="mt-3 t1 px-3 rounded border-0 mx-3 cajass"
+                                        id="cantEsp">
+
+                                    <p>Intervalos de cambios de contraseña:</p>
+                                    <div class="caja_input">
+                                        <input type="number" class="mt-3 t1 px-3 rounded border-0 mx-3 cajass"
+                                            id="intervaloCam">
+
+                                        <select class="form-select mt-3 selectores" id="frecuenciaCS">
+                                            <option value="Diaria">Dias</option>
+                                            <option value="Semanal">Semanas</option>
+                                            <option value="Mensual">Meses</option>
+                                            <option value="Anual">Años</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+
+                                <button class="gboton" id="btnG">Guardar Cambios</button>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <!-- NUEVO -->
+
                     </div>
 
-                    <div class="fw-bold mt-3">Frecuencia Copia de Seguridad</div>
-                    <div class="d-flex mt-3">
-                        <select class="form-select" id="frecuenciaCS" style="width: 20%;">
-                            <option value="Diaria" <%= politicas.body[0].frecuencia_copia_seguridad === 'Diaria' ? 'selected' : '' %>>Diaria</option>
-                            <option value="Semanal" <%= politicas.body[0].frecuencia_copia_seguridad === 'Semanal' ? 'selected' : '' %>>Semanal</option>
-                            <option value="Mensual" <%= politicas.body[0].frecuencia_copia_seguridad === 'Mensual' ? 'selected' : '' %>>Mensual</option>
-                            <option value="Anual" <%= politicas.body[0].frecuencia_copia_seguridad === 'Anual' ? 'selected' : '' %>>Anual</option>
-                        </select>
-                    </div>
-
-                    <div class="fw-bold mt-3">Complejidad de las Contraseñas</div>
-                    <div class="col d-flex">
-                        <div class="mt-4">Cantidad de Caracteres</div>
-                        <input type="number" class="t1 px-3 rounded border-0 mx-3 mt-3" id="cantC" placeholder="1" value="<%= politicas.body[0].longitud_minima_contrasena %>">
-                    </div>
-                    
-                    <div class="col d-flex">
-                        <div class="mt-4">Cantidad Mínima de Minúsculas</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMin" value="<%= politicas.body[0].cant_min_min %>">
-                    </div>
-
-                    <div class="col d-flex">
-                        <div class="mt-4">Cantidad Mínima de Mayúsculas</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantMay" value="<%= politicas.body[0].cant_min_may %>">
-                    </div>
-
-                    <div class="col d-flex">
-                        <div class="mt-4">Cantidad Mínima de Números</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantNum" value="<%= politicas.body[0].cant_min_num %>">
-                    </div>
-
-                    <div class="col d-flex">
-                        <div class="mt-4">Cantidades Especiales</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantEsp" value="<%= politicas.body[0].cant_caracteres_esp %>">
-                    </div>
-
-                    <div class="col d-flex">
-                        <div class="mt-4">Intervalos de cambios de contraseña (días)</div>
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="1" id="cantInt" value="<%= politicas.body[0].intervalos_cambio_contrasena %>">
-                        <select class="form-select mt-3" id="intervaloCS" style="width: 10%;">
-                            <option value="Diaria" selected>Días</option>
-                        </select>
-                    </div>
-
-                    <div class="col d-flex">
-                        <div class="mt-4">Duración de Contraseña</div>   
-                        <input type="text" class="mt-3 t1 px-3 rounded border-0 mx-3" placeholder="Cantidad" id="cantEsp" value="<%= politicas.body[0].tiempo_expiracion_sesion %>">
-                        <select class="form-select mt-3" id="frecuenciaCS" style="width: 10%;">
-                            <option value="Dias" <%= politicas.body[0].duracion_token.includes('d') ? 'selected' : '' %>>Días</option>
-                            <option value="Semanal" <%= politicas.body[0].duracion_token.includes('w') ? 'selected' : '' %>>Semanas</option>
-                            <option value="Mensual" <%= politicas.body[0].duracion_token.includes('m') ? 'selected' : '' %>>Meses</option>
-                            <option value="Anual" <%= politicas.body[0].duracion_token.includes('y') ? 'selected' : '' %>>Años</option>
-                        </select>
-                    </div>
                 </div>
-
-                <div class="d-flex-end mt-5">
-                    <button class="btn btn-primary gbtn" id="btnG">Guardar Cambios</button>
-                </div>
-            </div>
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/js/complejidad-contras.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
 </html>

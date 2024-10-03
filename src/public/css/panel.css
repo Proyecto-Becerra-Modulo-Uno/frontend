@@ -1,95 +1,68 @@
-/* Archivo para montar carpeta en Git hub */
-* {
-  margin: 0;
-  padding: 0;
-}
-.dropdown-arrow {
-    width: auto;
-    height: 20px;
-    position: relative;
-    margin-left: auto;
-}
-.content {
-  overflow: hidden;
-}
-.row {
-  width: 100%; 
-  height: 100vh;
-}
+@import url("main.css");
+@import url("components/menu.css");
 
-#settings-button, 
-#users-button, 
-#records-button, 
-#groups-button, 
-#reports-button, 
-#access-button, 
-#export-button, 
-#admin-button, 
-#config-button {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2); 
-}
-
-.aside {
-  background-color: #1E3DEA;
-}
-.btn {
-  width: 100%;
-  height: 52px;
-  background-color: #4961E4;
-  font-size: 18px;
-}
-.admin-section {
-  margin-top: auto;
-  padding-bottom: 20px;
-}
-th{
-  background-color: #1E3DEA;
-}
-.header-row {
-  align-items: center;
-  height: 60px; 
-}
-.header-row h1 {
-  margin: 0;
-  line-height: 60px; 
-}
-.header-row .btn {
-  line-height: 40px; 
-}
 .content {
   padding-top: 20px; 
 }
-#settings-dropdown .btn,
-#users-dropdown .btn,
-#records-dropdown .btn,
-#access-dropdown .btn,
-#admin-dropdown .btn,
-#config-dropdown .btn {
-  line-height: 1; /* Ajusta la altura de línea para evitar cortes */
-  padding: 10px; /* Ajusta el padding si es necesario */
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
 }
 
-.gbtn {
-  width: 20%;
-  height: 45px;
-  background-color: #4961E4;
-  font-size: 15px;
+.btn-group button {
+  position: relative;
+  padding: 1rem;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
-/* Para los botones con fondo negro */
-.btn-key:hover .btn-icon, 
-.btn-delete:hover .btn-icon {
-    color: red; /* Cambia a otro color en lugar de negro */
+.btn-group button:hover {
+  background-color: #ddd; 
 }
-#admin-mini-menu {
-  display: none; 
-  position: absolute; 
-  top: -80px; 
-  right: -50px; 
-  background-color: #4961E4; 
-  padding: 10px; 
-  border-radius: 5px; 
-  z-index: 100; 
-  width: 150px;
+
+.btn-group button p {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 20;
 }
+
+.btn-group button:hover p {
+  display: block;
+  opacity: 1;
+}
+
+.btn-group i {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-group button:nth-child(4), .btn-group button:nth-child(5){
+  background-color: red;
+}
+
+.btn-group button:nth-child(4) i, .btn-group button:nth-child(5) i{
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .aside {
+    display: none !important;
+  }
+}
+
+

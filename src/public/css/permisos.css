@@ -124,38 +124,6 @@
     transition: background-color 0.3s ease;
   }
 
-.btn-key {
-  background-color: black;
-  color: white;
-}
-
-.btn-edit {
-  background-color: #1e3dea;
-  color: white;
-}
-
-.btn-delete {
-  background-color: red;
-  color: white;
-}
-
-.btn-group .btn {
-  margin-right: 10px;
-}
-
-.btn-group .btn:last-child {
-  margin-right: 0;
-}
-
-.btn-group-custom {
-  margin-left: 10px;
-}
-
-.btn-group .btn:last-child {
-  margin-right: 0;
-}
-
-
 
 /* Estilos para el modal */
 .modal-body {
@@ -240,3 +208,36 @@
 .btn-secondary {
     background-color: #1E3DEA;
 }
+  
+  /* Estilo del slider (bolita) */
+  .switch-slider {
+    position: absolute;
+    top: 4px; 
+    left: 4px; 
+    width: 25px; 
+    height: 25px;
+    background-color: white;
+    border-radius: 55%; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .switch-input {
+    display: none;
+  }
+  
+  .switch-input:checked + .switch-label {
+    background-color: blue;
+  }
+  
+  .switch-input:checked + .switch-label .switch-slider {
+    transform: translateX(30px);
+    background-color: white;
+  }
+  
+  .btn-secondary {
+      background-color: #1E3DEA;
+  }
+
+
+
+  

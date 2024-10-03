@@ -11,9 +11,9 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- Menú incluido -->
             <%- include('./components/menu'); %>
             <div class="content col-md-10" style="height: 200vh;">
-                
                 <div class="contenedorPrincipal">
                     <div class="slider">
                         <!-- Primera pantalla -->
@@ -22,17 +22,15 @@
                             <div class="cuadroConTexto__contenedor2">
                                 <h2 class="contenedor2__h2">Configura tu teléfono</h2><br>
                                 <p class="contenedor2__p1">¿Qué número de teléfono usas?</p>
-                                <input type="text" placeholder="Introduce tu número" class="contenedor2__input">
-            
+                                <input type="text" placeholder="Introduce tu número" class="contenedor2__input" id="phoneNumberInput">
                                 <br><br>
                                 <p>
-                                    Apex solo usuara este numero <br>para mantener la seguridad de la cuenta.
+                                    Apex solo usará este número <br>para mantener la seguridad de la cuenta.
                                     <br><br><br>
-            
-                                    Obtendras los codigos por medio de <br>mensaje de textos
+                                    Obtendrás los códigos por medio de <br>mensaje de textos
                                 </p>
                                 <p class="contenedor2__contadorVista1">paso 1 de 3</p>
-                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro1" onclick="moverSlider(1)">Siguiente</button>
+                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro1" id="btnSiguiente1">Siguiente</button>
                             </div>
                         </div>
                         <!-- Segunda pantalla -->
@@ -41,32 +39,28 @@
                             <div class="cuadroConTexto__contenedor2">
                                 <h2 class="contenedor2__h2">Confirmar que funciona</h2>
                                 <br>
-                                <p class="contenedor2__p1">Apex acaba de enviar un mensaje de texto con un codigo de verificacion al ... </p><br>
-                                <input type="text" placeholder="Introduce el codigo" class="contenedor2__input">
-                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro2" onclick="moverSlider(2)">Siguiente</button>
-            
-                                <p>¿No lo has recibido?</p> Volver a enviar
-            
+                                <p class="contenedor2__p1">Apex acaba de enviar un mensaje de texto con un código de verificación al ... </p><br>
+                                <input type="text" placeholder="Introduce el código" class="contenedor2__input" id="verificationCodeInput">
+                                <button class="cuadroConTexto__boton cuadroConTexto__boton--cuadro2" id="btnSiguiente2">Siguiente</button>
+                                <p>¿No lo has recibido?</p>
+                                <button class="boton-reenviar-codigo" id="btnReenviarCodigo">Volver a enviar</button>
                                 <p class="contenedor2__contadorPantalla2">paso 2 de 3</p>
-            
-                                <button class="boton-atras boton-atras--pantalla2" onclick="moverSlider(0)">Atrás</button>
-            
+                                <button class="boton-atras boton-atras--pantalla2" id="btnAtras1">Atrás</button>
                             </div>
                         </div>
+
                         <!-- Tercera pantalla -->
                         <div class="contenedorPrincipal__cuadroConTexto contenedorPrincipal__cuadroConTexto--terceraPantalla">
                             <div class="cuadroConTexto__contenedor1"></div>
                             <div class="cuadroConTexto__contenedor2">
-                                <h2 class="contenedor2__h2">Ha funcionado. ¿Quieres confirmar la autenticacion de dos pasos?</h2>
-                                <p class="contenedor2__p1">Ahora que ya has visto como funciona.¿quieres confirmar la autenticacion de dos pasos para tu cuenta de Apex, Administrador?</p>
-                                <button class="cuadroConTexto__boton cuadroConTexto__boton--pantalla3 ">CONFIRMAR</button>
-            
+                                <h2 class="contenedor2__h2">Ha funcionado. ¿Quieres confirmar la autenticación de dos pasos?</h2>
+                                <p class="contenedor2__p1">Ahora que ya has visto como funciona, ¿quieres confirmar la autenticación de dos pasos para tu cuenta de Apex, Administrador?</p>
+                                <button class="cuadroConTexto__boton cuadroConTexto__boton--pantalla3" id="btnConfirmar">CONFIRMAR</button>
                                 <p class="contenedor2__contadorPantalla3">paso 3 de 3</p>
                             </div>
                         </div>
                     </div>
                 </div> 
-
             </div>
         </div>
     </div>
@@ -92,5 +86,6 @@ function moverSlider(step) {
 
 
 </script>
+<script type="module" src="/js/verificacionDoble2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

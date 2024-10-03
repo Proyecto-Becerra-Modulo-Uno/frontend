@@ -1,14 +1,14 @@
+@import url("main.css");
+@import url("components/menu.css");
+
 .modal-header-custom {
     background-color: #2B2C33;
     border-bottom: none;
     color: white;
     justify-content: center;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-body {
@@ -30,11 +30,4 @@ body {
 .modal-message {
     margin-top: 10px;
     font-size: 18px;
-}
-
-.btn-primary {
-    background-color: #3E4DC8;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
 }
