@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/panel.css">
+    <title>Solicitudes</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <%- include('../components/menu'); %>
+            <div class="content col-md-10">
+                <h1 class="mb-4">Solicitudes</h1>
+                
+                <div class="row">
+                  <!-- Sección de Eliminación -->
+                  <div class="col-md-6 mb-4">
+                    <div class="card">
+                      <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">Eliminación</h5>
+                      </div>
+                      <div class="card-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Usuario</th>
+                              <th>Estado</th>
+                              <th>Acción</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <% eliminaciones.forEach(function(solicitud) { %>
+                            <tr>
+                              <td><%= solicitud.nombre_usuario || 'Desconocido' %></td>
+                              <td><%= solicitud.estado %></td>
+                              <td>
+                                <button class="btn btn-success btn-sm btn-accept" data-id="<%= solicitud.id %>">
+                                    Aceptar
+                                  </button>
+                                  <button class="btn btn-danger btn-sm btn-reject" data-id="<%= solicitud.id %>">
+                                    Rechazar
+                                  </button>
+                              </td>
+                            </tr>
+                            <% }); %>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sección de Exportar Datos -->
+                  <div class="col-md-6 mb-4">
+                    <div class="card">
+                      <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Exportar Datos</h5>
+                      </div>
+                      <div class="card-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Usuario</th>
+                              <th>Estado</th>
+                              <th>Acción</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <% exportaciones.forEach(function(solicitud) { %>
+                            <tr>
+                              <td><%= solicitud.nombre_usuario || 'Desconocido' %></td>
+                              <td><%= solicitud.estado %></td>
+                              <td>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#confirmModal" data-action="export" data-user="<%= solicitud.nombre_usuario %>" data-id="<%= solicitud.id %>">
+                                  Exportar
+                                </button>
+                              </td>
+                            </tr>
+                            <% }); %>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+
+              </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/js/soli.js"></script>
+</html>

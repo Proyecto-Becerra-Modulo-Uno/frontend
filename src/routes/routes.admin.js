@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { panel, registro, cuentasbloqueadas, usuariosInactivos, grupos, configurarLogs, registroDispositivos} from "../controllers/admins.controllers.js";
+import { panel, registro, cuentasbloqueadas, usuariosInactivos, grupos, configurarLogs, registroDispositivos, solicitudes} from "../controllers/admins.controllers.js";
 
 import { condicionesc, configuracion, notipopup, verificacionDoble1, verificacionDoble2 } from "../controllers/admins.controllers.js";
 import { notiActi, vistaprincipalusuario } from "../controllers/usuarios.controllers.js";
@@ -18,7 +18,7 @@ rutaAdmin.get("/admin/registro", registro);
 rutaAdmin.get("/admin/cuentas-bloqueadas", cuentasbloqueadas);
 rutaAdmin.get("/admin/usuarios-inactivos", usuariosInactivos);
 rutaAdmin.get("/admin/crear-grupos", grupos);
-
+rutaAdmin.get("/admin/solicitudes", solicitudes);
 rutaAdmin.get("/admin/logs", configurarLogs);
 
 rutaAdmin.get("/admin/registro-dispositivos", registroDispositivos)

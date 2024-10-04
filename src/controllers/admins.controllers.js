@@ -14,6 +14,19 @@ export const panel = (req, res) => {
         res.render("views.panel.ejs", {users: data, url: url})
     })
 }
+export const solicitudes = (req, res) => {
+    fetch(url + "/solicitudes")
+    .then(res => res.json())
+    .then(data => {
+        const eliminaciones = data.body.filter(solicitud => solicitud.id_tipo === 1);
+        const exportaciones = data.body.filter(solicitud => solicitud.id_tipo === 2);
+        res.render("admin/views.solicitudes.ejs", {
+            eliminaciones: eliminaciones,
+            exportaciones: exportaciones
+        });
+    })
+    .catch(error => console.error("Error al traer solicitudes:", error));
+};
 
 export const registro = (req, res) => {
     res.render("admin/views.registro.ejs")
