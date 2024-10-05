@@ -10,7 +10,9 @@ export const recuperarClave = (req, res) => {
   res.render("views.recuperarClave.ejs");
 };
 
-
+export const solicitudes = (req, res) => {
+  res.render("views.solicitudesUsuario.ejs");
+}
 export const codigoRecuperacion = (req, res) => {
   res.render("views.codigoRecuperacion.ejs");
 };

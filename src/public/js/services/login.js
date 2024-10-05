@@ -60,7 +60,7 @@ BTN.addEventListener("click", (e) => {
             }
             return;
         }
-
+        
         if (data.status === 403) {
             alert("Esta cuenta está bloqueada, no es posible ingresar.");
             return;
@@ -69,7 +69,7 @@ BTN.addEventListener("click", (e) => {
         intentosFallidos = 0;
         const rol = data.body.rol;
         sessionStorage.setItem("token", data.body.token);
-
+        sessionStorage.setItem("userId", data.body.id);
         fetch(url + "/admin/historial-sesion", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
