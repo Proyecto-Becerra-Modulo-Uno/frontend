@@ -32,7 +32,7 @@ rutaUsuario.get("/listabn", listaBN);
 rutaUsuario.get("/historiala", historialacceso); // Admin
 rutaUsuario.get("/exportar-datos", exportardatos);
 rutaUsuario.get("/sesiones-desktop", sesionesActivasDesktop);
-rutaUsuario.get("/solicitudes" ,solicitudes);
+rutaUsuario.get("/solicitudes",solicitudes);
 
 
 export default rutaUsuario
