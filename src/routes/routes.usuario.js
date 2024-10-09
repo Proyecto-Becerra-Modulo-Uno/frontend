@@ -5,6 +5,9 @@ import { cambiarcontrasena, codigoRecuperacion, comLogs, dispositivosMovil, eleg
 import { detalles,  eliminacionCuenta, exportardatos, historialcambios, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
 
+import { historialacceso } from "../controllers/usuarios.controllers.js";
+
+
 const rutaUsuario = Router();
 
 rutaUsuario.get("/preguntas", preguntas);
