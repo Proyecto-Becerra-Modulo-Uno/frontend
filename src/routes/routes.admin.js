@@ -14,6 +14,7 @@ const rutaAdmin = Router();
 // Rutas organizadas
 
 rutaAdmin.get("/panel", panel);
+
 rutaAdmin.get("/admin/registro", registro);
 rutaAdmin.get("/admin/cuentas-bloqueadas", cuentasbloqueadas);
 rutaAdmin.get("/admin/usuarios-inactivos", usuariosInactivos);

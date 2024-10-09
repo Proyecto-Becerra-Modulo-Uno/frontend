@@ -6,15 +6,32 @@ config();
 
 const url = process.env.BACKEND_URL;
 
-export const panel = (req, res) => {
-    let datos = {};
-    fetch(url + "/users")
-    .then(res => res.json())
-    .then(data => {
-        datos = data
-        res.render("views.panel.ejs", {users: data, url: url})
-    })
-}
+export const panel = async (req, res) => {
+    try {
+        const userId = req.body.id; 
+        const urlBase = `${url}/users`;
+ 
+        const [userResponse, allUsersResponse] = await Promise.all([
+            fetch(`${urlBase}/1`), 
+            fetch(urlBase)               
+        ]);
+
+        const userData = await userResponse.json();
+        const allUsersData = await allUsersResponse.json();
+
+        console.log(userInfo);
+
+        res.render("views.panel.ejs", {
+            user: userInfo,    
+            users: allUsersData, 
+            url: url
+        });
+    } catch (error) {
+        console.error('Error fetching user or users data:', error);
+        res.status(500).send("Error al obtener los datos del usuario o de todos los usuarios");
+    }
+};
+
 
 export const registro = (req, res) => {
     res.render("admin/views.registro.ejs")
