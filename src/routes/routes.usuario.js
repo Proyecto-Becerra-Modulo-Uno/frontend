@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { cambiarcontrasena, codigoRecuperacion, dispositivosMovil, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, historialacceso, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
+import { cambiarcontrasena, codigoRecuperacion, detalles, dispositivosMovil, elegirAutentificacionDosPasos, eliminacionCuenta, historialacceso, historialcambios, ingresarcodigo, inicioAutentificacionDosPasos, nuevaClave, nuevousuario, perfil, politicas, preguntas, recuperarClave, recuperarusuario, sesionesActivasDesktop } from "../controllers/usuarios.controllers.js";
 
 const rutaUsuario = Router();
 
