@@ -1,16 +1,25 @@
-const url = document.querySelector(".id").value;
+// Asegúrate de que jwt-decode está disponible
+// Si lo has instalado con npm, importa la biblioteca
+// import jwt_decode from 'jwt-decode'; // Solo si usas módulos ES6
 
+import { jwtDecode } from "jwt-decode";
+
+const url = document.querySelector(".id").value;
 localStorage.setItem("url", url);
 
 const token = sessionStorage.getItem("token");
 
-if (token == "" || token == null) {
+if (!token) {
   window.location.href = "/";
 }
 
-if (url == "" || url == null) {
+if (!url) {
   window.location.href = "/";
 }
+
+// Decodificar el token para obtener la información del usuario
+const decodedToken = jwtDecode(token);
+console.log(decodedToken); // Verifica qué información contiene el token
 
 const options = {
   method: "POST",
@@ -19,38 +28,32 @@ const options = {
     "x-access-token": token,
   },
 };
+  
+// Asignar Rol a Usuario
+const selects = document.querySelectorAll(".form-select").forEach((selector) => {
+  selector.addEventListener("change", (e) => {
+    const row = e.target.closest(".table-active");
+    const option = e.target.value;
+    const id = row.querySelector(".id_usuario").textContent.trim();
+    const url = localStorage.getItem("url");
 
-// // Asignar Rol a Usuario
-
-const selects = document
-  .querySelectorAll(".form-select")
-  .forEach((selector) => {
-    selector.addEventListener("change", (e) => {
-      const row = e.target.closest(".table-active");
-      const option = e.target.value;
-      const id = row.querySelector(".id_usuario").textContent.trim();
-      const url = localStorage.getItem("url");
-
-      fetch(url + "/users/asignar-rol", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          usuarioId: id,
-          rolId: option,
-        }),
+    fetch(url + "/users/asignar-rol", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        usuarioId: id,
+        rolId: option,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => console.error(err));
-    });
+      .catch((err) => console.error(err));
   });
+});
 
-// Gestionar permisos usuario
-
-
-// // Inicializar tooltips y manejar bloqueo/desbloqueo
+// Inicializar tooltips y manejar bloqueo/desbloqueo
 document.addEventListener("DOMContentLoaded", function () {
   const tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -59,9 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 
-
   // Lógica de bloqueo/desbloqueo
-
   document.querySelectorAll(".btn-lock").forEach((button) => {
     button.addEventListener("click", function () {
       const locked = this.getAttribute("data-locked") === "true";
@@ -89,16 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // Bloquear Usuario
-
 const btnLock = document.querySelectorAll(".btn-lock").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const row = e.target.closest(".table-active");
     const id = row.querySelector(".id_usuario").textContent.trim();
     const url = localStorage.getItem("url");
 
-    fetch(url +`/admin/estado/${id}`, {
+    fetch(url + `/admin/estado/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
