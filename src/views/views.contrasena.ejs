@@ -1,5 +1,6 @@
 <div class="
-"></div><!DOCTYPE html>
+"></div>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,13 +13,14 @@
 
 
 <!-- Inicio -->
+
 <body>
     <header>
         <nav>
             <div class="nav__item">
                 <i class='bx bxs-bell' id="abrir"></i>
                 <i class='bx bxs-user-circle' id="config"></i>
-             </div>
+            </div>
         </nav>
     </header>
     <div class="caja__notifica" id="notificaciones">
@@ -48,8 +50,8 @@
             <a href="" class="cerrarSesion">Cerrar Sesión</a>
         </div>
     </div>
-    
-<!-- Fin -->
+
+    <!-- Fin -->
 
     <div class="container">
         <!-- <div class="container_barra"></div> -->
@@ -68,12 +70,12 @@
                     <span>Confirmar Nueva Contraseña:</span>
                 </div>
 
-                <div class="container_input">
+                <div class="container_input" id="container_input">
                     <input type="password" id="current-password">
                     <input type="password" id="new-password">
                     <p id="password-strength"></p>
                     <input type="password" id="confirm-password">
-    
+
                     <div class="container_contenido_botones">
                         <button class="btn-cancelar">Cancelar</button>
                         <button class="btn-save">Guardar</button>
@@ -87,54 +89,53 @@
     <script>
         const abrir = document.getElementById('abrir');
         const notificaciones = document.getElementById('notificaciones');
-    
-        abrir.addEventListener('click', () =>{
+
+        abrir.addEventListener('click', () => {
             notificaciones.classList.toggle('active')
-    
+
         })
-    
+
         document.addEventListener("click", (event) => {
-          const isClickInside =
-          notificaciones.contains(event.target) ||
-          abrir.contains(event.target);
-    
-          if (!isClickInside) {
-            notificaciones.classList.remove("active");
-          }
+            const isClickInside =
+                notificaciones.contains(event.target) ||
+                abrir.contains(event.target);
+
+            if (!isClickInside) {
+                notificaciones.classList.remove("active");
+            }
         });
-    
+
         const abrirConfig = document.getElementById('config');
         const configuracion = document.getElementById('configuracion');
-    
-        abrirConfig.addEventListener('click', () =>{
+
+        abrirConfig.addEventListener('click', () => {
             configuracion.classList.toggle('activeC')
-    
+
         })
-    
+
         document.addEventListener("click", (event) => {
-          const isClickInside =
-          configuracion.contains(event.target) ||
-          abrirConfig.contains(event.target);
-    
-          if (!isClickInside) {
-            configuracion.classList.remove("activeC");
-          }
+            const isClickInside =
+                configuracion.contains(event.target) ||
+                abrirConfig.contains(event.target);
+
+            if (!isClickInside) {
+                configuracion.classList.remove("activeC");
+            }
         });
-    
+
         // document.addEventListener('DOMContentLoaded', ()=>{
         //     const notificaciones = document.getElementById('notificaciones');
         // if (notificaciones) {
         //     notificaciones.style.display = '';
         // }
         // })
-    
-    
+
+
     </script>
 
-    
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/contrasena.js"></script>
 </body>
 
 </html>
-
