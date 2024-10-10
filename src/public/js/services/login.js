@@ -2,17 +2,17 @@ const input = document.querySelector("#url").value;
 const url1 = localStorage.setItem("url", input);
 const url = localStorage.getItem("url");
 let intentosFallidos = 0;
-let intentosPermitidos = 0;
+let intentosPermitidos = 10;
 
-fetch(url + "/politicas")
-    .then(response => response.json())
-    .then(data => {
-        intentosPermitidos = data.body[0].intentos_fallidos_permitidos;
-    })
-    .catch(err => {
-        console.log(err);
-        alert("Error al obtener las políticas del sistema.");
-    });
+// fetch(url + "/politicas")
+//     .then(response => response.json())
+//     .then(data => {
+//         let intentosPermitidos = data.body[10].intentos_fallidos_permitidos;
+//     }) 
+//     .catch(err => {
+//         console.log(err);
+//         alert("Error al obtener las políticas del sistema.");
+//     });
 
 const BTN = document.querySelector(".boton");
 BTN.addEventListener("click", (e) => {
