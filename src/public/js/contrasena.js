@@ -58,48 +58,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Consumo de la api
 const url = localStorage.getItem('url');
+const idUser = 13;
 
-document.getElementById('container_input').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Evita el envío del formulario
-  
+const cambiarContrasena = () => {
+
     // Obtener los valores de los inputs
     const currentPassword = document.getElementById('current-password').value;
     const newPassword = document.getElementById('new-password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
-  
-  
+
+    // Validar si la contraseña es correcta en los dos campos
+    if (newPassword === confirmPassword) {
+    } else {
+        Swal.fire("Las contraseñas no coinciden!");
+        return;
+    }
+
     // Enviar los datos al backend usando fetch
-    try {
-      const response = await fetch( url + '/users/cambiarContraseña', {
+
+    fetch(url + "/users/cambiarContrasena", {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          id_usuario: '1',  // Aquí puedes obtener el id_usuario de la sesión o token
-          password_actual: currentPassword,
-          nueva_password: newPassword
+            id_usuario: idUser,  // Aquí puedes obtener el id_usuario de la sesión o token
+            password_actual: currentPassword,
+            nueva_password: newPassword
         })
-      });
-  
-      const result = await response.json();
-  
-      if (response.ok) {
-        Swal.fire({
-            icon: "success",
-            title: "Contraseña cambiada con éxito.",
-            showConfirmButton: false,
-            timer: 1500
-        });
-      } else {
-        Swal.fire({
-            icon: "error",
-            title: "La ontraseña no se pudo ser cambiada.",
-            showConfirmButton: false,
-            timer: 1500
-        });
-      }
-    } catch (error) {
-        console.log("Error de conexión.");
-    }
-  });
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if (data.error == false) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Contraseña cambiada con éxito.",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "La ontraseña no se pudo ser cambiada.",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+
+        })
+        .catch(err => console.error(err))
+
+}
