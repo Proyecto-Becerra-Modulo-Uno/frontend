@@ -32,19 +32,19 @@ export const ingresarcodigo = (req, res) => {
 };
 
 export const politicas = (req, res) => {
-    res.render("views.privacidad.ejs")
+  res.render("views.privacidad.ejs")
 }
 
 export const detalles = (req, res) => {
-    res.render("views.detalles.ejs")
+  res.render("views.detalles.ejs")
 }
 
 export const historialcambios = (req, res) => {
-    res.render("views.historialCambios.ejs")
+  res.render("views.historialCambios.ejs")
 }
 
 export const eliminacionCuenta = (req, res) => {
-    res.render("views.eliminacionCuenta.ejs")
+  res.render("views.eliminacionCuenta.ejs")
 }
 
 export const nuevousuario = (req, res) => {
@@ -52,7 +52,7 @@ export const nuevousuario = (req, res) => {
 }
 
 export const perfil = (req, res) => {
-    res.render("views.perfil.ejs")
+  res.render("views.perfil.ejs")
 };
 
 export const inicioAutentificacionDosPasos = (req, res) => {
@@ -64,17 +64,27 @@ export const elegirAutentificacionDosPasos = (req, res) => {
 };
 
 export const dispositivosMovil = (req, res) => {
-    res.render("views.dispositivos.movil.ejs")
+  res.render("views.dispositivos.movil.ejs")
 }
 
 export const exportardatos = (req, res) => {
   res.render("views.exportar.datos.ejs");
 }
 
+import { config } from "dotenv";
+config();
+const url = process.env.BACKEND_URL;
+
 export const sesionesActivasDesktop = (req, res) => {
-    res.render("views.sesiones.activas.ejs")
+  fetch(url + "/users/sesiones-activas")
+    .then(res => res.json())
+    .then(data => {
+      // Pasamos directamente 'data' a la plantilla
+      res.render("views.sesiones.activas.ejs", { datos: data })
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      res.status(500).send("Error interno del servidor");
+    });
 }
 
-export const historialacceso = (req, res) => {
-  res.render("views.historialAcceso.ejs");
-};
