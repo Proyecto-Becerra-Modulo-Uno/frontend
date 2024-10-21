@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperar Contraseña</title>
     <link rel="stylesheet" href="/css/recuperarClave.css" />
+    <style>
+      .success-message {
+        color: rgb(152, 255, 152);
+        font-size: 14px;
+        margin-top: 5px; 
+        text-align: left;
+      }
+    
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px; 
+        text-align: left; 
+      }
+
+      .containerCampo {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+      }
+
+      #message {
+        width: 80%; 
+      }
+    </style>
   </head>
   <body>
     <div class="containerBlur">
@@ -21,11 +46,14 @@
             id="email"
             placeholder="Ingrese su correo"
           />
+          <div id="message" class="containerError"></div>
         </div>
         <div class="containerBtn">
-          <input class="btn" type="submit" value="Enviar" />
+          <input class="btn" type="submit" value="Enviar" id="sendEmailBtn" />
         </div>
       </div>
+      </div>
     </div>
+    <script src="/js/recuperar.correo.js" defer></script>
   </body>
 </html>

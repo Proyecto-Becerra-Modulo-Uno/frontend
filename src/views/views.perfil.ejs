@@ -1,90 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accesos</title>
-    <link rel="stylesheet" href="./css/perfil.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
-<body>
+    <link rel="stylesheet" href="./css/perfil.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="nav__item">
-                <i class='bx bxs-bell' id="abrir"></i>
-                <i class='bx bxs-user-circle'></i>
-             </div>
-        </nav>
+      <nav>
+        <div class="nav__item">
+          <i class="bx bxs-bell" id="abrir"></i>
+          <i class="bx bxs-user-circle"></i>
+        </div>
+      </nav>
     </header>
     <div class="caja__notifica" id="notificaciones">
-        <div class="noti__main">
-            <div class="noti__head">
-                <p>Notificaciones</p>
-            </div>
-            <div class="noti__body">
-                <p>Borrar Notificaciones</p>
-            </div>
-            <div class="noti__footer">
-                <div class="toggle-container">
-                    <label for="toggle-switch" class="toggle-label">Desahabilitar notificaciones</label>
-                    <input type="checkbox" id="toggle-switch" class="toggle-switch">
-                    <label for="toggle-switch" class="switch"></label>
-                </div>
-            </div>
+      <div class="noti__main">
+        <div class="noti__head">
+          <p>Notificaciones</p>
         </div>
+        <div class="noti__body">
+          <p>Borrar Notificaciones</p>
+        </div>
+        <div class="noti__footer">
+          <div class="toggle-container">
+            <label for="toggle-switch" class="toggle-label"
+              >Desahabilitar notificaciones</label
+            >
+            <input type="checkbox" id="toggle-switch" class="toggle-switch" />
+            <label for="toggle-switch" class="switch"></label>
+          </div>
+        </div>
+      </div>
     </div>
     <main>
-        <div class="main__perfil">
-            <div class="main__img">
-                <div class="img__foto">
-                    <img src="/foto.webp" alt="" class="circulo">
-                    <div class="circulo__usuario">
-                        <div class="nom">
-                            <p>{Usuario}</p>
-                        </div>
-                        <div class="nom">
-                            <p>{Rol}</p>
-                        </div>
-                    </div>
-                </div>
-                    
-                <div class="perfil__btn">
-                    <div class="arriba">
-                        <button class="btn btn--azul">Cambiar Contraseña</button>
-                        <button class="btn btn--rojo">Eliminar Cuenta</button>
-                    </div>
-                    <div class="abajo">
-                        <select name="" id="accesos" class="btn btn--gris">
-                            <option value="0">Seleccione</option>
-                            <option value="1">eccione</option>
-                            <option value="2">Selcione</option>
-                        </select>
-                        <button class="btn btn--azul">Editar Cuentas</button>
-                    </div>
-                </div>
+      <div class="main__perfil">
+        <div class="main__img">
+          <div class="img__foto">
+            <img src="/foto.webp" alt="" class="circulo" />
+            <div class="circulo__usuario">
+              <div class="nom">
+                <p>{Usuario}</p>
+              </div>
+              <div class="nom">
+                <p>{Rol}</p>
+              </div>
             </div>
-            
-        </div>
+          </div>
 
-        <!-- <div class="main__opc">
+          <div class="perfil__btn">
+            <div class="arriba">
+              <button class="btn btn--azul">Cambiar Contraseña</button>
+              <button class="btn btn--rojo">Eliminar Cuenta</button>
+            </div>
+            <div class="abajo">
+              <select name="" id="accesos" class="btn btn--gris">
+                <option value="0">Seleccione</option>
+                <option value="1">eccione</option>
+                <option value="2">Selcione</option>
+              </select>
+              <button class="btn btn--azul">Editar Cuentas</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="main__opc">
               
         </div> -->
     </main>
-</body>
-<script>
-    const abrir = document.getElementById('abrir');
-    const notificaciones = document.getElementById('notificaciones');
+  </body>
+  <script>
+    const abrir = document.getElementById("abrir");
+    const notificaciones = document.getElementById("notificaciones");
 
-    abrir.addEventListener('click', () =>{
-        notificaciones.classList.toggle('active')
-
-    })
+    abrir.addEventListener("click", () => {
+      notificaciones.classList.toggle("active");
+    });
 
     document.addEventListener("click", (event) => {
       const isClickInside =
-      notificaciones.contains(event.target) ||
-      abrir.contains(event.target);
+        notificaciones.contains(event.target) || abrir.contains(event.target);
 
       if (!isClickInside) {
         notificaciones.classList.remove("active");
@@ -97,7 +98,5 @@
     //     notificaciones.style.display = '';
     // }
     // })
-
-
-</script>
+  </script>
 </html>

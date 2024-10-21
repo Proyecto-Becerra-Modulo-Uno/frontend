@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperar Contraseña</title>
     <link rel="stylesheet" href="/css/recuperarClave.css" />
+    <style>
+      .success-message {
+        color: rgb(152, 255, 152);
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      .containerCampo {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+      }
+      #message {
+        width: 80%; 
+      }
+    </style>
   </head>
   <body>
     <div class="containerBlur">
       <div class="containerCaja">
-        <h1 class="tituloCaja">Recuperar Contraseña</h1>
+        <h1 class="tituloCaja">Verificar Código</h1>
         <p class="mensaje">
           Ingrese el código que se le envió al correo proporcionado
         </p>
@@ -19,13 +39,15 @@
             type="text"
             name="codigo"
             id="codigo"
-            placeholder="Ingrese el codigo"
+            placeholder="Ingrese el código"
           />
+          <div id="message"></div>
         </div>
         <div class="containerBtn">
-          <input class="btn" type="submit" value="Enviar" />
+          <input class="btn" type="submit" value="Enviar" id="submitBtn" />
         </div>
       </div>
     </div>
+    <script src="/js/codigo.recuperacion.contrasena.js" defer></script>
   </body>
 </html>
