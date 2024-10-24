@@ -7,28 +7,18 @@ config();
 const url = process.env.BACKEND_URL;
 
 export const panel = async (req, res) => {
+    const url = "http://localhost:3000"
+    const userId = req.body['']; 
     try {
-        const userId = req.body.id; 
-        const urlBase = `${url}/users`;
- 
-        const [userResponse, allUsersResponse] = await Promise.all([
-            fetch(`${urlBase}/1`), 
-            fetch(urlBase)               
-        ]);
-
+        const userResponse = await fetch(`${url}/users/${userId}`, );
         const userData = await userResponse.json();
-        const allUsersData = await allUsersResponse.json();
+        const user = userData.body[0];
 
-        console.log(userInfo);
 
-        res.render("views.panel.ejs", {
-            user: userInfo,    
-            users: allUsersData, 
-            url: url
-        });
+        res.render('views.panel.ejs', { user });
     } catch (error) {
-        console.error('Error fetching user or users data:', error);
-        res.status(500).send("Error al obtener los datos del usuario o de todos los usuarios");
+        console.error(error);
+        res.status(500).send('Error al obtener los datos del usuario');
     }
 };
 

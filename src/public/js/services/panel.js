@@ -1,114 +1,108 @@
-const url = document.querySelector(".id").value;
 
+const url = "http://localhost:3000"; 
 localStorage.setItem("url", url);
 
 const token = sessionStorage.getItem("token");
+const userId = sessionStorage.getItem("userId");
 
-if (token == "" || token == null) {
-  window.location.href = "/";
-}
-
-if (url == "" || url == null) {
-  window.location.href = "/";
+if (!token || !url) {
+    window.location.href = "/"; 
 }
 
 const options = {
-  method: "POST",
-  headers: {
-    "content-type": "application/json",
-    "x-access-token": token,
-  },
+    method: "GET", 
+    headers: {
+        "Content-Type": "application/json",
+        "x-access-token": token,
+    },
 };
 
-// // Asignar Rol a Usuario
+// Obtener información del usuario y todos los usuarios
+const getUserData = async () => {
+    try {
+        const userResponse = await fetch(`${localStorage.getItem("url")}/users/${userId}`, options);
+        const allUsersResponse = await fetch(`${localStorage.getItem("url")}/users`, options);
 
-const selects = document
-  .querySelectorAll(".form-select")
-  .forEach((selector) => {
-    selector.addEventListener("change", (e) => {
-      const row = e.target.closest(".table-active");
-      const option = e.target.value;
-      const id = row.querySelector(".id_usuario").textContent.trim();
-      const url = localStorage.getItem("url");
+        if (!userResponse.ok || !allUsersResponse.ok) {
+            throw new Error("Error en la respuesta del servidor");
+        }
 
-      fetch(url + "/users/asignar-rol", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          usuarioId: id,
-          rolId: option,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => console.error(err));
+        const userData = await userResponse.json();
+        const allUsersData = await allUsersResponse.json();
+
+
+        if (Array.isArray(allUsersData.body) && allUsersData.body.length > 0) {
+            renderUserData(userData.body[0], allUsersData.body);
+        } else {
+            console.error("No se encontraron usuarios en la respuesta");
+        }
+    } catch (error) {
+        console.error('Error al obtener los datos del usuario o de todos los usuarios:', error);
+    }
+};
+
+// Función para renderizar los datos del usuario en la interfaz
+const renderUserData = (userInfo, allUsersData) => {
+    document.getElementById("user-name").innerText = `Nombre: ${userInfo.Nombre}`;
+    document.getElementById("user-email").innerText = `Email: ${userInfo.Correo}`;
+
+    const usersTable = document.getElementById("all-users-table").getElementsByTagName('tbody')[0];
+    usersTable.innerHTML = ''; 
+    allUsersData.forEach(user => {
+        const row = usersTable.insertRow();
+        row.innerHTML = `
+            <td class="id_usuario">${user.ID}</td>
+            <td>${user.Nombre}</td>
+            <td>${user.Correo}</td>
+            <td>
+                <button class="btn btn-lock" data-locked="${user.locked}" title="${user.locked ? 'Desbloquear usuario' : 'Bloquear usuario'}">
+                    <i class="fa ${user.locked ? 'fa-lock' : 'fa-lock-open'}"></i>
+                </button>
+            </td>
+        `;
     });
-  });
-
-// Gestionar permisos usuario
 
 
-// // Inicializar tooltips y manejar bloqueo/desbloqueo
-document.addEventListener("DOMContentLoaded", function () {
-  const tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  );
-  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
+    assignLockButtons();
+};
 
 
-  // Lógica de bloqueo/desbloqueo
+const assignLockButtons = () => {
+    document.querySelectorAll(".btn-lock").forEach((btn) => {
+        btn.addEventListener("click", async function () {
+            const row = this.closest("tr");
+            const id = row.querySelector(".id_usuario").textContent.trim();
+            const locked = this.getAttribute("data-locked") === "true";
 
-  document.querySelectorAll(".btn-lock").forEach((button) => {
-    button.addEventListener("click", function () {
-      const locked = this.getAttribute("data-locked") === "true";
-      const icon = this.querySelector("i");
+            try {
+                const response = await fetch(`${localStorage.getItem("url")}/admin/estado/${id}`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json", "x-access-token": token },
+                    body: JSON.stringify({ estado: locked ? 0 : 1 }),
+                });
 
-      if (!locked) {
-        // Cambiar a bloqueado
-        this.setAttribute("data-locked", "true");
-        icon.classList.remove("fa-lock");
-        icon.classList.add("fa-lock-open");
-        this.setAttribute("title", "Desbloquear usuario"); // Cambia el tooltip
-      } else {
-        // Cambiar a desbloqueado
-        this.setAttribute("data-locked", "false");
-        icon.classList.remove("fa-lock-open");
-        icon.classList.add("fa-lock");
-        this.setAttribute("title", "Bloquear usuario"); // Cambia el tooltip
-      }
+                if (!response.ok) {
+                    throw new Error("Error al actualizar el estado del usuario");
+                }
 
-      // Actualizar tooltip después del cambio
-      bootstrap.Tooltip.getInstance(this).setContent({
-        ".tooltip-inner": this.getAttribute("title"),
-      });
+                // Actualizar la interfaz
+                this.setAttribute("data-locked", !locked);
+                const icon = this.querySelector("i");
+                if (locked) {
+                    icon.classList.remove("fa-lock-open");
+                    icon.classList.add("fa-lock");
+                    this.setAttribute("title", "Bloquear usuario");
+                } else {
+                    icon.classList.remove("fa-lock");
+                    icon.classList.add("fa-lock-open");
+                    this.setAttribute("title", "Desbloquear usuario");
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        });
     });
-  });
-});
+};
 
-
-// Bloquear Usuario
-
-const btnLock = document.querySelectorAll(".btn-lock").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const row = e.target.closest(".table-active");
-    const id = row.querySelector(".id_usuario").textContent.trim();
-    const url = localStorage.getItem("url");
-
-    fetch(url +`/admin/estado/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        estado: 3,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        location.reload();
-      })
-      .catch((err) => console.error(err));
-  });
-});
+// Llamar a la función para obtener los datos al cargar la página
+document.addEventListener("DOMContentLoaded", getUserData);
