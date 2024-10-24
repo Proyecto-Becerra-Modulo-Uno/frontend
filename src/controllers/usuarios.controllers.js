@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 config();
 const url = process.env.BACKEND_URL;
-
+import { jwtDecode } from "jwt-decode";
 export const preguntas = (req, res) => {
   res.render("views.preguntas.seguridad.ejs");
 };
@@ -102,3 +102,10 @@ export const vistaprincipalusuario = (req, res)=>{
 export const panelUsuario = (req, res) => {
   res.render("views.panel.usuario.ejs");
 };
+
+export const inicioUsuario = (req, res) => {
+  const token = "eyJ0eXAiO.../// jwt token";
+  const decoded = jwtDecode(token);
+  sessionStorage.getItem() 
+  res.render("views.usuarioInicio.ejs")
+}

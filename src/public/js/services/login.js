@@ -68,6 +68,8 @@ BTN.addEventListener("click", (e) => {
 
         intentosFallidos = 0;
         const rol = data.body.rol;
+        console.log(rol);
+        
         sessionStorage.setItem("token", data.body.token);
 
         fetch(url + "/admin/historial-sesion", {
@@ -75,7 +77,7 @@ BTN.addEventListener("click", (e) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 id: data.body.id,
-                ip: data.body.ip,
+                ip: data.body.ip, 
                 platform: data.body.platform
             })
         })
