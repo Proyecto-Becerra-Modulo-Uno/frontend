@@ -1,7 +1,8 @@
 import { config } from "dotenv";
 config();
 const url = process.env.BACKEND_URL;
-import { jwtDecode } from "jwt-decode";
+
+
 export const preguntas = (req, res) => {
   res.render("views.preguntas.seguridad.ejs");
 };

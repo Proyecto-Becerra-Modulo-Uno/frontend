@@ -2,8 +2,9 @@ const input = document.querySelector("#url").value;
 const url1 = localStorage.setItem("url", input);
 const url = localStorage.getItem("url");
 let intentosFallidos = 0;
-let intentosPermitidos = 0;
+let intentosPermitidos = 5;
 
+// Obtener las políticas del sistema
 fetch(url + "/politicas")
     .then(response => response.json())
     .then(data => {
@@ -27,6 +28,7 @@ BTN.addEventListener("click", (e) => {
     const usuario = document.querySelector("#usuario").value;
     const contrasena = document.querySelector("#contrasena").value;
 
+    // Petición al login
     fetch(url + "/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -42,6 +44,7 @@ BTN.addEventListener("click", (e) => {
             alert("Correo o contraseña incorrecta");
 
             if (intentosFallidos >= intentosPermitidos) {
+                // Bloqueo de la cuenta después de intentos fallidos
                 fetch(url + "/users/bloquearIntentos", {
                     headers: { "Content-Type": "application/json" },
                     method: "PUT",
@@ -67,11 +70,13 @@ BTN.addEventListener("click", (e) => {
         }
 
         intentosFallidos = 0;
-        const rol = data.body.rol;
-        console.log(rol);
-        
-        sessionStorage.setItem("token", data.body.token);
 
+        console.log("ID del usuario:", data.body.id);
+
+        const rol = data.body.rol;
+        sessionStorage.setItem("token", data.body.token); // Guardar el token en sessionStorage
+
+        // Registrar historial de sesión
         fetch(url + "/admin/historial-sesion", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -83,10 +88,12 @@ BTN.addEventListener("click", (e) => {
         })
         .then(response => response.json())
         .then(() => {
+            // Redirigir sin alterar el historial de sesión
             if (rol === 3) {
+                sessionStorage.setItem("userId", data.body.id);
                 window.location.href = "/panel";
             } else {
-                window.location.href = "/usuario-normal"; 
+                window.location.href = "/usuario-normal";
             }
         })
         .catch(err => {

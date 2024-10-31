@@ -1,3 +1,4 @@
+import { log } from "console";
 import { config } from "dotenv";
 import fetch from "node-fetch";
 import path from 'path';
@@ -6,32 +7,21 @@ config();
 
 const url = process.env.BACKEND_URL;
 
-export const panel = async (req, res) => {    
-
-    // console.log(info);
-    
+export const panel = async (req, res) => {
     try {
         const urlBase = `${url}/users`;
-
-        const [userResponse, allUsersResponse] = await Promise.all([
-            fetch(`${urlBase}/${info}`), // Obtener información del usuario actual
-            fetch(urlBase) // Obtener información de todos los usuarios
+ 
+        const [allUsersResponse] = await Promise.all([
+            fetch(urlBase)               
         ]);
 
-        const userData = await userResponse.json();
         const allUsersData = await allUsersResponse.json();
-
-        const userInfo = userData.body[0];
-
-        // Renderizar la vista con los datos obtenidos
-        res.render("views.panel.ejs", {
-            user: userInfo,    
+        res.render("views.panel.ejs", {  
             users: allUsersData, 
             url: url
         });
-
     } catch (error) {
-        console.error('Error al obtener los datos del usuario o de todos los usuarios:', error);
+        console.error('Error fetching user or users data:', error);
         res.status(500).send("Error al obtener los datos del usuario o de todos los usuarios");
     }
 };
@@ -41,39 +31,14 @@ export const registro = (req, res) => {
     res.render("admin/views.registro.ejs")
 }
 
-export const cuentasbloqueadas = async(req, res) => {
-    try {
-        const userId = req.body.correo; 
-        const urlBase = `${url}/users`;
- 
-        const [userResponse, allUsersResponse] = await Promise.all([
-            fetch(`${urlBase}/1`), 
-            fetch(urlBase)               
-        ]);
-
-        const userData = await userResponse.json();
-        const allUsersData = await allUsersResponse.json();
-
-        const userInfo = userData.body[0];
-
-        console.log(userInfo);
-        res.render("admin/views.cuentas.bloqueadas.ejs", {
-            user: userInfo,    
-            users: allUsersData, 
-            url: url
-        });
-    } catch (error) {
-        console.error('Error fetching user or users data:', error);
-        res.status(500).send("Error al obtener los datos del usuario o de todos los usuarios");
-    }
-    // let datos = {};
-    // fetch(url + "/admin/cuentas-bloqueadas")
-    // .then(res => res.json())
-    // .then(data => {
-    //     datos = data
-    //     res.render("admin/views.cuentas.bloqueadas.ejs", {user: userInfo,
-    //         users: data, url: url})
-    // })
+export const cuentasbloqueadas = (req, res) => {
+    let datos = {};
+    fetch(url + "/admin/cuentas-bloqueadas")
+    .then(res => res.json())
+    .then(data => {
+        datos = data
+        res.render("admin/views.cuentas.bloqueadas.ejs", {users: data, url: url})
+    })
 }
 
 export const usuariosInactivos = (req, res) =>{
