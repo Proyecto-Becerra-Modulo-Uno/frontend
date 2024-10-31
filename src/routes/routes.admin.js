@@ -13,39 +13,38 @@ import {  panel_control_seguridad, reporting} from "../controllers/admins.contro
 const rutaAdmin = Router();
 // Rutas organizadas
 
-rutaAdmin.get("/panel", panel);
+rutaAdmin.get("/admin/panel", panel); //Listo
+rutaAdmin.get("/admin/registro", registro); //Listo
+rutaAdmin.get("/admin/cuentas-bloqueadas", cuentasbloqueadas); //Listo
+rutaAdmin.get("/admin/usuarios-inactivos", usuariosInactivos); //Listo
+rutaAdmin.get("/admin/crear-grupos", grupos); //Listo
+rutaAdmin.get("/admin/configurar-logs", configurarLogs); //Listo
+rutaAdmin.get("/admin/logs-seguridad", reporting) //Listo
+rutaAdmin.get("/admin/registro-dispositivos", registroDispositivos) //Listo
+rutaAdmin.get("/admin/panel-seguridad", panel_control_seguridad) //Listo
+rutaAdmin.get("/admin/configurar-intentos-sesion", configuracion) //Listo
+rutaAdmin.get("/admin/informe-actividad", informeActividad) //Listo
 
-rutaAdmin.get("/admin/registro", registro);
-rutaAdmin.get("/admin/cuentas-bloqueadas", cuentasbloqueadas);
-rutaAdmin.get("/admin/usuarios-inactivos", usuariosInactivos);
-rutaAdmin.get("/admin/crear-grupos", grupos);
-
-rutaAdmin.get("/admin/logs", configurarLogs);
-
-rutaAdmin.get("/admin/registro-dispositivos", registroDispositivos)
 // Rutas desorganizadas
 
-rutaAdmin.get("/notipop", notipopup)//???
+rutaAdmin.get("/notipop", notipopup)
 rutaAdmin.get("/notia", notiActi)
 rutaAdmin.get("/co", condicionesc)
-rutaAdmin.get("/verificacionDoble1", verificacionDoble1)
-rutaAdmin.get("/verificacionDoble2", verificacionDoble2)
-rutaAdmin.get("/config", configuracion)
+rutaAdmin.get("/admin/autenticacion-doble", verificacionDoble1)
+rutaAdmin.get("/admin/autenticacion-doble/step-1", verificacionDoble2)
 
 rutaAdmin.get("/nuevousuario", nuevousuario);
 rutaAdmin.get("/complejidadPreguntas", complejidadPreguntas)
-rutaAdmin.get("/informeActividad", informeActividad)
 rutaAdmin.get("/SeguridadPreguntas", preguntasSeguridad)
 rutaAdmin.get("/ConfiguracionPoliticas", configuracionPoliticas)
 rutaAdmin.get("/export-data", exportdata)
 rutaAdmin.get('/ssl', ssl)
 rutaAdmin.get('/backups', listarBackups);
 rutaAdmin.post('/create-backup', crearBackup);
+
+
 rutaAdmin.post('/restore-backup', restaurarBackup);
-rutaAdmin.get("/principalusuario", vistaprincipalusuario);
 
 
-rutaAdmin.get("/reporteingrso", reporting)
-rutaAdmin.get("/panel-seguridad", panel_control_seguridad)
 
 export default rutaAdmin

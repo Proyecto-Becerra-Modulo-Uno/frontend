@@ -5,7 +5,7 @@ let intentosFallidos = 0;
 let intentosPermitidos = 5;
 
 // Obtener las políticas del sistema
-fetch(url + "/politicas")
+fetch(url + "/admin/listar-politicas")
     .then(response => response.json())
     .then(data => {
         intentosPermitidos = data.body[0].intentos_fallidos_permitidos;
@@ -45,7 +45,7 @@ BTN.addEventListener("click", (e) => {
 
             if (intentosFallidos >= intentosPermitidos) {
                 // Bloqueo de la cuenta después de intentos fallidos
-                fetch(url + "/users/bloquearIntentos", {
+                fetch(url + "/users/bloquear-intentos", {
                     headers: { "Content-Type": "application/json" },
                     method: "PUT",
                     body: JSON.stringify({
@@ -74,9 +74,8 @@ BTN.addEventListener("click", (e) => {
         console.log("ID del usuario:", data.body.id);
 
         const rol = data.body.rol;
-        sessionStorage.setItem("token", data.body.token); // Guardar el token en sessionStorage
+        sessionStorage.setItem("token", data.body.token); // 
 
-        // Registrar historial de sesión
         fetch(url + "/admin/historial-sesion", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -91,9 +90,9 @@ BTN.addEventListener("click", (e) => {
             // Redirigir sin alterar el historial de sesión
             if (rol === 3) {
                 sessionStorage.setItem("userId", data.body.id);
-                window.location.href = "/panel";
+                window.location.href = "/admin/panel";
             } else {
-                window.location.href = "/usuario-normal";
+                window.location.href = "/usuario";
             }
         })
         .catch(err => {

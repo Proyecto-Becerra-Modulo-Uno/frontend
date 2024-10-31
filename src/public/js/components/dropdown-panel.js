@@ -41,7 +41,7 @@ if (user) {
                     mt-2">Grupos</a>
 
                 <!-- Informes Dropdown -->
-                <a href="/informeActividad"
+                <a href="/admin/informe-actividad"
                     class=" btn btn-action d-flex align-items-center justify-content-between mt-2 text-start text-light text-decoration-none">Informes</a>
 
                 <!-- Logs Dropdown -->
@@ -51,8 +51,8 @@ if (user) {
                 </button>
                 <div id="admin-dropdown" style="display: none; flex-direction: column; height: auto; width: 100%;">
                     <div class="dropdown">
-                        <a href="#" class="btn text-start text-light text-decoration-none">Configuración de Logs </a>
-                        <a href="#" class="btn text-start text-light text-decoration-none">Logs de seguridad</a>
+                        <a href="configurar-logs" class="btn text-start text-light text-decoration-none">Configuración de Logs </a>
+                        <a href="/admin/logs-seguridad" class="btn text-start text-light text-decoration-none">Logs de seguridad</a>
 
                     </div>
                 </div>
@@ -89,19 +89,49 @@ if (user) {
                 </button>
                 <div id="records-dropdown" style="display: none; flex-direction: column; height: 100%; width: 100%;">
                     <div class="dropdown">
-                        <a href="#" class="btn text-start text-light text-decoration-none">Panel de seguridad</a>
+                        <a href="/admin/panel-seguridad" class="btn text-start text-light text-decoration-none">Panel de seguridad</a>
                         <a href="#" class="btn text-start text-light text-decoration-none">Copias de seguridad</a>
                         <a href="#" class="btn text-start text-light text-decoration-none">Exportación de
                             datos</a>
-                        <a href="/sesiones" class="btn text-start text-light text-decoration-none">Inicios de
+                        <a href="#" class="btn text-start text-light text-decoration-none">Inicios de
                             sesión</a>
                         <a href="#" class="btn text-start text-light text-decoration-none">Detección</a>
                         <a href="/historialc" class="btn text-start text-light text-decoration-none">Monitoreo</a>
-                        <a href="/verificacionDoble1"
+                        <a href="/admin/autenticacion-doble"
                             class="btn text-start text-light text-decoration-none">Autenticación de
                             dos
                             factores</a>
-                        <a href="/config" class="btn text-start text-light text-decoration-none">Configuración del
+                        <a href="/admin/configurar-intentos-sesion" class="btn text-start text-light text-decoration-none">Configuración del
+                            sistema</a>
+                        <a href="/complejidadPreguntas" class="btn text-start text-light text-decoration-none">Preguntas
+                            de
+                            Seguridad</a>
+                        <a href="#" class="btn text-start text-light text-decoration-none">Encriptación de
+                            contraseñas</a>
+                    </div>
+                </div>
+
+                <!-- Configuracion Dropdown -->
+                <button class="btn btn-action d-flex align-items-center justify-content-between mt-2"
+                    id="records-button">
+                    <span class="text-start">Configuracion</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div id="records-dropdown" style="display: none; flex-direction: column; height: 100%; width: 100%;">
+                    <div class="dropdown">
+                        <a href="/admin/panel-seguridad" class="btn text-start text-light text-decoration-none">Panel de seguridad</a>
+                        <a href="#" class="btn text-start text-light text-decoration-none">Copias de seguridad</a>
+                        <a href="#" class="btn text-start text-light text-decoration-none">Exportación de
+                            datos</a>
+                        <a href="#" class="btn text-start text-light text-decoration-none">Inicios de
+                            sesión</a>
+                        <a href="#" class="btn text-start text-light text-decoration-none">Detección</a>
+                        <a href="/historialc" class="btn text-start text-light text-decoration-none">Monitoreo</a>
+                        <a href="/admin/autenticacion-doble"
+                            class="btn text-start text-light text-decoration-none">Autenticación de
+                            dos
+                            factores</a>
+                        <a href="/admin/configurar-intentos-sesion" class="btn text-start text-light text-decoration-none">Configuración del
                             sistema</a>
                         <a href="/complejidadPreguntas" class="btn text-start text-light text-decoration-none">Preguntas
                             de

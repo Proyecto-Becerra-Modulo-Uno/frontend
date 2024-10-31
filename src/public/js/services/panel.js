@@ -59,7 +59,7 @@ document.querySelectorAll(".form-select").forEach((selector) => {
         const id = row.querySelector(".id_usuario").textContent.trim();
         const url = localStorage.getItem("url");
 
-        fetch(url + "/users/asignar-rol", {
+        fetch(url + "/admin/asignar-rol", {
             method: "POST",
             headers: { "Content-Type": "application/json", "x-access-token": token }, // Incluyendo el token
             body: JSON.stringify({

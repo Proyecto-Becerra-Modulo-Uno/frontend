@@ -47,7 +47,7 @@ export const usuariosInactivos = (req, res) =>{
 
 
 export const grupos = (req, res) => {
-    fetch(url + "/listar-grupos")
+    fetch(url + "/admin/listar-grupos")
     .then(res => res.json())
     .then(data => res.render("admin/views.grupos.ejs", {grupos: data}))
 } 
@@ -68,7 +68,7 @@ export const nuevousuario = (req, res) => {
 }
 
 export const condicionesc = (req, res) => {
-    fetch(url + "/politicas")
+    fetch(url + "/admin/listar-politicas")
     .then(res => res.json())
     .then(data => {
         res.render("views.condicionesc.ejs", {politicas: data})
@@ -111,7 +111,7 @@ export const complejidadPreguntas = (req, res) => {
 }
 
 export const configuracion = (req, res) => {
-    fetch(url + "/users/listar-politicas")
+    fetch(url + "/admin/listar-politicas")
     .then(res => res.json())
     .then(data => {
         res.render("views.configuracion.ejs", {configuracion: data})
@@ -172,7 +172,7 @@ export const crearBackup = (req, res) => {
 export const restaurarBackup = (req, res) => {
     const { backupFilePath } = req.body;
     
-    fetch(url + "/restore-users", {
+    fetch(url + "/admin/restore-users", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
