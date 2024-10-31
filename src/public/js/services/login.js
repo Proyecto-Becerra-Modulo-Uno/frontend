@@ -2,7 +2,7 @@ const input = document.querySelector("#url").value;
 const url1 = localStorage.setItem("url", input);
 const url = localStorage.getItem("url");
 let intentosFallidos = 0;
-let intentosPermitidos = 0;
+let intentosPermitidos = 5;
 
 // Obtener las políticas del sistema
 fetch(url + "/politicas")
@@ -82,7 +82,7 @@ BTN.addEventListener("click", (e) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 id: data.body.id,
-                ip: data.body.ip,
+                ip: data.body.ip, 
                 platform: data.body.platform
             })
         })

@@ -1,3 +1,4 @@
+import { log } from "console";
 import { config } from "dotenv";
 import fetch from "node-fetch";
 import path from 'path';
@@ -7,18 +8,21 @@ config();
 const url = process.env.BACKEND_URL;
 
 export const panel = async (req, res) => {
-    const url = "http://localhost:3000"
-    const userId = req.body['']; 
     try {
-        const userResponse = await fetch(`${url}/users/${userId}`, );
-        const userData = await userResponse.json();
-        const user = userData.body[0];
+        const urlBase = `${url}/users`;
+ 
+        const [allUsersResponse] = await Promise.all([
+            fetch(urlBase)               
+        ]);
 
-
-        res.render('views.panel.ejs', { user });
+        const allUsersData = await allUsersResponse.json();
+        res.render("views.panel.ejs", {  
+            users: allUsersData, 
+            url: url
+        });
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Error al obtener los datos del usuario');
+        console.error('Error fetching user or users data:', error);
+        res.status(500).send("Error al obtener los datos del usuario o de todos los usuarios");
     }
 };
 
