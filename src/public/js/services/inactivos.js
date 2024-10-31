@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        // Obtener la configuración inicial
         const urlConfig = 'http://localhost:3000/admin/mostrar-configuracion-desactivacion';
         const responseConfig = await fetch(urlConfig);
 
@@ -15,9 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error(dataConfig.message || 'Error en la respuesta del servidor');
         }
 
-        const config = dataConfig.body[0]; // Asumiendo que siempre habrá al menos un elemento
+        const config = dataConfig.body[0];
 
-        // Llenar los campos del formulario con los datos obtenidos
         document.getElementById('tiempoInactividad').value = config.tiempo_inactividad;
         document.getElementById('unidadInactividad').value = config.unidad_inactividad;
         document.getElementById('tiempoNotificacion').value = config.tiempo_notificacion;
@@ -65,7 +63,7 @@ document.getElementById('formDesactivarUsuario').addEventListener('submit', asyn
     try {
         const url = "http://localhost:3000";
         const response = await fetch(`${url}/admin/cambiar-configuracion-desactivacion`, {
-            method: 'PUT', // Cambiar a 'PUT' si tu backend lo requiere
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
